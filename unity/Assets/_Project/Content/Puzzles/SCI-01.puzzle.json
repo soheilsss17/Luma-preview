@@ -1,0 +1,274 @@
+{
+  "schema": "luma.circuit_puzzle/1",
+  "card_id": "SCI-01",
+  "concept_id": "SCIENTIFIC_METHOD_LOOP",
+  "quest_id": "Q02",
+  "room_id": "WS_SCI_LAB",
+  "area_id": "SCI_LAB_BENCH",
+  "world_state_on_solve": "SCI_LAB_LAMP_ON",
+  "requires_world_state": "WS_TUTORIAL_DONE",
+  "music_layers_max": 4,
+  "source": "Science grade 3, lesson 1 «زنگ علوم» (C306, چاپ چهاردهم ۱۴۰۵). Card SCI-01 (plan 04 §2 row SCI-01): SCIENTIFIC_METHOD_LOOP — مشاهده، سؤال، فرضیه، آزمون، نتیجه، ثبت و جمع‌بندی؛ «مدار Rule-based؛ هر بار یک متغیر؛ سیم‌ها مستقل از رنگ‌اند». Plan 12 §3 row 3: Observe ← Question ← Hypothesis ← Test ← Record ← Conclude, H3 notebook «چه دیدم / چه تغییر دادم / چه شد», battery safety card.",
+  "method_steps": [
+    "مشاهده",
+    "سؤال",
+    "فرضیه",
+    "آزمون",
+    "ثبت",
+    "نتیجه"
+  ],
+  "misconceptions": [
+    {
+      "code": "SCI_OBSERVATION_EQUALS_CONCLUSION",
+      "alias": "SCI-S01",
+      "rule": "need_records",
+      "error_type": "ConceptError",
+      "description": "Treats what was seen («the lamp is dark») as the conclusion itself, without written rows — the card's «مشاهده = نتیجه».",
+      "targeted_hint": 2
+    },
+    {
+      "code": "SCI_MULTIPLE_VARIABLE_CHANGE",
+      "alias": "SCI-S02",
+      "rule": "multiple_variable",
+      "error_type": "StrategyError",
+      "description": "Changes two things before testing again, so no row can say which of them made the lamp change.",
+      "targeted_hint": 1
+    },
+    {
+      "code": "SCI_WIRE_COLOR_CHANGES_RESULT",
+      "alias": "SCI-S03",
+      "rule": "colour_matters",
+      "error_type": "ConceptError",
+      "description": "Believes the colour of a wire decides whether the lamp lights («فقط سیم قرمز برق را رد می‌کند») — the card says wires are independent of colour.",
+      "targeted_hint": 3
+    }
+  ],
+  "analytics_fields": [
+    "puzzle_id",
+    "attempt_id",
+    "duration",
+    "experiment_run",
+    "experiment_refused",
+    "experiment_recorded",
+    "conclude_refused",
+    "variables_changed",
+    "rule",
+    "hint_level",
+    "solved",
+    "transfer_solved"
+  ],
+  "safety": {
+    "card_sprite": "safety_card",
+    "show_on": "encounter",
+    "dismiss": "tap",
+    "text_fa": "باتری را به شکلک وصل نکن؛ سیم‌ها را دور هم نپیچ."
+  },
+  "stages": [
+    {
+      "puzzle_id": "SCI-01_ENC",
+      "stage": "encounter",
+      "kind": "circuit",
+      "objective_fa": "چرا چراغ خاموش است؟ هر بار فقط یک چیز را عوض کن، آزمایش کن و در دفترچه بنویس.",
+      "bays": 2,
+      "min_rows": 3,
+      "setup": {
+        "battery": "bat_a",
+        "switch": "sw_a",
+        "lamp": "lamp_a",
+        "wires": [
+          "wire_red"
+        ],
+        "closed": false
+      },
+      "parts": [
+        { "id": "bat_a", "kind": "battery", "flat": false, "colour": "brass", "label_fa": "باتری" },
+        { "id": "sw_a", "kind": "switch", "label_fa": "کلید" },
+        { "id": "lamp_a", "kind": "lamp", "label_fa": "چراغ" },
+        { "id": "wire_red", "kind": "wire", "colour": "red", "label_fa": "سیم قرمز" },
+        { "id": "wire_blue", "kind": "wire", "colour": "blue", "label_fa": "سیم آبی" }
+      ],
+      "conclusion_options": [
+        { "id": "closed_path", "text_fa": "هر وقت راه برق بسته باشد، چراغ روشن می‌شود." },
+        { "id": "bigger_battery", "text_fa": "هرچه باتری بزرگ‌تر باشد، چراغ روشن‌تر می‌شود." },
+        { "id": "red_wire", "text_fa": "فقط سیم قرمز برق را رد می‌کند." }
+      ],
+      "answer": "closed_path",
+      "conclusion_prompt_fa": "از سه آزمونت چه نتیجه‌ای می‌گیری؟",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "bench",
+          "text_key": "hint.SCI-01.enc.1",
+          "animation": "LUMI points at the empty bay and then at the switch: only ONE of them may change before the next test."
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "notebook",
+          "text_key": "hint.SCI-01.enc.2",
+          "animation": "The notebook rows are lined up: «چه دیدم / چه تغییر دادم / چه شد» — the changed column of the last row glows."
+        },
+        {
+          "level": 3,
+          "kind": "assist",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "bench",
+          "text_key": "hint.SCI-01.enc.3",
+          "animation": "The one part that is missing glows; the others dim."
+        }
+      ],
+      "answer_assist": {
+        "text_key": "hint.SCI-01.enc.assist",
+        "animation": "Answer Assist: only the one part that keeps the rule «one variable» is offered in the tray."
+      }
+    },
+    {
+      "puzzle_id": "SCI-01_PRA",
+      "stage": "practice",
+      "kind": "circuit",
+      "objective_fa": "چراغ چشمک می‌زند. یک‌به‌یک آزمایش کن تا بفهمی ایراد از چیست.",
+      "bays": 2,
+      "min_rows": 3,
+      "setup": {
+        "battery": "bat_flat",
+        "switch": "sw_a",
+        "lamp": "lamp_a",
+        "wires": [
+          "wire_red",
+          "wire_blue"
+        ],
+        "closed": true
+      },
+      "parts": [
+        { "id": "bat_flat", "kind": "battery", "flat": true, "colour": "brass", "label_fa": "باتری کهنه" },
+        { "id": "bat_fresh", "kind": "battery", "flat": false, "colour": "brass", "label_fa": "باتری تازه" },
+        { "id": "sw_a", "kind": "switch", "label_fa": "کلید" },
+        { "id": "lamp_a", "kind": "lamp", "label_fa": "چراغ" },
+        { "id": "lamp_b", "kind": "lamp", "label_fa": "چراغ دیگر" },
+        { "id": "wire_red", "kind": "wire", "colour": "red", "label_fa": "سیم قرمز" },
+        { "id": "wire_blue", "kind": "wire", "colour": "blue", "label_fa": "سیم آبی" },
+        { "id": "wire_green", "kind": "wire", "colour": "green", "label_fa": "سیم سبز" }
+      ],
+      "conclusion_options": [
+        { "id": "flat_battery", "text_fa": "باتری کهنه بود؛ با باتری تازه راه بسته شد." },
+        { "id": "blue_wire", "text_fa": "سیم آبی برق را رد نمی‌داد." },
+        { "id": "two_batteries", "text_fa": "باید دو باتری می‌گذاشتیم." }
+      ],
+      "answer": "flat_battery",
+      "conclusion_prompt_fa": "ایراد از چه بود؟",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "bench",
+          "text_key": "hint.SCI-01.pra.1",
+          "animation": "LUMI taps the battery: one thing at a time — change the battery OR the wire, never both."
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "notebook",
+          "text_key": "hint.SCI-01.pra.2",
+          "animation": "The three rows are compared side by side; the row whose «چه تغییر دادم» is «باتری» lights up."
+        },
+        {
+          "level": 3,
+          "kind": "assist",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "bench",
+          "text_key": "hint.SCI-01.pra.3",
+          "animation": "The flat battery is marked with a small cross and the fresh battery in the tray glows."
+        }
+      ],
+      "answer_assist": {
+        "text_key": "hint.SCI-01.pra.assist",
+        "animation": "Answer Assist: only the fresh battery stays pickable."
+      }
+    },
+    {
+      "puzzle_id": "SCI-01_TRA",
+      "stage": "transfer",
+      "kind": "circuit",
+      "objective_fa": "حدس بزن، بعد آزمایش کن: آیا رنگ سیم اثری دارد؟",
+      "bays": 2,
+      "min_rows": 3,
+      "require_guess": true,
+      "setup": {
+        "battery": "bat_fresh",
+        "switch": "sw_a",
+        "lamp": "lamp_a",
+        "wires": [
+          "wire_green",
+          "wire_yellow"
+        ],
+        "closed": true
+      },
+      "parts": [
+        { "id": "bat_fresh", "kind": "battery", "flat": false, "colour": "brass", "label_fa": "باتری تازه" },
+        { "id": "sw_a", "kind": "switch", "label_fa": "کلید" },
+        { "id": "lamp_a", "kind": "lamp", "label_fa": "چراغ" },
+        { "id": "wire_green", "kind": "wire", "colour": "green", "label_fa": "سیم سبز" },
+        { "id": "wire_yellow", "kind": "wire", "colour": "yellow", "label_fa": "سیم زرد" },
+        { "id": "wire_red", "kind": "wire", "colour": "red", "label_fa": "سیم قرمز" },
+        { "id": "wire_blue", "kind": "wire", "colour": "blue", "label_fa": "سیم آبی" }
+      ],
+      "guess_options": [
+        { "id": "path_closed", "text_fa": "چراغ روشن می‌ماند." },
+        { "id": "switch_open", "text_fa": "چراغ خاموش می‌شود." }
+      ],
+      "conclusion_options": [
+        { "id": "colour_no_effect", "text_fa": "رنگ سیم هیچ اثری ندارد؛ فقط بسته بودن راه مهم است." },
+        { "id": "red_best", "text_fa": "سیم قرمز بهترین است." },
+        { "id": "two_colours", "text_fa": "دو سیم هم‌رنگ لازم است." }
+      ],
+      "answer": "colour_no_effect",
+      "conclusion_prompt_fa": "از آزمون‌هایت چه نتیجه‌ای می‌گیری؟",
+      "transfer_note_fa": "همین قانون در مسیر آب باغ هم هست: تا راه بسته نباشد، آب به باغچه نمی‌رسد.",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "bench",
+          "text_key": "hint.SCI-01.tra.1",
+          "animation": "LUMI points at the two wires: only their colour changes, nothing else."
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "notebook",
+          "text_key": "hint.SCI-01.tra.2",
+          "animation": "The notebook shows «چه تغییر دادم: رنگ سیم» beside «چه شد: همان» — the two rows match."
+        },
+        {
+          "level": 3,
+          "kind": "assist",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "bench",
+          "text_key": "hint.SCI-01.tra.3",
+          "animation": "A small garden diagram appears: tank → gate → flower bed; the same closed-path rule."
+        }
+      ],
+      "answer_assist": {
+        "text_key": "hint.SCI-01.tra.assist",
+        "animation": "Answer Assist: the tray offers only a wire of another colour."
+      },
+      "max_hint_for_mastery": 1
+    }
+  ]
+}

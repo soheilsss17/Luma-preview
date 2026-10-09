@@ -1,0 +1,65 @@
+{
+  "schema": "luma.pattern_puzzle/1",
+  "card_id": "MATH-01",
+  "concept_id": "PATTERN_REPEAT",
+  "quest_id": "Q01",
+  "room_id": "VIL_PLAZA",
+  "source": "Math grade 3, chapter 1 (patterns), lesson: pattern finding, book p. 8; card = plan 13 §5 / plan 12 Q01 #1",
+  "objective_fa": "فانوس‌های جشن را به ترتیب درست آویزان کن.",
+  "world_state_on_solve": "VIL_LAMPS_ON",
+  "music_layers_max": 4,
+  "stages": [
+    {
+      "puzzle_id": "MATH-01_ENC",
+      "stage": "encounter",
+      "pieces": [
+        { "id": "A", "pattern_type": "amber_round", "sprite_off": "lamp_a_off", "sprite_on": "lamp_a_on", "fallback_off": "", "fallback_on": "" },
+        { "id": "B", "pattern_type": "turquoise_hex", "sprite_off": "lamp_b_off", "sprite_on": "lamp_b_on", "fallback_off": "", "fallback_on": "" }
+      ],
+      "given": ["A", "B", "A", "B", "", ""],
+      "solution": ["A", "B", "A", "B", "A", "B"],
+      "unit_length": 2,
+      "tray": ["A", "B"]
+    },
+    {
+      "puzzle_id": "MATH-01_PRA",
+      "stage": "practice",
+      "pieces": [
+        { "id": "C", "pattern_type": "circle", "sprite_off": "lamp_round_off", "sprite_on": "lamp_round_on", "fallback_off": "lamp_a_off", "fallback_on": "lamp_a_on" },
+        { "id": "S", "pattern_type": "square", "sprite_off": "lamp_square_off", "sprite_on": "lamp_square_on", "fallback_off": "lamp_b_off", "fallback_on": "lamp_b_on" }
+      ],
+      "given": ["C", "S", "S", "C", "", ""],
+      "solution": ["C", "S", "S", "C", "S", "S"],
+      "unit_length": 3,
+      "tray": ["C", "S"]
+    }
+  ],
+  "misconceptions": [
+    { "code": "MATH_PATTERN_SURFACE_ONLY", "alias": "PAT_M01", "rule": "repeat_nearest", "error_type": "ConceptError",
+      "description": "Copies the neighbouring lamp instead of continuing the repeating unit.", "targeted_hint": 1 },
+    { "code": "MATH_PATTERN_UNIT_MISSED", "alias": "PAT_M02", "rule": "wrong_unit_length", "error_type": "ConceptError",
+      "description": "Continues with a unit of the wrong length (e.g. alternates A B when the unit is C S S).", "targeted_hint": 2 }
+  ],
+  "misconception_flag_threshold": 2,
+  "hints": [
+    { "level": 1, "kind": "attention", "trigger_wrong": 2, "trigger_idle_s": 45, "target": "first_unit_items",
+      "animation": "lumi_fly_and_glow", "text_fa": "" },
+    { "level": 2, "kind": "representation", "trigger_wrong": 0, "trigger_idle_s": 0, "target": "unit_frame",
+      "animation": "light_frame_around_unit", "text_fa": "" },
+    { "level": 3, "kind": "scaffold", "trigger_wrong": 0, "trigger_idle_s": 0, "target": "next_empty_slot",
+      "animation": "ghost_of_next_item", "text_fa": "" }
+  ],
+  "answer_assist": { "after_wrong": 3, "remove_options": 2, "records_mastery": false },
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "note": "levels 4-5 need other rooms and the workshop gears Transfer (Q02), plan 06 §9"
+  },
+  "analytics_fields": ["puzzle_id", "attempt_id", "duration", "selected_pattern_type", "error_type", "hint_level"],
+  "audio": {
+    "on_correct": "warm_village_chime + add_music_layer",
+    "on_wrong": "soft_flicker (no punishment, no layer)",
+    "on_solve": "luma_motif_3_note_ascending"
+  }
+}

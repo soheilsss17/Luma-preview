@@ -1,0 +1,388 @@
+{
+  "schema": "luma.crate_pack_puzzle/1",
+  "card_id": "MATH-06",
+  "concept_id": "THOUSAND_AS_TEN_HUNDREDS",
+  "quest_id": "Q02",
+  "room_id": "WS_STORAGE",
+  "area_id": "WORKSHOP",
+  "source": "Math grade 3, chapter 2, lesson «معرفی عدد هزار» (book pp. 28–30). Card MATH-06 (source docx v1 + detailed card): quest «انبار روستا باید موجودی بزرگی را ثبت کند»; grouping + stacking with crate snap, «۱۰ بستهٔ صدتایی → یک مجموعهٔ هزارتایی»; wrong answer = an incomplete group is made and highlighted; misconception MATH_THOUSAND_AS_COUNT_NOT_GROUP (1000 only as ‘a big number’; v1: compares numbers by written length); H1 «چند صدتایی داری؟», H2 highlight the hundred crates, H3 10 groups turn into one big crate; animations block_stack, crate_close, group_merge; analytics unit_grouped, hundred_group_created, thousand_group_created, grouping_error, solved. Textbook p.28: cookie → packet (10) → box (100) → carton (1000); ‘10 packs of 100 make 1000’; p.29 pattern ۱۰۰، ۲۰۰ … ۱۰۰۰; p.30: ten hundred-flats make 1000, 1000 has four digits. Strategy «الگوسازی» (p.26) on the encounter.",
+  "world_state_on_solve": "WS_STORAGE_SORTED",
+  "requires_world_state": "WS_IO_MACHINE_ON",
+  "music_layers_max": 4,
+  "strategy_tag": "pattern_making",
+  "group_size": 10,
+  "units": [
+    {
+      "id": "one",
+      "value": 1,
+      "sprite": "counting_block"
+    },
+    {
+      "id": "ten",
+      "value": 10,
+      "sprite": "crate_small"
+    },
+    {
+      "id": "hundred",
+      "value": 100,
+      "sprite": "hundred_crate"
+    },
+    {
+      "id": "thousand",
+      "value": 1000,
+      "sprite": "thousand_crate"
+    }
+  ],
+  "stages": [
+    {
+      "puzzle_id": "MATH-06_ENC",
+      "stage": "encounter",
+      "kind": "crate_pack",
+      "phases": [
+        {
+          "phase_id": "hundred",
+          "unit": "ten",
+          "given": 0,
+          "objective_fa": "جعبهٔ صدتایی را با ده‌تایی‌ها پر کن و طناب را بکش.",
+          "done_line_key": "line.MATH-06.hundred_done",
+          "supply": [
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "one",
+              "shelf": "b"
+            },
+            {
+              "unit": "one",
+              "shelf": "b"
+            },
+            {
+              "unit": "one",
+              "shelf": "b"
+            },
+            {
+              "unit": "ten",
+              "shelf": "c"
+            },
+            {
+              "unit": "ten",
+              "shelf": "c"
+            },
+            {
+              "unit": "ten",
+              "shelf": "c"
+            },
+            {
+              "unit": "ten",
+              "shelf": "c"
+            },
+            {
+              "unit": "ten",
+              "shelf": "c"
+            }
+          ]
+        },
+        {
+          "phase_id": "thousand",
+          "unit": "hundred",
+          "given": 0,
+          "objective_fa": "حالا جعبهٔ بزرگ را با صدتایی‌ها پر کن و طناب را بکش.",
+          "done_line_key": "line.MATH-06.thousand_done",
+          "supply": [
+            {
+              "unit": "hundred",
+              "shelf": "a",
+              "from_previous": true
+            },
+            {
+              "unit": "hundred",
+              "shelf": "top"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "top"
+            },
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "b"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "c"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "c"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "c"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "floor"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "floor"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "floor"
+            }
+          ]
+        }
+      ],
+      "label": {
+        "options": [],
+        "answer": 0,
+        "objective_fa": "",
+        "done_line_key": ""
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "container_count",
+          "animation": "LUMI circles over the container and the tally board; the crates inside pulse one by one (card H1: «چند صدتایی داری؟»)",
+          "text_key": "hint.MATH-06.1.hundred",
+          "text_key_by_unit": {
+            "ten": "hint.MATH-06.1.ten",
+            "hundred": "hint.MATH-06.1.hundred",
+            "label": "hint.MATH-06.1.hundred"
+          }
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "right_unit_and_slots",
+          "animation": "the crates of the right unit glow on the rack; every empty slot shows a dashed outline with its tally number (۷۰۰، ۸۰۰ … ۱۰۰۰) — the counting pattern (card H2: highlight the hundred crates; strategy «الگوسازی» p.26). Label phase: the tally cells light one by one ۱۰۰ … ۱۰۰۰",
+          "text_key": "hint.MATH-06.2.hundred",
+          "text_key_by_unit": {
+            "ten": "hint.MATH-06.2.ten",
+            "hundred": "hint.MATH-06.2.hundred",
+            "label": "hint.MATH-06.2.hundred"
+          }
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "ghost_fill",
+          "animation": "ghost crates slide into the empty slots one by one while the tally counts on, then the ghost lid closes and the group merges into one big crate (card H3: 10 groups turn into one big crate). Label phase: a ghost ۱۰۰۰ plate appears on the crate",
+          "text_key": ""
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "remove_distractors",
+        "label_action": "remove_one_wrong_plate",
+        "records_mastery": false
+      },
+      "source_note": "card: the child builds the groups herself — ten tens close into one hundred-crate (textbook p.28 packet → box), then ten hundred-crates (the one she just made + nine from the rack) close into the thousand-crate (box → carton). Loose blocks / ten-crates on the rack are the wrong-size distractors (card misconception: counting objects, not groups). Finale: the ۱۰۰۰ plate appears with «ده تا صدتایی، یک هزارتایی»."
+    },
+    {
+      "puzzle_id": "MATH-06_PRA",
+      "stage": "practice",
+      "kind": "crate_pack",
+      "phases": [
+        {
+          "phase_id": "refill",
+          "unit": "hundred",
+          "given": 6,
+          "objective_fa": "جعبهٔ بزرگ نیمه‌پر است؛ کاملش کن و طناب را بکش.",
+          "done_line_key": "",
+          "supply": [
+            {
+              "unit": "hundred",
+              "shelf": "top"
+            },
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "ten",
+              "shelf": "top"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "b"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "c"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "c"
+            },
+            {
+              "unit": "hundred",
+              "shelf": "c"
+            }
+          ]
+        }
+      ],
+      "label": {
+        "options": [
+          100,
+          1000,
+          10000
+        ],
+        "answer": 1000,
+        "objective_fa": "روی جعبهٔ بسته کدام برچسب را بزنیم؟",
+        "done_line_key": "line.MATH-06.label_done"
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "container_count",
+          "animation": "LUMI circles over the container and the tally board; the crates inside pulse one by one (card H1: «چند صدتایی داری؟»)",
+          "text_key": "hint.MATH-06.1.hundred",
+          "text_key_by_unit": {
+            "ten": "hint.MATH-06.1.ten",
+            "hundred": "hint.MATH-06.1.hundred",
+            "label": "hint.MATH-06.1.hundred"
+          }
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "right_unit_and_slots",
+          "animation": "the crates of the right unit glow on the rack; every empty slot shows a dashed outline with its tally number (۷۰۰، ۸۰۰ … ۱۰۰۰) — the counting pattern (card H2: highlight the hundred crates; strategy «الگوسازی» p.26). Label phase: the tally cells light one by one ۱۰۰ … ۱۰۰۰",
+          "text_key": "hint.MATH-06.2.hundred",
+          "text_key_by_unit": {
+            "ten": "hint.MATH-06.2.ten",
+            "hundred": "hint.MATH-06.2.hundred",
+            "label": "hint.MATH-06.2.hundred"
+          }
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "ghost_fill",
+          "animation": "ghost crates slide into the empty slots one by one while the tally counts on, then the ghost lid closes and the group merges into one big crate (card H3: 10 groups turn into one big crate). Label phase: a ghost ۱۰۰۰ plate appears on the crate",
+          "text_key": ""
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "remove_distractors",
+        "label_action": "remove_one_wrong_plate",
+        "records_mastery": false
+      },
+      "source_note": "card practice: the thousand-crate already holds some hundreds (textbook p.28: «اگر علی ۹ سکهٔ ۱۰۰ ریالی بدهد چند تای دیگر…») — the child fills only the missing ones; the rack has one hundred too many (a drop into the full crate is refused, not an error). Then the label: ۱۰۰ names the crate by one of its groups (MATH_THOUSAND_AS_COUNT_NOT_GROUP), ۱۰۰۰۰ is ‘just a big number’ (card v2: MATH_THOUSAND_JUST_BIG_NUMBER; v1: longer number = bigger)."
+    }
+  ],
+  "misconceptions": [
+    {
+      "code": "MATH_THOUSAND_AS_COUNT_NOT_GROUP",
+      "alias": "TH-M01",
+      "rule": "smaller_unit",
+      "error_type": "ConceptError",
+      "description": "Counts ten objects, not ten groups: puts a ten-crate (or a loose block) where a hundred-crate (a ten-crate) belongs, as if any ten things make the next unit (card MATH-06).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "MATH_THOUSAND_AS_COUNT_NOT_GROUP",
+      "alias": "TH-M01",
+      "rule": "one_group_label",
+      "error_type": "ConceptError",
+      "description": "Labels the full thousand-crate ۱۰۰ — names the crate by one of its groups instead of ten groups of a hundred (card MATH-06).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "MATH_THOUSAND_JUST_BIG_NUMBER",
+      "alias": "TH-M02",
+      "rule": "big_number",
+      "error_type": "ConceptError",
+      "description": "Picks the longest / biggest-looking number (۱۰۰۰۰) for the thousand-crate: 1000 only as ‘a big number’, compared by written length (card v1 + v2).",
+      "targeted_hint": 1
+    }
+  ],
+  "procedure_errors": [
+    {
+      "rule": "incomplete",
+      "error_type": "ProcedureError",
+      "event": "grouping_error",
+      "note": "card wrong answer: pulling the rope with fewer than ten groups — the lid bounces back up and the empty slots are highlighted. Counts as a wrong attempt for hints; not a misconception."
+    }
+  ],
+  "design_mitigations": [
+    {
+      "alias": "TH-M03",
+      "code": "MATH_THOUSAND_SIZE_ONLY",
+      "note": "all crates of one unit share one sprite and one size, and every crate shows its value on its brass plate (engine-written ۱۰ / ۱۰۰ / ۱۰۰۰), so the child never has to guess a unit from colour; the relative sizes stay true (a ten-crate is one tenth of a hundred-crate's width) so size supports — never replaces — the count."
+    }
+  ],
+  "misconception_flag_threshold": 2,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "note": "card: L1 sees the thousand built, L2 builds it with H1/H2, L3 fills and labels a thousand-crate alone (concrete model + numeral). L4/L5 need the transfer in another context (market inventory / coins, later quest, plan 06 §9)."
+  },
+  "analytics_fields": [
+    "puzzle_id",
+    "attempt_id",
+    "duration",
+    "unit",
+    "group_value",
+    "grouping_error",
+    "error_type",
+    "misconception",
+    "label_placed",
+    "hint_level",
+    "solved"
+  ],
+  "audio": {
+    "on_drop": "SFX_CRATE_SET (wood on wood; smaller crates higher and lighter)",
+    "on_close": "SFX_CRATE_LID_CLOSE (thud + latch) after SFX_ROPE_PULL",
+    "on_wrong": "soft snap as the wrong crate pops back; flicker on the amber tally cell — never harsh",
+    "on_merge": "shimmer + stamp as the plate writes its number",
+    "on_solve": "luma_motif_3_note_ascending; bell when the storage lights come on"
+  }
+}

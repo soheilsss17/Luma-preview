@@ -1,0 +1,80 @@
+{
+  "schema": "luma.step_count_puzzle/1",
+  "card_id": "MATH-02",
+  "concept_id": "SKIP_COUNT_EQUAL_GROUPS",
+  "quest_id": "Q01",
+  "room_id": "VIL_PLAZA",
+  "area_id": "FESTIVAL_STALL",
+  "source": "Math grade 3, chapter 1, lesson «شمارش چندتا چندتا» (book p. 10). Card v1.0 (source docx L1689: 12 fruits into 4 equal baskets, Drag & Group + snap, GROUP-M01/M02, H1–H3) + card v1.1 (L2770: groups of 2, 5, 10, Number Trail, tap to count a group, counting one by one allowed but slower + comparative observation). Plan 12 §1 row 2: Number Trail steps 2/5/10 on the plaza paving → 12 fruits into 4 baskets at the festival stall; world state VIL_STALL_READY; Transfer later in the mill (Q04, outside the VS).",
+  "world_state_on_solve": "VIL_STALL_READY",
+  "requires_world_state": "VIL_LAMPS_ON",
+  "music_layers_max": 4,
+  "stages": [
+    {
+      "puzzle_id": "MATH-02_ENC",
+      "stage": "encounter",
+      "kind": "number_trail",
+      "objective_fa": "سیب‌ها را روی میز بگذار تا تیکو درست روی سنگِ طلایی بایستد.",
+      "single_source": { "id": "heap", "size": 1, "sprite": "fruit_heap", "unlimited": true },
+      "rounds": [
+        { "round_id": "R2",  "step": 2,  "target": 10, "container": "basket", "groups": 6, "colours": ["R"],
+          "trail_max": 12 },
+        { "round_id": "R5",  "step": 5,  "target": 20, "container": "basket", "groups": 5, "colours": ["G", "R"],
+          "trail_max": 25 },
+        { "round_id": "R10", "step": 10, "target": 30, "container": "crate",  "groups": 4, "colours": ["G", "G", "G", "G", "G", "R", "R", "R", "R", "R"],
+          "trail_max": 40 }
+      ],
+      "hints": [
+        { "level": 1, "kind": "attention", "trigger_wrong": 2, "trigger_idle_s": 45, "target": "one_supply_group",
+          "animation": "lumi_circles_a_whole_basket", "text_key": "hint.MATH-02.enc.1" },
+        { "level": 2, "kind": "representation", "trigger_wrong": 0, "trigger_idle_s": 0, "target": "one_full_group",
+          "animation": "glow_one_full_basket + dotted arc of one step on the trail", "text_key": "" },
+        { "level": 3, "kind": "scaffold", "trigger_wrong": 0, "trigger_idle_s": 0, "target": "trail_step_numbers",
+          "animation": "step numbers appear on the ground stones", "text_key": "" }
+      ],
+      "answer_assist": { "after_wrong": 3, "action": "remove_heap_and_extra_groups", "records_mastery": false }
+    },
+    {
+      "puzzle_id": "MATH-02_PRA",
+      "stage": "practice",
+      "kind": "basket_snap",
+      "objective_fa": "۱۲ سیب را در ۴ سبد بچین؛ همهٔ سبدها باید برابر باشند.",
+      "fruits": 12,
+      "baskets": 4,
+      "basket_capacity": 7,
+      "hints": [
+        { "level": 1, "kind": "attention", "trigger_wrong": 2, "trigger_idle_s": 45, "target": "all_baskets",
+          "animation": "lumi_flies_over_the_baskets_comparing", "text_key": "hint.MATH-02.pra.1" },
+        { "level": 2, "kind": "representation", "trigger_wrong": 0, "trigger_idle_s": 0, "target": "example_basket_of_3",
+          "animation": "one basket with 3 apples highlighted as the example", "text_key": "" },
+        { "level": 3, "kind": "scaffold", "trigger_wrong": 0, "trigger_idle_s": 0, "target": "ghost_slots",
+          "animation": "3 ghost slots in every basket show its share", "text_key": "" }
+      ],
+      "answer_assist": { "after_wrong": 3, "action": "cap_each_basket_at_share", "records_mastery": false }
+    }
+  ],
+  "misconceptions": [
+    { "code": "MATH_COUNT_BY_ONES_ONLY", "alias": "SKIP-M01", "rule": "ones_only", "error_type": "StrategyError",
+      "description": "Reaches the total only by adding single apples: treats skip counting as ‘just faster counting’ and does not use the equal groups (card v1.1).", "targeted_hint": 1 },
+    { "code": "MATH_OVERSHOOT_STEP", "alias": "", "rule": "overshoot", "error_type": "CountError",
+      "description": "Adds one more group after the target (does not stop at the target while stepping). Team addition (not in the source cards): logged for the parent report, never shown as an error message.", "targeted_hint": 3 },
+    { "code": "MATH_TOTAL_WITHOUT_GROUPS", "alias": "GROUP-M01", "rule": "not_grouped", "error_type": "ConceptError",
+      "description": "Puts all fruit in some baskets and leaves others empty: counts the total without forming groups (card v1.0).", "targeted_hint": 1 },
+    { "code": "MATH_UNEQUAL_GROUPS", "alias": "GROUP-M02", "rule": "unequal", "error_type": "ConceptError",
+      "description": "Every basket has fruit but the groups are not equal, e.g. 4 3 3 2 (card v1.0).", "targeted_hint": 2 }
+  ],
+  "misconception_flag_threshold": 2,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "note": "card v1.1 mastery: equal steps with two different group types (steps 2/5/10 + baskets of 3) + Transfer. Levels 4-5 need the Transfer (mill sacks in groups of 3, Q04; workshop screws in equal boxes) — outside the VS, plan 06 §9"
+  },
+  "analytics_fields": ["puzzle_id", "attempt_id", "duration", "round_id", "group_size", "count", "counting_method", "error_type", "hint_level"],
+  "audio": {
+    "on_group_count": "counting tick per step (count_pulse)",
+    "on_place": "fruit soft thump / basket wooden click",
+    "on_wrong": "soft wobble, no punishment, no layer",
+    "on_solve": "success bell + luma_motif_3_note_ascending"
+  }
+}

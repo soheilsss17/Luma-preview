@@ -1,0 +1,97 @@
+{
+  "id": "MUS_ENV_WORKSHOP",
+  "title": "Workshop — Curious Gears",
+  "bpm": 88,
+  "meter": "4/4",
+  "scale": "chahargah_C",
+  "bar_seconds": 2.727272727272727,
+  "loop_start": 5.4545,
+  "loop_end": 152.7273,
+  "sections": [
+    {
+      "name": "Intro",
+      "start": 0.0,
+      "bars": 2
+    },
+    {
+      "name": "A — gears",
+      "start": 5.455,
+      "bars": 16
+    },
+    {
+      "name": "B — invention",
+      "start": 49.091,
+      "bars": 16
+    },
+    {
+      "name": "C — breathing space",
+      "start": 92.727,
+      "bars": 8
+    },
+    {
+      "name": "A' — return",
+      "start": 114.545,
+      "bars": 12
+    },
+    {
+      "name": "Turnaround",
+      "start": 147.273,
+      "bars": 2
+    }
+  ],
+  "stems": {
+    "BASE": "MUS_ENV_WORKSHOP__BASE.ogg",
+    "RHYTHM": "MUS_ENV_WORKSHOP__RHYTHM.ogg",
+    "MELODY": "MUS_ENV_WORKSHOP__MELODY.ogg"
+  },
+  "layer_for_stem": {
+    "BASE": 0,
+    "RHYTHM": 0,
+    "MELODY": 0
+  },
+  "stem_list": [
+    {
+      "name": "BASE",
+      "file": "MUS_ENV_WORKSHOP__BASE.ogg",
+      "layer": 0
+    },
+    {
+      "name": "RHYTHM",
+      "file": "MUS_ENV_WORKSHOP__RHYTHM.ogg",
+      "layer": 0
+    },
+    {
+      "name": "MELODY",
+      "file": "MUS_ENV_WORKSHOP__MELODY.ogg",
+      "layer": 0
+    }
+  ],
+  "adaptive": "Puzzle focus: MELODY −6 dB, RHYTHM stays (gears keep ticking); solved: MUS_STINGER_DISCOVERY then full mix.",
+  "render": {
+    "engine": "TinySoundFont (tinysoundfont pip)",
+    "soundfont": "GeneralUser GS 1.47 (S. Christian Collins)",
+    "gm_programs": {
+      "santur": 15,
+      "ney": 77,
+      "dotar": 24,
+      "kamancheh": 40,
+      "strings": 49
+    },
+    "kit": {
+      "dum": 64,
+      "tek": 60,
+      "tek2": 62,
+      "daf_low": 41,
+      "daf_jingle": 54
+    },
+    "reverb": "synthetic small room RT60 0.9 s, wet 0.2"
+  },
+  "qa": {
+    "integrated_lufs": -18.99,
+    "sample_peak_dbfs": -1.5,
+    "seam_rms_ratio": 12.29,
+    "rms_dbfs_BASE": -25.9,
+    "rms_dbfs_RHYTHM": -31.7,
+    "rms_dbfs_MELODY": -25.9
+  }
+}

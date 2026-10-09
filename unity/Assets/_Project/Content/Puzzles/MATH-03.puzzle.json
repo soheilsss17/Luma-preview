@@ -1,0 +1,322 @@
+{
+  "schema": "luma.io_machine_puzzle/1",
+  "card_id": "MATH-03",
+  "concept_id": "INPUT_OUTPUT_RULE",
+  "quest_id": "Q02",
+  "room_id": "WS_MACHINE_ROOM",
+  "area_id": "WORKSHOP",
+  "source": "Math grade 3, chapter 1, lesson «ماشین‌های ورودی ـ خروجی» (book pp. 13–15). Card v1.0 (source docx: machine 2→4, 3→6, 4→?; wrong answer = soft stop / warning lamp; IO-M01 rule from one example, IO-M02 attends to gear shape, IO-M03 no relation from two examples; H1 compare the two examples, H2 a line linking the examples, H3 a visual ×2 on one example; mastery ×2 → +3 → ×3 + a new rule without H3). Textbook p.13: a +5 machine and «if 15 came out, what went in?» (the reverse question = PRA); p.14 find inputs from outputs. Quest Q02: the workshop parts machine forgot its rule; the clock tower needs parts. World state WS_IO_MACHINE_ON; the water-machine Transfer is later (outside the VS).",
+  "world_state_on_solve": "WS_IO_MACHINE_ON",
+  "requires_world_state": "VIL_FESTIVAL_STARTED",
+  "music_layers_max": 4,
+  "stages": [
+    {
+      "puzzle_id": "MATH-03_ENC",
+      "stage": "encounter",
+      "kind": "io_machine",
+      "objective_fa": "ماشین قاعده‌اش را فراموش کرده. چرخ‌دندهٔ درست را بگذار و اهرم را بکش.",
+      "answer_objective_fa": "حالا بگو: ماشین با عدد ۴ چه می‌سازد؟",
+      "rule": {
+        "op": "mul",
+        "n": 2
+      },
+      "memory": [
+        {
+          "in": 2,
+          "out": 4
+        },
+        {
+          "in": 3,
+          "out": 6
+        }
+      ],
+      "ask": {
+        "kind": "output",
+        "in": 4
+      },
+      "answer_options": [
+        6,
+        7,
+        8
+      ],
+      "gears": [
+        {
+          "id": "g_add2",
+          "op": "add",
+          "n": 2
+        },
+        {
+          "id": "g_mul2",
+          "op": "mul",
+          "n": 2
+        },
+        {
+          "id": "g_mul3",
+          "op": "mul",
+          "n": 3
+        }
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 45,
+          "target": "memory_rows",
+          "animation": "LUMI flies from the first memory row to the second and back; both rows pulse together (card H1: «دو نمونه را با هم مقایسه کن»)",
+          "text_key": "hint.MATH-03.enc.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "dot_groups",
+          "animation": "a glowing line links the two examples and each number becomes dot groups: ×n = the input repeated n times, +n = the input plus n extra dots in another colour (card H2: line linking the examples)",
+          "text_key": ""
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "ghost_rule",
+          "animation": "a ghost of the correct rule plaque appears on the first row's arrow (card H3: a visual ×۲ on one example)",
+          "text_key": ""
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "remove_one_wrong_option",
+        "records_mastery": false
+      },
+      "source_note": "card v1.0 puzzle verbatim: 2→4, 3→6, 4→? = 8. Gears: +۲ fits only the first example (IO-M01), ×۳ fits none (IO-M03); answer option ۷ = the card's wrong 4→7, ۶ = the +۲ single-example rule applied"
+    },
+    {
+      "puzzle_id": "MATH-03_PRA",
+      "stage": "practice",
+      "kind": "io_machine",
+      "objective_fa": "قاعده عوض شده! چرخ‌دندهٔ درست را پیدا کن.",
+      "answer_objective_fa": "ماشین عدد ۱۰ را بیرون داده. چه عددی واردش شده بود؟",
+      "rule": {
+        "op": "add",
+        "n": 3
+      },
+      "memory": [
+        {
+          "in": 1,
+          "out": 4
+        },
+        {
+          "in": 5,
+          "out": 8
+        }
+      ],
+      "ask": {
+        "kind": "input",
+        "out": 10
+      },
+      "answer_options": [
+        7,
+        13,
+        6
+      ],
+      "gears": [
+        {
+          "id": "g_add3",
+          "op": "add",
+          "n": 3
+        },
+        {
+          "id": "g_mul4",
+          "op": "mul",
+          "n": 4
+        },
+        {
+          "id": "g_add4",
+          "op": "add",
+          "n": 4
+        }
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 45,
+          "target": "memory_rows",
+          "animation": "LUMI flies from the first memory row to the second and back; both rows pulse together (card H1: «دو نمونه را با هم مقایسه کن»)",
+          "text_key": "hint.MATH-03.pra.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "dot_groups",
+          "animation": "a glowing line links the two examples and each number becomes dot groups: ×n = the input repeated n times, +n = the input plus n extra dots in another colour (card H2: line linking the examples)",
+          "text_key": ""
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "ghost_rule",
+          "animation": "a ghost of the correct rule plaque appears on the first row's arrow (card H3: a visual ×۲ on one example)",
+          "text_key": ""
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "remove_one_wrong_option",
+        "records_mastery": false
+      },
+      "source_note": "textbook p.13 activity: «اگر عدد ۱۵ از ماشین خارج شده باشد، چه عددی وارد آن شده است؟» — the reverse question with a +n machine. Gears: ×۴ fits only 1→4 (IO-M01), +۴ fits none (IO-M03); option ۱۳ = rule applied forward (IO-M04), ۶ = off by one"
+    },
+    {
+      "puzzle_id": "MATH-03_TRA",
+      "stage": "transfer",
+      "kind": "io_machine",
+      "objective_fa": "یک قاعدهٔ تازه! چرخ‌دندهٔ درست را پیدا کن.",
+      "answer_objective_fa": "ماشین با عدد ۵ چه می‌سازد؟",
+      "rule": {
+        "op": "mul",
+        "n": 3
+      },
+      "memory": [
+        {
+          "in": 2,
+          "out": 6
+        },
+        {
+          "in": 4,
+          "out": 12
+        }
+      ],
+      "ask": {
+        "kind": "output",
+        "in": 5
+      },
+      "answer_options": [
+        9,
+        15,
+        10
+      ],
+      "gears": [
+        {
+          "id": "g_add4",
+          "op": "add",
+          "n": 4
+        },
+        {
+          "id": "g_mul3",
+          "op": "mul",
+          "n": 3
+        },
+        {
+          "id": "g_mul2",
+          "op": "mul",
+          "n": 2
+        }
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 45,
+          "target": "memory_rows",
+          "animation": "LUMI flies from the first memory row to the second and back; both rows pulse together (card H1: «دو نمونه را با هم مقایسه کن»)",
+          "text_key": "hint.MATH-03.tra.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "dot_groups",
+          "animation": "a glowing line links the two examples and each number becomes dot groups: ×n = the input repeated n times, +n = the input plus n extra dots in another colour (card H2: line linking the examples)",
+          "text_key": ""
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "ghost_rule",
+          "animation": "a ghost of the correct rule plaque appears on the first row's arrow (card H3: a visual ×۲ on one example)",
+          "text_key": ""
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "remove_one_wrong_option",
+        "records_mastery": false
+      },
+      "max_hint_for_mastery": 2,
+      "source_note": "card mastery: ×2 → +3 → ×3 and a new rule without H3. Gears: +۴ fits only 2→6 (IO-M01), ×۲ fits none (IO-M03); options ۹ (+۴ thinking) and ۱۰ (×۲ thinking)"
+    }
+  ],
+  "misconceptions": [
+    {
+      "code": "MATH_IO_SINGLE_EXAMPLE_RULE",
+      "alias": "IO-M01",
+      "rule": "single_example",
+      "error_type": "ConceptError",
+      "description": "Picks a rule that explains only one example (e.g. +2 because 2→4) and does not check it against the second (card v1.0).",
+      "targeted_hint": 1
+    },
+    {
+      "code": "MATH_IO_NO_EXAMPLE_RELATION",
+      "alias": "IO-M03",
+      "rule": "no_fit",
+      "error_type": "ConceptError",
+      "description": "Picks a rule that explains neither example: no relation extracted from the two examples (card v1.0, e.g. the card's 4→7).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "MATH_IO_REVERSE_APPLIES_FORWARD",
+      "alias": "IO-M04",
+      "rule": "reverse_forward",
+      "error_type": "ProcedureError",
+      "description": "In the reverse question applies the rule forward to the output (10 + 3 = 13) instead of undoing it. Team addition from textbook p.13 (not in the source card list): logged for the parent report, never shown as an error message.",
+      "targeted_hint": 2
+    }
+  ],
+  "design_mitigations": [
+    {
+      "alias": "IO-M02",
+      "code": "MATH_IO_GEAR_SHAPE",
+      "note": "card v1.0 IO-M02 (looks at the gear shape): all rule gears have the same size, colour and teeth; only the plaque differs, so shape can never carry the answer. Not classified at runtime."
+    }
+  ],
+  "misconception_flag_threshold": 2,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "transfer_without_h3": 4,
+    "note": "card v1.0: ×2 → +3 → ×3 + a new rule without H3 → level 4 in the TRA stage when max hint ≤ 2. Level 5 needs the water-machine Transfer (later quest, plan 06 §9)."
+  },
+  "analytics_fields": [
+    "puzzle_id",
+    "attempt_id",
+    "duration",
+    "input_entered",
+    "output_observed",
+    "rule_attempted",
+    "rule_error",
+    "error_type",
+    "hint_level",
+    "solved",
+    "transfer_solved"
+  ],
+  "audio": {
+    "on_start": "SFX_MACHINE_START (lever clunk + boiler whoosh)",
+    "on_process": "SFX_GEAR_ROTATE loop while a token is inside",
+    "on_output": "SFX_OUTPUT_DROP (walnut token into the tray)",
+    "on_wrong": "SFX_MACHINE_FAIL_SOFT (hiccup + steam puff, amber lamp, no punishment)",
+    "on_solve": "success bell + luma_motif_3_note_ascending; counter bell"
+  }
+}

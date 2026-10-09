@@ -1,0 +1,480 @@
+{
+  "schema": "luma.sentence_board_puzzle/1",
+  "card_id": "W-01",
+  "concept_id": "WR_COHERENT_DESCRIPTION",
+  "quest_id": "Q01",
+  "room_id": "VIL_SIGN_AREA",
+  "area_id": "INTRO_BOARD",
+  "world_state_on_solve": "VIL_INTRO_BOARD_UP",
+  "requires_world_state": "VIL_SIGNS_FIXED",
+  "music_layers_max": 4,
+  "source": "Persian writing (نگارش) grade 3, chapter 1 «نهادها», lesson 1 «محله‌ی ما». Card WRITING-01 (source docx, WRITING section): Quest, Village Plaza + School Route + Market, Drag → Snap → Sentence Assembly → Sequence, rail physics, H1–H3 verbatim, W01_ASSET_01..05, UI Sentence tray + order 1–4 + Undo, analytics, mastery «a coherent four-sentence description in a NEW environment», transfer «describe the library with four new pictures». Plan 04 row 01 (W-n = production step of P-n, run in the P-n room), plan 12 §1 row 4.",
+  "design_note": "The four places are the ones the child actually walked through in Q01 (plaza houses and lamps → fruit stall → garden edge = park → school/crossroads), so the description follows the real route. Every sentence after the first refers back to the previous place («از خانه …», «بعد از بازار …», «آن طرفِ پارک …»); the order is therefore decided by the text itself (cohesion), which is exactly what the card misconception denies. The practice uses a NEW environment (library, 4 new pictures) with the same logic, as the card mastery requires.",
+  "stages": [
+    {
+      "puzzle_id": "W-01_ENC",
+      "stage": "encounter",
+      "kind": "sentence_board",
+      "collect": true,
+      "objective_fa": {
+        "collect": "تکه‌های تابلوی محله را در میدان پیدا کن.",
+        "match": "هر جمله را کنار تصویر درستش بگذار.",
+        "sequence": "جمله‌ها را به ترتیب درست بچین و مهر بزن.",
+        "done": "تابلوی محله دوباره سر پا شد!"
+      },
+      "cards": [
+        {
+          "card_id": "HOUSE",
+          "name_fa": "خانه",
+          "sprite": "w01_card_house",
+          "picto": "house",
+          "name_key": "card.W-01.HOUSE"
+        },
+        {
+          "card_id": "SCHOOL",
+          "name_fa": "مدرسه",
+          "sprite": "w01_card_school",
+          "picto": "school",
+          "name_key": "card.W-01.SCHOOL"
+        },
+        {
+          "card_id": "MARKET",
+          "name_fa": "بازار",
+          "sprite": "w01_card_market",
+          "picto": "market",
+          "name_key": "card.W-01.MARKET"
+        },
+        {
+          "card_id": "PARK",
+          "name_fa": "پارک",
+          "sprite": "w01_card_park",
+          "picto": "park",
+          "name_key": "card.W-01.PARK"
+        }
+      ],
+      "initial_rows": [
+        "MARKET",
+        "SCHOOL",
+        "HOUSE",
+        "PARK"
+      ],
+      "answer_order": [
+        "HOUSE",
+        "MARKET",
+        "PARK",
+        "SCHOOL"
+      ],
+      "plaques": [
+        {
+          "plaque_id": "W1_HOUSE",
+          "subject": "HOUSE",
+          "text_fa": "محله‌ی ما کوچک و قشنگ است و خانه‌ی ما کنار میدانش است.",
+          "tts_fa": "محله‌ی ما کوچک و قشنگ است و خانه‌ی ما کنارِ میدانش است.",
+          "subject_words": [
+            "خانه‌ی ما"
+          ],
+          "traps": [],
+          "link": null,
+          "intro_words": [
+            "محله‌ی ما"
+          ],
+          "audio_key": "W-01_enc_house"
+        },
+        {
+          "plaque_id": "W1_MARKET",
+          "subject": "MARKET",
+          "text_fa": "از خانه که بیرون می‌آییم، اول به بازار می‌رسیم و میوه می‌خریم.",
+          "tts_fa": "از خانه که بیرون می‌آییم، اول به بازار می‌رسیم و میوه می‌خریم.",
+          "subject_words": [
+            "بازار"
+          ],
+          "traps": [
+            {
+              "card": "HOUSE",
+              "word": "خانه"
+            }
+          ],
+          "link": {
+            "words": "از خانه",
+            "refers_to": "HOUSE",
+            "kind": "place"
+          },
+          "intro_words": [],
+          "audio_key": "W-01_enc_market"
+        },
+        {
+          "plaque_id": "W1_PARK",
+          "subject": "PARK",
+          "text_fa": "بعد از بازار، به پارک می‌رسیم که پر از گل و درخت است.",
+          "tts_fa": "بعد از بازار، به پارک می‌رسیم که پُر از گُل و درخت است.",
+          "subject_words": [
+            "پارک"
+          ],
+          "traps": [
+            {
+              "card": "MARKET",
+              "word": "بازار"
+            }
+          ],
+          "link": {
+            "words": "بعد از بازار",
+            "refers_to": "MARKET",
+            "kind": "place"
+          },
+          "intro_words": [],
+          "audio_key": "W-01_enc_park"
+        },
+        {
+          "plaque_id": "W1_SCHOOL",
+          "subject": "SCHOOL",
+          "text_fa": "آن طرفِ پارک، مدرسه است و صدای زنگش تا خانه می‌آید.",
+          "tts_fa": "آن طرفِ پارک، مدرسه است و صدای زنگش تا خانه می‌آید.",
+          "subject_words": [
+            "مدرسه"
+          ],
+          "traps": [
+            {
+              "card": "PARK",
+              "word": "پارک"
+            },
+            {
+              "card": "HOUSE",
+              "word": "خانه"
+            }
+          ],
+          "link": {
+            "words": "آن طرفِ پارک",
+            "refers_to": "PARK",
+            "kind": "place"
+          },
+          "intro_words": [],
+          "audio_key": "W-01_enc_school"
+        }
+      ],
+      "plaque_tray_order": [
+        "W1_SCHOOL",
+        "W1_PARK",
+        "W1_MARKET",
+        "W1_HOUSE"
+      ],
+      "hints_match": [
+        {
+          "level": 1,
+          "text_key": "hint.W-01.1",
+          "text_fa": "اول ببین درباره چه مکانی صحبت می‌کنیم.",
+          "tts_fa": "اول ببین دربارهٔ چه مکانی صحبت می‌کنیم.",
+          "effect": "lumi_reads_plaque",
+          "audio_key": "W-01_hint_1",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 45
+        },
+        {
+          "level": 2,
+          "text_key": "hint.W-01.1",
+          "text_fa": "اول ببین درباره چه مکانی صحبت می‌کنیم.",
+          "tts_fa": "اول ببین دربارهٔ چه مکانی صحبت می‌کنیم.",
+          "effect": "highlight_subject"
+        },
+        {
+          "level": 3,
+          "text_key": "hint.W-01.1",
+          "text_fa": "اول ببین درباره چه مکانی صحبت می‌کنیم.",
+          "tts_fa": "اول ببین دربارهٔ چه مکانی صحبت می‌کنیم.",
+          "effect": "subject_and_picture"
+        }
+      ],
+      "hints_sequence": [
+        {
+          "level": 1,
+          "text_key": "hint.W-01.2",
+          "text_fa": "جمله‌ها را طوری بچین که خواننده بتواند مسیر را دنبال کند.",
+          "tts_fa": "جمله‌ها را طوری بچین که خواننده بتواند مسیر را دنبال کند.",
+          "effect": "lumi_walks_rows",
+          "audio_key": "W-01_hint_2",
+          "trigger_wrong": 1,
+          "trigger_idle_s": 40
+        },
+        {
+          "level": 2,
+          "text_key": "hint.W-01.2",
+          "text_fa": "جمله‌ها را طوری بچین که خواننده بتواند مسیر را دنبال کند.",
+          "tts_fa": "جمله‌ها را طوری بچین که خواننده بتواند مسیر را دنبال کند.",
+          "effect": "highlight_links"
+        },
+        {
+          "level": 3,
+          "text_key": "hint.W-01.3",
+          "text_fa": "از جایی شروع کن که معرفی‌کننده محله است و بعد به مکان‌های دیگر برو.",
+          "tts_fa": "از جایی شروع کن که معرفی‌کنندهٔ محله است و بعد به مکان‌های دیگر برو.",
+          "effect": "intro_first"
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "records_mastery": false,
+        "action_match": "two_rows_only",
+        "action_sequence": "intro_locked_first",
+        "note": "match: only the right row and the trap row accept the plaque; sequence: the introducing row slides to slot ۱ and locks"
+      },
+      "board_title_key": "board.W-01.enc"
+    },
+    {
+      "puzzle_id": "W-01_PRA",
+      "stage": "practice",
+      "kind": "sentence_board",
+      "collect": false,
+      "objective_fa": {
+        "match": "کتابخانه را هم با چهار جمله معرفی کن.",
+        "sequence": "جمله‌ها را به ترتیب درست بچین و مهر بزن.",
+        "done": "محله و کتابخانه‌اش حالا معرفی شده‌اند."
+      },
+      "cards": [
+        {
+          "card_id": "LIB_BUILDING",
+          "name_fa": "ساختمان کتابخانه",
+          "sprite": "w01_card_building",
+          "picto": "building",
+          "name_key": "card.W-01.LIB_BUILDING"
+        },
+        {
+          "card_id": "LIB_SHELVES",
+          "name_fa": "قفسه‌ی کتاب",
+          "sprite": "w01_card_shelves",
+          "picto": "shelves",
+          "name_key": "card.W-01.LIB_SHELVES"
+        },
+        {
+          "card_id": "LIB_TABLE",
+          "name_fa": "میز مطالعه",
+          "sprite": "w01_card_table",
+          "picto": "table",
+          "name_key": "card.W-01.LIB_TABLE"
+        },
+        {
+          "card_id": "LIB_DESK",
+          "name_fa": "میز کتابدار",
+          "sprite": "w01_card_desk",
+          "picto": "desk",
+          "name_key": "card.W-01.LIB_DESK"
+        }
+      ],
+      "initial_rows": [
+        "LIB_TABLE",
+        "LIB_DESK",
+        "LIB_SHELVES",
+        "LIB_BUILDING"
+      ],
+      "answer_order": [
+        "LIB_BUILDING",
+        "LIB_SHELVES",
+        "LIB_TABLE",
+        "LIB_DESK"
+      ],
+      "plaques": [
+        {
+          "plaque_id": "W1_LIB_BUILDING",
+          "subject": "LIB_BUILDING",
+          "text_fa": "کتابخانه‌ی محله‌ی ما یک ساختمانِ سنگی با پنجره‌های بلند است.",
+          "tts_fa": "کتابخانه‌ی محله‌ی ما یک ساختمانِ سنگی با پنجره‌های بلند است.",
+          "subject_words": [
+            "ساختمانِ سنگی"
+          ],
+          "traps": [],
+          "link": null,
+          "intro_words": [
+            "کتابخانه‌ی محله‌ی ما"
+          ],
+          "audio_key": "W-01_pra_building"
+        },
+        {
+          "plaque_id": "W1_LIB_SHELVES",
+          "subject": "LIB_SHELVES",
+          "text_fa": "وقتی از درِ آن وارد می‌شویم، قفسه‌های پر از کتاب را می‌بینیم.",
+          "tts_fa": "وقتی از درِ آن وارد می‌شویم، قفسه‌های پُر از کتاب را می‌بینیم.",
+          "subject_words": [
+            "قفسه‌های پر از کتاب"
+          ],
+          "traps": [
+            {
+              "card": "LIB_BUILDING",
+              "word": "درِ آن"
+            }
+          ],
+          "link": {
+            "words": "وقتی از درِ آن وارد می‌شویم",
+            "refers_to": "LIB_BUILDING",
+            "kind": "place"
+          },
+          "intro_words": [],
+          "audio_key": "W-01_pra_shelves"
+        },
+        {
+          "plaque_id": "W1_LIB_TABLE",
+          "subject": "LIB_TABLE",
+          "text_fa": "کنار قفسه‌ها چند میز هست که بچه‌ها پشتِ آن‌ها کتاب می‌خوانند.",
+          "tts_fa": "کنارِ قفسه‌ها چند میز هست که بچه‌ها پشتِ آن‌ها کتاب می‌خوانند.",
+          "subject_words": [
+            "چند میز"
+          ],
+          "traps": [
+            {
+              "card": "LIB_SHELVES",
+              "word": "قفسه‌ها"
+            }
+          ],
+          "link": {
+            "words": "کنار قفسه‌ها",
+            "refers_to": "LIB_SHELVES",
+            "kind": "place"
+          },
+          "intro_words": [],
+          "audio_key": "W-01_pra_table"
+        },
+        {
+          "plaque_id": "W1_LIB_DESK",
+          "subject": "LIB_DESK",
+          "text_fa": "آخرِ کار، کتاب را پیشِ کتابدار می‌بریم تا آن را امانت بگیریم.",
+          "tts_fa": "آخرِ کار، کتاب را پیشِ کتابدار می‌بریم تا آن را امانت بگیریم.",
+          "subject_words": [
+            "کتابدار"
+          ],
+          "traps": [
+            {
+              "card": "LIB_SHELVES",
+              "word": "کتاب"
+            }
+          ],
+          "link": {
+            "words": "آخرِ کار",
+            "refers_to": null,
+            "kind": "time"
+          },
+          "intro_words": [],
+          "audio_key": "W-01_pra_desk"
+        }
+      ],
+      "plaque_tray_order": [
+        "W1_LIB_TABLE",
+        "W1_LIB_BUILDING",
+        "W1_LIB_DESK",
+        "W1_LIB_SHELVES"
+      ],
+      "hints_match": [
+        {
+          "level": 1,
+          "text_key": "hint.W-01.1",
+          "text_fa": "اول ببین درباره چه مکانی صحبت می‌کنیم.",
+          "tts_fa": "اول ببین دربارهٔ چه مکانی صحبت می‌کنیم.",
+          "effect": "lumi_reads_plaque",
+          "audio_key": "W-01_hint_1",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 45
+        },
+        {
+          "level": 2,
+          "text_key": "hint.W-01.1",
+          "text_fa": "اول ببین درباره چه مکانی صحبت می‌کنیم.",
+          "tts_fa": "اول ببین دربارهٔ چه مکانی صحبت می‌کنیم.",
+          "effect": "highlight_subject"
+        },
+        {
+          "level": 3,
+          "text_key": "hint.W-01.1",
+          "text_fa": "اول ببین درباره چه مکانی صحبت می‌کنیم.",
+          "tts_fa": "اول ببین دربارهٔ چه مکانی صحبت می‌کنیم.",
+          "effect": "subject_and_picture"
+        }
+      ],
+      "hints_sequence": [
+        {
+          "level": 1,
+          "text_key": "hint.W-01.2",
+          "text_fa": "جمله‌ها را طوری بچین که خواننده بتواند مسیر را دنبال کند.",
+          "tts_fa": "جمله‌ها را طوری بچین که خواننده بتواند مسیر را دنبال کند.",
+          "effect": "lumi_walks_rows",
+          "audio_key": "W-01_hint_2",
+          "trigger_wrong": 1,
+          "trigger_idle_s": 40
+        },
+        {
+          "level": 2,
+          "text_key": "hint.W-01.2",
+          "text_fa": "جمله‌ها را طوری بچین که خواننده بتواند مسیر را دنبال کند.",
+          "tts_fa": "جمله‌ها را طوری بچین که خواننده بتواند مسیر را دنبال کند.",
+          "effect": "highlight_links"
+        },
+        {
+          "level": 3,
+          "text_key": "hint.W-01.3",
+          "text_fa": "از جایی شروع کن که معرفی‌کننده محله است و بعد به مکان‌های دیگر برو.",
+          "tts_fa": "از جایی شروع کن که معرفی‌کنندهٔ محله است و بعد به مکان‌های دیگر برو.",
+          "effect": "intro_first"
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "records_mastery": false,
+        "action_match": "two_rows_only",
+        "action_sequence": "intro_locked_first",
+        "note": "match: only the right row and the trap row accept the plaque; sequence: the introducing row slides to slot ۱ and locks"
+      },
+      "board_title_key": "board.W-01.pra"
+    }
+  ],
+  "reading": {
+    "audio_optional": true,
+    "audio_unlock_s": 3,
+    "audio_dir": "Content/Audio/VO",
+    "note": "tap a plaque → the Reading Card; the listen button appears after 3 s (audio helps, never replaces reading, Persian card contract).",
+    "tts_rule": "tts_fa = the exact TTS input, LIGHTLY marked (user decision, round 13: full vocalization made the voice worse): text_fa as written + kasra only for a spoken ezafe that is not written (کنارِ), «ـهٔ» for an ezafe after a silent ه, a word-final sukun only where the voice would otherwise add a false ezafe (کتابْ قرض), and a vowel only on known homographs (پُر، گُل). No fatha/damma/tashdid/sukun elsewhere. Stripped of the marks it equals text_fa."
+  },
+  "misconceptions": [
+    {
+      "code": "WR_SENTENCE_ORDER_IRRELEVANT",
+      "alias": "W01-M01",
+      "rule": "order",
+      "error_type": "ConceptError",
+      "description": "card: «هر جمله مستقل از جمله قبلی است و ترتیب جمله‌ها مهم نیست.» — the stamp is pressed on an order that breaks the chain of references",
+      "targeted_hint": 2
+    },
+    {
+      "code": "FA_SINGLE_WORD_MATCH",
+      "alias": "W01-M02",
+      "rule": "trap",
+      "error_type": "ConceptError",
+      "description": "a sentence is joined to a place it only mentions (e.g. the market sentence «از خانه که …» next to the house): the card wrong answer «a market sentence in the school part»",
+      "targeted_hint": 2
+    }
+  ],
+  "misconception_flag_threshold": 2,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "highlight_level": 2,
+    "note": "card mastery = a coherent four-sentence description in a NEW environment → the library practice solved without Highlight (H2/H3 of either phase) and without Assist gives level 3; H1 and the read-aloud are allowed."
+  },
+  "analytics_fields": [
+    "puzzle_id",
+    "attempt_id",
+    "duration",
+    "plaque_id",
+    "card_id",
+    "row",
+    "result",
+    "error_type",
+    "misconception",
+    "hint_level",
+    "order",
+    "reorder_attempts",
+    "read_ms",
+    "audio_used"
+  ],
+  "audio": {
+    "on_pick": "paper_pickup",
+    "on_snap": "wood_snap",
+    "on_wrong": "soft_error (the plaque slides back along the tray, never punishing)",
+    "on_solve": "soft_success + star stamp + board lights up + luma_motif_3_note_ascending"
+  },
+  "layout_note": "close-up of the board: plaques on the writing board (left), four rows on the board (right; picture card at the right end of each row, RTL), number tags ۱–۴ on the brass rail; the stamp lies on the writing board when all four rows are joined."
+}

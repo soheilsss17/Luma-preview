@@ -1,0 +1,41 @@
+{
+  "schema": "luma.gear_puzzle/1",
+  "card_id": "TUTORIAL",
+  "concept_id": "TUTORIAL_GEARS",
+  "quest_id": "OPENING",
+  "room_id": "WS_MAIN_FLOOR",
+  "source": "plan 12 §2 opening «کوک»: one gear on an axle → two gears (alternating direction) → three gears; teaches tap-to-walk, drag, snap and undo. Not a curriculum card: no mastery is recorded.",
+  "objective_fa": "چرخ‌دنده‌ها را روی میله‌ها بگذار تا همه با هم بچرخند.",
+  "world_state_on_solve": "WS_TUTORIAL_DONE",
+  "coords": "board sprite pixels (PROP_TUT_GEAR_BOARD, 1024×1024 final)",
+  "mesh_tolerance": 7,
+  "gear_types": [
+    { "id": "S", "sprite": "gear_small", "pitch_r": 45 },
+    { "id": "M", "sprite": "gear_medium", "pitch_r": 62 },
+    { "id": "L", "sprite": "gear_large", "pitch_r": 80 }
+  ],
+  "drive": { "x": 230, "y": 818, "type": "L", "omega": 1.1 },
+  "output": { "x": 695, "y": 818, "type": "S" },
+  "pegs": [
+    { "x": 355, "y": 818, "need": "S" },
+    { "x": 480, "y": 818, "need": "L" },
+    { "x": 605, "y": 818, "need": "S" }
+  ],
+  "stages": [
+    { "puzzle_id": "TUT_GEAR_1", "stage": "one_gear", "pegs": ["fixed", "empty", "fixed"], "tray": ["L"] },
+    { "puzzle_id": "TUT_GEAR_2", "stage": "two_gears", "pegs": ["empty", "fixed", "empty"], "tray": ["S", "S"] },
+    { "puzzle_id": "TUT_GEAR_3", "stage": "three_gears", "pegs": ["empty", "empty", "empty"], "tray": ["S", "M", "L", "S"] }
+  ],
+  "wrong_kinds": [
+    { "kind": "too_big", "error_type": "SizeMismatch", "feedback": "gears collide: the driven chain shudders and stops (comic clunk), nothing breaks" },
+    { "kind": "too_small", "error_type": "SizeMismatch", "feedback": "gear does not reach its neighbour: motion stops at the gap" }
+  ],
+  "hints": [
+    { "level": 1, "kind": "attention", "trigger_wrong": 2, "trigger_idle_s": 30, "target": "first_empty_peg", "animation": "lumi_fly_and_glow", "text_fa": "" },
+    { "level": 2, "kind": "representation", "trigger_wrong": 0, "trigger_idle_s": 0, "target": "needed_size_rings", "animation": "light_ring_of_needed_size", "text_fa": "" },
+    { "level": 3, "kind": "scaffold", "trigger_wrong": 0, "trigger_idle_s": 0, "target": "next_empty_peg", "animation": "ghost_of_next_gear", "text_fa": "" }
+  ],
+  "answer_assist": { "after_wrong": 3, "rule": "hide tray gears that fit no remaining empty peg", "records_mastery": false },
+  "analytics_fields": ["puzzle_id", "attempt_id", "duration", "gear_type", "error_type", "hint_level"],
+  "walk_gate": { "work_spot_board_x": 10, "near_px": 120, "note": "NEO works from a spot at the LEFT edge of the board (never in front of the pegs, so the puzzle stays visible). Gears can be picked up once he stands there; trying earlier makes him walk there (teaches tap-to-walk)" }
+}

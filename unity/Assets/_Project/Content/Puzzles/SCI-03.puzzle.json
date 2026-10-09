@@ -1,0 +1,229 @@
+{
+  "schema": "luma.measure_puzzle/1",
+  "card_id": "SCI-03",
+  "concept_id": "MEASURE_SELECT_USE_RECORD",
+  "quest_id": "Q02",
+  "room_id": "WS_MEASURE",
+  "area_id": "WS_MEASURE_BENCH",
+  "world_state_on_solve": "WS_MEASURE_AWAKE",
+  "requires_world_state": "SCI_LAB_LAMP_ON",
+  "music_layers_max": 4,
+  "source": "Science grade 3, lesson «اندازه‌گیری مواد» (C306, چاپ چهاردهم ۱۴۰۵). Card SCI-03 (plan 04 §2 row SCI-03): MEASURE_SELECT_USE_RECORD with ترازو (جرم, rule-based), ظرف مدرج (حجم, controlled) and خط‌کش (درازا); «جرم Rule-based و حجم کنترل‌شده». Plan 12: select → use → record, notebook «چه اندازه گرفتیم / با چه ابزاری / چند شد».",
+  "method_steps": [
+    "انتخابِ ابزار",
+    "اندازه‌گیری",
+    "ثبت",
+    "نتیجه"
+  ],
+  "notebook_columns": [
+    "چه اندازه گرفتیم",
+    "با چه ابزاری",
+    "چند شد"
+  ],
+  "misconceptions": [
+    {
+      "code": "SCI_ONE_TOOL_MEASURES_ALL",
+      "alias": "SCI-S04",
+      "rule": "wrong_tool",
+      "error_type": "ConceptError",
+      "description": "Picks one tool for every quantity («the ruler measures everything», «the scale tells me how much water») — the card says each tool reads one quantity only.",
+      "targeted_hint": 1
+    },
+    {
+      "code": "SCI_OBSERVATION_EQUALS_CONCLUSION",
+      "alias": "SCI-S01",
+      "rule": "need_records",
+      "error_type": "ConceptError",
+      "description": "Concludes from one look at the material instead of from the recorded rows — the card's «مشاهده = نتیجه».",
+      "targeted_hint": 2
+    }
+  ],
+  "analytics_fields": [
+    "puzzle_id",
+    "attempt_id",
+    "duration",
+    "tool_selected",
+    "measure_run",
+    "measure_refused",
+    "measure_recorded",
+    "record_refused",
+    "conclude_refused",
+    "guess",
+    "rule",
+    "hint_level",
+    "solved",
+    "transfer_solved"
+  ],
+  "stages": [
+    {
+      "puzzle_id": "SCI-03_ENC",
+      "stage": "encounter",
+      "kind": "measure",
+      "objective_fa": "جرمِ هر ماده را با ترازو پیدا کن و در دفترچه بنویس.",
+      "tools": ["balance", "cylinder", "ruler"],
+      "min_rows": 3,
+      "capacity": 8,
+      "jobs": [
+        { "id": "stone", "material_fa": "سنگ", "sprite": "mat_stone", "quantity": "mass", "target": 3 },
+        { "id": "bag", "material_fa": "کیسهٔ ماسه", "sprite": "mat_bag", "quantity": "mass", "target": 5 },
+        { "id": "block", "material_fa": "قالبِ چوب", "sprite": "mat_block", "quantity": "mass", "target": 2 }
+      ],
+      "conclusion_options": [
+        { "id": "one_tool_per_quantity", "text_fa": "هر ابزار یک اندازه را نشان می‌دهد: ترازو جرم، ظرف مدرج حجم، خط‌کش درازا." },
+        { "id": "ruler_for_all", "text_fa": "خط‌کش همهٔ اندازه‌ها را نشان می‌دهد." },
+        { "id": "biggest_number", "text_fa": "هرچه ماده بزرگ‌تر باشد، عددش بیشتر است؛ ابزار مهم نیست." }
+      ],
+      "answer": "one_tool_per_quantity",
+      "conclusion_prompt_fa": "از سه اندازه‌گیریت چه نتیجه‌ای می‌گیری؟",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "bench",
+          "text_key": "hint.SCI-03.enc.1",
+          "animation": "LUMI taps the three tools in turn: «ترازو جرم، ظرف مدرج حجم، خط‌کش درازا» — and the right one glows."
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "notebook",
+          "text_key": "hint.SCI-03.enc.2",
+          "animation": "The notebook rows are lined up: «چه اندازه گرفتیم / با چه ابزاری / چند شد» — the tool column of the rows glows."
+        },
+        {
+          "level": 3,
+          "kind": "assist",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "bench",
+          "text_key": "hint.SCI-03.enc.3",
+          "animation": "The scale's two pans are drawn level and one weight at a time steps onto the pan while a counter ticks."
+        }
+      ],
+      "answer_assist": {
+        "text_key": "hint.SCI-03.enc.assist",
+        "animation": "Answer Assist: only the balance stays pickable in the tool rail."
+      }
+    },
+    {
+      "puzzle_id": "SCI-03_PRA",
+      "stage": "practice",
+      "kind": "measure",
+      "objective_fa": "حجمِ هر آب را با ظرفِ مدرج اندازه بگیر؛ سطحِ آب را هم‌سطحِ چشم بخوان.",
+      "tools": ["balance", "cylinder", "ruler"],
+      "min_rows": 3,
+      "capacity": 8,
+      "jobs": [
+        { "id": "water_flower", "material_fa": "آبِ گلدان", "sprite": "mat_water", "quantity": "volume", "target": 3 },
+        { "id": "water_tree", "material_fa": "آبِ درخت", "sprite": "mat_water", "quantity": "volume", "target": 5 },
+        { "id": "water_bird", "material_fa": "آبِ پرنده‌ها", "sprite": "mat_water", "quantity": "volume", "target": 2 }
+      ],
+      "conclusion_options": [
+        { "id": "eye_level", "text_fa": "تا سطحِ آب هم‌سطحِ چشم نباشد، عددِ روی ظرف درست نیست." },
+        { "id": "any_angle", "text_fa": "از هر طرف نگاه کنی، یک عدد می‌گیری." },
+        { "id": "full_is_better", "text_fa": "هرچه ظرف پُرتر باشد، عدد درست‌تر است." }
+      ],
+      "answer": "eye_level",
+      "conclusion_prompt_fa": "از سه اندازه‌گیریت چه نتیجه‌ای می‌گیری؟",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "cylinder",
+          "text_key": "hint.SCI-03.pra.1",
+          "animation": "LUMI kneels until her eyes are level with the water surface and the reading mark lights up."
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "notebook",
+          "text_key": "hint.SCI-03.pra.2",
+          "animation": "Two pictures of the same glass are compared: one seen from above (wrong number), one level (true number)."
+        },
+        {
+          "level": 3,
+          "kind": "assist",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "cylinder",
+          "text_key": "hint.SCI-03.pra.3",
+          "animation": "The eye-level band slides to the water surface and the number it points at is ringed."
+        }
+      ],
+      "answer_assist": {
+        "text_key": "hint.SCI-03.pra.assist",
+        "animation": "Answer Assist: the eye-level marker is already placed and only pours are needed."
+      }
+    },
+    {
+      "puzzle_id": "SCI-03_TRA",
+      "stage": "transfer",
+      "kind": "measure",
+      "objective_fa": "برای هر کدام اول بگو کدام ابزار، بعد اندازه بگیر و بنویس.",
+      "tools": ["balance", "cylinder", "ruler"],
+      "min_rows": 3,
+      "capacity": 8,
+      "require_guess": true,
+      "jobs": [
+        { "id": "stick", "material_fa": "چوب", "sprite": "mat_stick", "quantity": "length", "length": 7, "target": 7 },
+        { "id": "stone_b", "material_fa": "سنگ", "sprite": "mat_stone", "quantity": "mass", "target": 4 },
+        { "id": "bottle", "material_fa": "بطریِ آب", "sprite": "mat_water", "quantity": "volume", "target": 3 }
+      ],
+      "guess_options": [
+        { "id": "balance", "text_fa": "ترازو" },
+        { "id": "cylinder", "text_fa": "ظرفِ مدرج" },
+        { "id": "ruler", "text_fa": "خط‌کش" }
+      ],
+      "conclusion_options": [
+        { "id": "one_tool_per_quantity", "text_fa": "هر ابزار فقط یک اندازه را نشان می‌دهد؛ باید درستش را انتخاب کنی." },
+        { "id": "ruler_for_all", "text_fa": "خط‌کش همه‌چیز را اندازه می‌گیرد." },
+        { "id": "same_number", "text_fa": "همهٔ مواد یک عدد می‌دهند." }
+      ],
+      "answer": "one_tool_per_quantity",
+      "conclusion_prompt_fa": "از سه اندازه‌گیریت چه نتیجه‌ای می‌گیری؟",
+      "transfer_note_fa": "همین انتخاب در باغ هم هست: آبِ باغ را با ظرفِ مدرج اندازه می‌گیریم، نه با خط‌کش.",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "bench",
+          "text_key": "hint.SCI-03.tra.1",
+          "animation": "LUMI holds up one finger per quantity: «درازا؟ حجم؟ جرم؟» and the matching tool lifts a little."
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "notebook",
+          "text_key": "hint.SCI-03.tra.2",
+          "animation": "The three rows are shown with their tool icons; each tool appears only beside its own quantity."
+        },
+        {
+          "level": 3,
+          "kind": "assist",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "bench",
+          "text_key": "hint.SCI-03.tra.3",
+          "animation": "A small garden diagram appears: watering can → measuring glass → flower bed; the cylinder is ringed."
+        }
+      ],
+      "answer_assist": {
+        "text_key": "hint.SCI-03.tra.assist",
+        "animation": "Answer Assist: only the tool that measures this material stays pickable."
+      },
+      "max_hint_for_mastery": 1
+    }
+  ]
+}

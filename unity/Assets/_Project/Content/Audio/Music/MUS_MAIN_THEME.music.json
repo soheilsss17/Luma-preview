@@ -1,0 +1,105 @@
+{
+  "id": "MUS_MAIN_THEME",
+  "title": "LUMA — Main Theme",
+  "bpm": 90,
+  "meter": "4/4",
+  "scale": "mahur_C",
+  "bar_seconds": 2.6666666666666665,
+  "loop_start": 0.0,
+  "loop_end": 90.6667,
+  "sections": [
+    {
+      "name": "Intro — music box",
+      "start": 0.0,
+      "bars": 4
+    },
+    {
+      "name": "A — theme",
+      "start": 10.667,
+      "bars": 8
+    },
+    {
+      "name": "A' — ney",
+      "start": 32.0,
+      "bars": 8
+    },
+    {
+      "name": "B — Dad colour",
+      "start": 53.333,
+      "bars": 8
+    },
+    {
+      "name": "A'' — together",
+      "start": 74.667,
+      "bars": 4
+    },
+    {
+      "name": "Tail — back to box",
+      "start": 85.333,
+      "bars": 2
+    }
+  ],
+  "stems": {
+    "BASE": "MUS_MAIN_THEME__BASE.ogg",
+    "RHYTHM": "MUS_MAIN_THEME__RHYTHM.ogg",
+    "MELODY": "MUS_MAIN_THEME__MELODY.ogg",
+    "FESTIVAL": "MUS_MAIN_THEME__FESTIVAL.ogg"
+  },
+  "layer_for_stem": {
+    "BASE": 0,
+    "RHYTHM": 0,
+    "MELODY": 0,
+    "FESTIVAL": 0
+  },
+  "stem_list": [
+    {
+      "name": "BASE",
+      "file": "MUS_MAIN_THEME__BASE.ogg",
+      "layer": 0
+    },
+    {
+      "name": "RHYTHM",
+      "file": "MUS_MAIN_THEME__RHYTHM.ogg",
+      "layer": 0
+    },
+    {
+      "name": "MELODY",
+      "file": "MUS_MAIN_THEME__MELODY.ogg",
+      "layer": 0
+    },
+    {
+      "name": "FESTIVAL",
+      "file": "MUS_MAIN_THEME__FESTIVAL.ogg",
+      "layer": 0
+    }
+  ],
+  "adaptive": "",
+  "render": {
+    "engine": "TinySoundFont (tinysoundfont pip)",
+    "soundfont": "GeneralUser GS 1.47 (S. Christian Collins)",
+    "gm_programs": {
+      "santur": 15,
+      "ney": 77,
+      "dotar": 24,
+      "kamancheh": 40,
+      "strings": 49
+    },
+    "kit": {
+      "dum": 64,
+      "tek": 60,
+      "tek2": 62,
+      "daf_low": 41,
+      "daf_jingle": 54
+    },
+    "reverb": "synthetic small room RT60 0.9 s, wet 0.2"
+  },
+  "qa": {
+    "integrated_lufs": -18.0,
+    "sample_peak_dbfs": -1.63,
+    "seam_rms_ratio": 4.66,
+    "rms_dbfs_BASE": -31.4,
+    "rms_dbfs_RHYTHM": -38.4,
+    "rms_dbfs_MELODY": -28.1,
+    "rms_dbfs_FESTIVAL": -24.7
+  }
+}

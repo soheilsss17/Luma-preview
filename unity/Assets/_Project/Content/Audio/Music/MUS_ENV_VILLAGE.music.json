@@ -1,0 +1,105 @@
+{
+  "id": "MUS_ENV_VILLAGE",
+  "title": "Village — Silent Festival",
+  "bpm": 80,
+  "meter": "6/8",
+  "scale": "mahur_F",
+  "bar_seconds": 1.5,
+  "loop_start": 6.0,
+  "loop_end": 102.0,
+  "sections": [
+    {
+      "name": "Intro",
+      "start": 0.0,
+      "bars": 4
+    },
+    {
+      "name": "A — theme",
+      "start": 6.0,
+      "bars": 16
+    },
+    {
+      "name": "B — ney answer",
+      "start": 30.0,
+      "bars": 16
+    },
+    {
+      "name": "C — festival lanterns",
+      "start": 54.0,
+      "bars": 16
+    },
+    {
+      "name": "D — return",
+      "start": 78.0,
+      "bars": 12
+    },
+    {
+      "name": "Turnaround",
+      "start": 96.0,
+      "bars": 4
+    }
+  ],
+  "stems": {
+    "BASE": "MUS_ENV_VILLAGE__BASE.ogg",
+    "RHYTHM": "MUS_ENV_VILLAGE__RHYTHM.ogg",
+    "MELODY": "MUS_ENV_VILLAGE__MELODY.ogg",
+    "FESTIVAL": "MUS_ENV_VILLAGE__FESTIVAL.ogg"
+  },
+  "layer_for_stem": {
+    "BASE": 0,
+    "RHYTHM": 1,
+    "MELODY": 2,
+    "FESTIVAL": 4
+  },
+  "stem_list": [
+    {
+      "name": "BASE",
+      "file": "MUS_ENV_VILLAGE__BASE.ogg",
+      "layer": 0
+    },
+    {
+      "name": "RHYTHM",
+      "file": "MUS_ENV_VILLAGE__RHYTHM.ogg",
+      "layer": 1
+    },
+    {
+      "name": "MELODY",
+      "file": "MUS_ENV_VILLAGE__MELODY.ogg",
+      "layer": 2
+    },
+    {
+      "name": "FESTIVAL",
+      "file": "MUS_ENV_VILLAGE__FESTIVAL.ogg",
+      "layer": 4
+    }
+  ],
+  "adaptive": "Silent Village mechanic (MATH-01): at quest start only BASE plays; RHYTHM fades in when the lantern pattern (MATH-01) is solved; MELODY returns after MATH-02; the festival layer (section C) is unlocked by the Q01 finale. Wrong state: RHYTHM −4 dB for 4 bars, never stops.",
+  "render": {
+    "engine": "TinySoundFont (tinysoundfont pip)",
+    "soundfont": "GeneralUser GS 1.47 (S. Christian Collins)",
+    "gm_programs": {
+      "santur": 15,
+      "ney": 77,
+      "dotar": 24,
+      "kamancheh": 40,
+      "strings": 49
+    },
+    "kit": {
+      "dum": 64,
+      "tek": 60,
+      "tek2": 62,
+      "daf_low": 41,
+      "daf_jingle": 54
+    },
+    "reverb": "synthetic small room RT60 0.9 s, wet 0.2"
+  },
+  "qa": {
+    "integrated_lufs": -18.0,
+    "sample_peak_dbfs": -1.77,
+    "seam_rms_ratio": 6.14,
+    "rms_dbfs_BASE": -26.5,
+    "rms_dbfs_RHYTHM": -30.5,
+    "rms_dbfs_MELODY": -26.0,
+    "rms_dbfs_FESTIVAL": -27.3
+  }
+}

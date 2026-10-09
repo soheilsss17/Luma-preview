@@ -1,0 +1,264 @@
+{
+  "schema": "luma.money_puzzle/1",
+  "card_id": "MATH-08",
+  "concept_id": "MONEY_VALUE_MAKE_AMOUNT",
+  "quest_id": "Q02",
+  "room_id": "MARKET_PAYMENT",
+  "area_id": "MARKET_GARDENS",
+  "source": "Math grade 3, chapter 2, lesson «ارزش پول» (book pp. 34–36). Card MATH-08: environment Market, room MARKET_PAYMENT, «بازیکن ارزش مجموعه‌ای از واحدهای پولی را در یک موقعیت خرید درک کند»; puzzle: an NPC has a purchase and the player must hand over the right tokens; mechanic drag token; wrong: the amount is left short or over, with no punishment («اگر کم: هنوز به مقدار لازم نرسیده‌ایم.» / «اگر زیاد: یک لحظه؛ می‌توانی مقدار مناسب‌تری پیدا کنی؟»); misconception MONEY-M01 «جمع نکردن ارزش Tokenها» (counting the pieces instead of adding their values) and MONEY-M02 «تکیه به اندازه ظاهری Token» (judging a piece by its size); hints H1 «به ارزش هر قطعه نگاه کن، نه تعداد آن.», H2 highlight the biggest unit needed, H3 one possible combination is shown but not the complete answer; assets PROP_CURRENCY_TOKEN_A/B, PROP_MARKET_COUNTER, ENV_MKT_MONEY; animations coin_slide, coin_stack, total_update; sound metallic soft coin clicks; UI Target Amount + Current Amount + Remaining; analytics currency_selected, amount_changed, overpay, underpay, solved; mastery building the amount with at least two different combinations; transfer paying for a ride ticket with a new amount. Important design (v1 card): no real Iranian currency is used as a graphical asset — generic fictional tokens keep the UI clean and the focus on value. Textbook p.35 کاردرکلاس: «با ۵۰۰۰ ریال چه چیزی می‌توان خرید؟ یک دانه شکلات یا آدامس؛ با ۱۰۰۰ تومان چه چیزی می‌توان خرید؟ یک قوطی شیر کاکائو کوچک؛ با ۵۰۰۰ تومان چه چیزی می‌توان خرید؟ یک بستنی چوبی» (so ۱۰۰۰ ریال = ۱۰۰ تومان … the book works in round thousands); p.36 تمرین ۱: «یک دلار کشور شکرستان ۱۲۰۰ تومان ارزش دارد؛ ۳ دلار این کشور چند تومان ارزش دارد؟ تومان ۳۶۰۰ = ۱۲۰۰+۱۲۰۰+۱۲۰۰»; p.36 تمرین ۲: ۲۱۰۰ لیره = ۱۰ ریال → «۲ تومان ایران چند لیره است؟ لیره ۴۲۰۰». The three prices here (۲۰۰۰، ۳۵۰۰، ۴۲۰۰ تومان) are of that size and are all payable in more than one way with the three pieces ۱۰۰۰ / ۵۰۰ / ۱۰۰.",
+  "world_state_on_solve": "MK_PAYMENT_DONE",
+  "requires_world_state": "WS_NUMBER_PANEL_FIXED",
+  "music_layers_max": 4,
+  "strategy_tag": "model_with_objects",
+  "denominations": [
+    {
+      "id": "token_1000",
+      "value": 1000,
+      "look": "medium",
+      "material": "aged brass hexagon",
+      "name_fa": "سکهٔ شش‌گوش برنجی",
+      "sprite": "token_1000"
+    },
+    {
+      "id": "token_500",
+      "value": 500,
+      "look": "small",
+      "material": "copper disc",
+      "name_fa": "سکهٔ گرد مسی",
+      "sprite": "token_500"
+    },
+    {
+      "id": "token_100",
+      "value": 100,
+      "look": "large",
+      "material": "painted-wood octagon",
+      "name_fa": "سکهٔ هشت‌گوش چوبی",
+      "sprite": "token_100"
+    }
+  ],
+  "misconceptions": [
+    {
+      "code": "MATH_MONEY_TOKEN_COUNT",
+      "alias": "MONEY-M01",
+      "rule": "count_trap",
+      "error_type": "ConceptError",
+      "description": "Counts the pieces instead of adding their values: the number of pieces on the counter times the biggest denomination is exactly the price, but the real total is not (e.g. two wooden pieces handed over for ۲۰۰۰).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "MATH_MONEY_TOKEN_SIZE",
+      "alias": "MONEY-M02",
+      "rule": "size_trap",
+      "error_type": "ConceptError",
+      "description": "Judges a token by how big it looks: the payment falls short by exactly ۹۰۰ for every large painted-wood piece used, i.e. the biggest piece was taken for the most valuable one (it is worth the least, ۱۰۰).",
+      "targeted_hint": 2
+    }
+  ],
+  "procedure_errors": [
+    {
+      "rule": "under",
+      "error_type": "ProcedureError",
+      "event": "pay_result",
+      "note": "the counter is short: the seller says «هنوز به مقدار لازم نرسیده‌ایم.» and the remaining amount glows amber — no punishment, the pieces stay on the counter."
+    },
+    {
+      "rule": "over",
+      "error_type": "ProcedureError",
+      "event": "pay_result",
+      "note": "the counter is over the price: the seller says «یک لحظه؛ می‌توانی مقدار مناسب‌تری پیدا کنی؟» — again no punishment."
+    },
+    {
+      "rule": "repeat",
+      "error_type": "ProcedureError",
+      "event": "pay_result",
+      "note": "the price is right but the very same combination was already paid: mastery needs two DIFFERENT combinations, so this is a nudge («باز هم می‌توانی؟ به یک شکلِ دیگر»), never a mistake."
+    }
+  ],
+  "design_mitigations": [
+    {
+      "alias": "MONEY-M01",
+      "code": "MATH_MONEY_TOKEN_COUNT",
+      "note": "every piece carries an engine-rendered value on the tray tag and the counter shows the running total plus the remaining amount, so a pile of pieces is never worth its count; H1 says it out loud («به ارزش هر قطعه نگاه کن، نه تعداد آن»)."
+    },
+    {
+      "alias": "MONEY-M02",
+      "code": "MATH_MONEY_TOKEN_SIZE",
+      "note": "the size order is deliberately not the value order — the biggest piece (the wooden octagon) is worth the least — so the trap can actually be walked into and then taught; the three materials (brass, copper, painted wood) and three shapes (hexagon, disc, octagon) keep them apart, and H3 lays one full combination down so the value of each piece becomes concrete."
+    }
+  ],
+  "misconception_flag_threshold": 2,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "transfer_solved_independently": 4,
+    "note": "card: mastery is building the amount with at least two different combinations, so every stage asks for two ways to pay the same price. L1 sees a price paid, L2 pays with H1/H2, L3 pays the practice price twice in two different ways alone, L4 pays for the ride ticket twice in two ways."
+  },
+  "analytics_fields": [
+    "puzzle_id",
+    "attempt_id",
+    "duration",
+    "denom",
+    "amount",
+    "pay_rule",
+    "overpay",
+    "underpay",
+    "combo",
+    "mistake",
+    "misconception",
+    "alias",
+    "hint_level",
+    "solved"
+  ],
+  "audio": {
+    "on_select": "SFX_COIN_PICK (soft metallic click as a token is lifted out of its tray)",
+    "on_drop": "SFX_COIN_DROP (one soft coin click, slightly lower than the pick)",
+    "on_stack": "SFX_COIN_STACK (two or three quick clicks as the piece settles into its compartment)",
+    "on_total": "SFX_TOTAL_UPDATE (a short two-note tick; higher when the remaining amount shrinks, lower when it grows)",
+    "on_wrong": "the remaining amount blinks amber; no penalty sound, only the seller's soft voice line",
+    "on_solve": "luma_motif_3_note_ascending; a small bell when the price board tag turns over"
+  },
+  "stages": [
+    {
+      "puzzle_id": "MATH-08_ENC",
+      "stage": "encounter",
+      "kind": "pay",
+      "item_fa": "یک چرخ‌دندهٔ برنجی برای دستگاه",
+      "target": 2000,
+      "supply": [3, 4, 6],
+      "combos_needed": 2,
+      "objective_fa": "بهای چرخ‌دنده ۲۰۰۰ تومان است. دو بار پرداخت کن، هر بار به یک شکلِ دیگر.",
+      "done_line_key": "line.MATH-08.enc_done",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "tray_tags",
+          "animation": "LUMI flies along the three tray tags and each tag's value pulses in turn, while the pieces in that tray lift a little and settle (card H1: «به ارزش هر قطعه نگاه کن، نه تعداد آن.»)",
+          "text_key": "hint.MATH-08.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "biggest_unit",
+          "animation": "the biggest unit the price still needs is highlighted in its tray: a warm ring around that stack, its tag grows, and a ghost piece drifts towards the pay counter's matching compartment",
+          "text_key": "hint.MATH-08.2"
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "one_combination",
+          "animation": "one possible combination slides out of the trays and stacks itself in the pay counter's three compartments (coin_stack), the total counts up to the price, the tag turns over — and then the seller asks for the SAME price again, in a different way",
+          "text_key": "hint.MATH-08.3"
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "place_and_lock_biggest_unit",
+        "note": "one piece of the biggest unit the price still needs is placed and locked; any piece that pushes the counter over the price goes back to its tray. Because mastery needs two different combinations, the assist never finishes the stage.",
+        "records_mastery": false
+      },
+      "source_note": "encounter: the workshop's errand in the market («در بازار باید هزینه‌ی خرید قطعات یک دستگاه پرداخت شود»). ۲۰۰۰ تومان out of ۳×۱۰۰۰، ۴×۵۰۰، ۶×۱۰۰ has several combinations (۱۰۰۰+۱۰۰۰; ۱۰۰۰+۵۰۰+۵۰۰; ۱۰۰۰+۵۰۰+۵×۱۰۰; ۴×۵۰۰; ۳×۵۰۰+۵×۱۰۰), which is exactly what the card's mastery asks for."
+    },
+    {
+      "puzzle_id": "MATH-08_PRA",
+      "stage": "practice",
+      "kind": "pay",
+      "item_fa": "یک قوطی شیر کاکائو و یک بستنی چوبی",
+      "target": 3500,
+      "supply": [2, 5, 8],
+      "combos_needed": 2,
+      "objective_fa": "بها ۳۵۰۰ تومان است. دو ترکیبِ متفاوت پیدا کن.",
+      "done_line_key": "line.MATH-08.pra_done",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "tray_tags",
+          "animation": "LUMI flies along the three tray tags and each tag's value pulses in turn, while the pieces in that tray lift a little and settle (card H1: «به ارزش هر قطعه نگاه کن، نه تعداد آن.»)",
+          "text_key": "hint.MATH-08.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "biggest_unit",
+          "animation": "the biggest unit the price still needs is highlighted in its tray: a warm ring around that stack, its tag grows, and a ghost piece drifts towards the pay counter's matching compartment",
+          "text_key": "hint.MATH-08.2"
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "one_combination",
+          "animation": "one possible combination slides out of the trays and stacks itself in the pay counter's three compartments (coin_stack), the total counts up to the price, the tag turns over — and then the seller asks for the SAME price again, in a different way",
+          "text_key": "hint.MATH-08.3"
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "place_and_lock_biggest_unit",
+        "note": "one piece of the biggest unit the price still needs is placed and locked; any piece that pushes the counter over the price goes back to its tray.",
+        "records_mastery": false
+      },
+      "source_note": "practice, textbook p.35: «با ۵۰۰۰ ریال چه چیزی می‌توان خرید؟ … با ۱۰۰۰ تومان چه چیزی می‌توان خرید؟ یک قوطی شیر کاکائو کوچک … با ۵۰۰۰ تومان چه چیزی می‌توان خرید؟ یک بستنی چوبی» — the two purchases together are priced ۳۵۰۰ تومان here. With only ۲ pieces of ۱۰۰۰ in the tray the child must lean on the ۵۰۰s, and there are still several ways (۱۰۰۰+۵×۵۰۰; ۱۰۰۰+۴×۵۰۰+۵×۱۰۰; ۲×۱۰۰۰+۳×۵۰۰; …)."
+    },
+    {
+      "puzzle_id": "MATH-08_TRA",
+      "stage": "transfer",
+      "kind": "pay",
+      "item_fa": "بلیتِ چرخ‌وفلکِ بازار",
+      "target": 4200,
+      "supply": [4, 4, 6],
+      "combos_needed": 2,
+      "objective_fa": "بلیت ۴۲۰۰ تومان است. دو ترکیبِ متفاوت پیدا کن.",
+      "done_line_key": "line.MATH-08.tra_done",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "tray_tags",
+          "animation": "LUMI flies along the three tray tags and each tag's value pulses in turn, while the pieces in that tray lift a little and settle (card H1: «به ارزش هر قطعه نگاه کن، نه تعداد آن.»)",
+          "text_key": "hint.MATH-08.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "biggest_unit",
+          "animation": "the biggest unit the price still needs is highlighted in its tray: a warm ring around that stack, its tag grows, and a ghost piece drifts towards the pay counter's matching compartment",
+          "text_key": "hint.MATH-08.2"
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "one_combination",
+          "animation": "one possible combination slides out of the trays and stacks itself in the pay counter's three compartments (coin_stack), the total counts up to the price, the tag turns over — and then the seller asks for the SAME price again, in a different way",
+          "text_key": "hint.MATH-08.3"
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "place_and_lock_biggest_unit",
+        "note": "one piece of the biggest unit the price still needs is placed and locked; any piece that pushes the counter over the price goes back to its tray.",
+        "records_mastery": false
+      },
+      "source_note": "card transfer: «پرداخت هزینه‌ی بلیت یک وسیله‌ی تفریحی با مبلغ جدید.» The price ۴۲۰۰ is the answer of textbook p.36 تمرین ۲ («۲ تومان ایران چند لیره است؟ لیره ۴۲۰۰»), so the transfer lands on a number the book itself reaches. Combinations: ۴×۱۰۰۰+۲×۱۰۰; ۳×۱۰۰۰+۲×۵۰۰+۲×۱۰۰; ۲×۱۰۰۰+۴×۵۰۰+۲×۱۰۰; ۳×۱۰۰۰+۱×۵۰۰+۷×۱۰۰ (only ۶ hundreds) …"
+    }
+  ]
+}
