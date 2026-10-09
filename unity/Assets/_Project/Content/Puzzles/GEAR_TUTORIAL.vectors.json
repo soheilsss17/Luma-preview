@@ -1,0 +1,26 @@
+{
+  "schema": "luma.gear_vectors/1",
+  "note": "Expected values reasoned by hand from the geometry (peg spacing 125 px; S=45, M=62, L=80; tolerance 7). Both web/test/gears.test.js and Tests/EditMode/GearChainTests.cs must pass them.",
+  "chains": [
+    { "name": "stage 1 solved", "placed": ["S", "L", "S"], "output_turning": true, "jam": false, "turning": ["drive", "0", "1", "2", "output"], "output_omega": 1.9556 },
+    { "name": "one gap in the middle", "placed": ["S", "", "S"], "output_turning": false, "jam": false, "turning": ["drive", "0"], "output_omega": 0 },
+    { "name": "medium on the large peg leaves gaps", "placed": ["S", "M", "S"], "output_turning": false, "jam": false, "turning": ["drive", "0"], "output_omega": 0 },
+    { "name": "medium on the first small peg collides with the drive", "placed": ["M", "L", "S"], "output_turning": false, "jam": true, "turning": [], "output_omega": 0 },
+    { "name": "all small: gap after the first", "placed": ["S", "S", "S"], "output_turning": false, "jam": false, "turning": ["drive", "0"], "output_omega": 0 },
+    { "name": "large on the first peg collides", "placed": ["L", "", ""], "output_turning": false, "jam": true, "turning": [], "output_omega": 0 },
+    { "name": "floating gear only", "placed": ["", "L", ""], "output_turning": false, "jam": false, "turning": ["drive"], "output_omega": 0 },
+    { "name": "collision at the end jams the whole driven chain", "placed": ["S", "L", "M"], "output_turning": false, "jam": true, "turning": [], "output_omega": 0 }
+  ],
+  "classify": [
+    { "peg": 0, "type": "S", "kind": "fits" },
+    { "peg": 0, "type": "M", "kind": "too_big" },
+    { "peg": 1, "type": "S", "kind": "too_small" },
+    { "peg": 1, "type": "M", "kind": "too_small" },
+    { "peg": 2, "type": "L", "kind": "too_big" }
+  ],
+  "useful": [
+    { "stage": 2, "placed": ["S", "", ""], "types": ["L", "S"] },
+    { "stage": 2, "placed": ["S", "L", ""], "types": ["S"] },
+    { "stage": 2, "placed": ["M", "", ""], "types": ["L", "S"] }
+  ]
+}

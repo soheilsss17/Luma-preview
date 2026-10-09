@@ -1,0 +1,483 @@
+{
+  "schema": "luma.timeline_puzzle/1",
+  "card_id": "SOC-01",
+  "concept_id": "SOC_LIFE_TIMELINE_ORDER",
+  "quest_id": "Q01",
+  "room_id": "VIL_HOUSE",
+  "area_id": "LIVING_TIMELINE",
+  "world_state_on_solve": "VIL_HOUSE_CLOCK_TICKING",
+  "requires_world_state": "VIL_FESTIVAL_POSTER_UP",
+  "music_layers_max": 4,
+  "source": "بازی آموزشی کل دروس سوم ابتدایی.docx — SOCIAL-01 «من به دنیا آمدم» (L11806–11830: quest, Drag → Timeline Snap, cards move on the time rail, album/photo/timeline/clock/memory box, wrong = a newer event before an older one, H1–H3, SOC01_ASSET_01..05, paper_flip/wood_snap/soft_clock_tick, analytics timeline_error/reorder_count/hint_level, mastery = a timeline for a NEW event set, transfer = plant growth); plan 04 row SOC-01; plan 12 §2 row 7 (VS: life timeline in VIL_HOUSE with 5 slots); textbook C307 lesson 1 p. 2 (birth: the nurse inks the footprint, name band, birth certificate) and lesson 2 p. 6 (Amir, 9, grade 3; «خط زمان»: گذشته · حال · آینده).",
+  "design_note": "The timeline runs LEFT (past) → RIGHT (today) with an empty arrow head for the future, exactly like the textbook timelines (C307 p. 6 and worksheet 1), even though Persian text reads right-to-left. Cards come from the open album (the plant cards from the pot on the sill) and snap into five slots; dropping on an occupied slot swaps. When all five slots are full the brass time key at the left end glows; turning it sends the marker along the rail from birth to today: it stops at the first card that happened BEFORE the card on its left (rule newer_before_older) and the pair wobbles. A (nearly) fully reversed row — at least 9 of the 10 pairs inverted, i.e. read right-to-left — is its own misconception (timeline_reversed). Source props per stage: the encounter cards rise from the album (SOC01_ASSET_01), the practice cards come out of the memory box that opened at the encounter payoff (SOC01_ASSET_04: more of Amir's keepsakes), the transfer cards from the plant pot on the window sill.",
+  "slots": 5,
+  "direction": "ltr_past_to_future",
+  "labels": {
+    "past_key": "timeline.label.past",
+    "present_key": "timeline.label.present",
+    "future_key": "timeline.label.future"
+  },
+  "reversed_min_inversions": 9,
+  "events": [
+    {
+      "event_id": "BIRTH",
+      "rank": 0,
+      "caption_fa": "تولد",
+      "text_fa": "امیر به دنیا آمد. پرستار کف پای او را جوهری کرد.",
+      "tts_fa": "امیر به دنیا آمد. پرستار کفِ پای او را جوهری کرد.",
+      "age_fa": "روز تولد",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 0
+      },
+      "audio_key": "SOC-01_ev_birth"
+    },
+    {
+      "event_id": "CRADLE",
+      "rank": 1,
+      "caption_fa": "نوزادی",
+      "text_fa": "امیر نوزاد بود و بیشتر وقت‌ها در گهواره می‌خوابید.",
+      "tts_fa": "امیر نوزاد بود و بیشترِ وقت‌ها در گهواره می‌خوابید.",
+      "age_fa": "چند ماهه",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 1
+      },
+      "audio_key": "SOC-01_ev_cradle"
+    },
+    {
+      "event_id": "STEPS",
+      "rank": 2,
+      "caption_fa": "اولین قدم",
+      "text_fa": "امیر یک‌ساله بود که اولین قدم‌هایش را برداشت.",
+      "tts_fa": "امیر یک‌ساله بود که اولین قدم‌هایش را برداشت.",
+      "age_fa": "۱ ساله",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 2
+      },
+      "audio_key": "SOC-01_ev_steps"
+    },
+    {
+      "event_id": "SCHOOL",
+      "rank": 3,
+      "caption_fa": "کلاس اول",
+      "text_fa": "امیر هفت‌ساله شد و با کیف تازه‌اش به کلاس اول رفت.",
+      "tts_fa": "امیر هفت‌ساله شد و با کیفِ تازه‌اش به کلاسِ اول رفت.",
+      "age_fa": "۷ ساله",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 3
+      },
+      "audio_key": "SOC-01_ev_school"
+    },
+    {
+      "event_id": "TODAY",
+      "rank": 4,
+      "caption_fa": "امروز",
+      "text_fa": "امروز امیر ۹ سال دارد و در کلاس سوم درس می‌خواند.",
+      "tts_fa": "امروز امیر نُه سال دارد و در کلاسِ سوم درس می‌خواند.",
+      "age_fa": "۹ ساله",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 4
+      },
+      "audio_key": "SOC-01_ev_today"
+    },
+    {
+      "event_id": "CERT",
+      "rank": 0,
+      "caption_fa": "شناسنامه",
+      "text_fa": "چند روز بعد از تولد، برای امیر شناسنامه گرفتند.",
+      "tts_fa": "چند روز بعد از تولد، برای امیر شناسنامه گرفتند.",
+      "age_fa": "چند روزه",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 5
+      },
+      "audio_key": "SOC-01_ev_cert"
+    },
+    {
+      "event_id": "TOOTH",
+      "rank": 1,
+      "caption_fa": "اولین دندان",
+      "text_fa": "امیر شش‌ماهه بود که اولین دندانش درآمد.",
+      "tts_fa": "امیر شش‌ماهه بود که اولین دندانش درآمد.",
+      "age_fa": "۶ ماهه",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 6
+      },
+      "audio_key": "SOC-01_ev_tooth"
+    },
+    {
+      "event_id": "TRIKE",
+      "rank": 2,
+      "caption_fa": "سه‌چرخه",
+      "text_fa": "امیر سه‌ساله بود و با سه‌چرخه در حیاط بازی می‌کرد.",
+      "tts_fa": "امیر سه‌ساله بود و با سه‌چرخه در حیاط بازی می‌کرد.",
+      "age_fa": "۳ ساله",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 7
+      },
+      "audio_key": "SOC-01_ev_trike"
+    },
+    {
+      "event_id": "LOST_TOOTH",
+      "rank": 3,
+      "caption_fa": "افتادن دندان",
+      "text_fa": "امیر شش‌ساله بود که اولین دندان شیری‌اش افتاد.",
+      "tts_fa": "امیر شش‌ساله بود که اولین دندانِ شیری‌اش افتاد.",
+      "age_fa": "۶ ساله",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 8
+      },
+      "audio_key": "SOC-01_ev_lost_tooth"
+    },
+    {
+      "event_id": "READ",
+      "rank": 4,
+      "caption_fa": "کتاب داستان",
+      "text_fa": "امیر هشت‌ساله شد و خودش یک کتاب داستان خواند.",
+      "tts_fa": "امیر هشت‌ساله شد و خودش یک کتابِ داستان خواند.",
+      "age_fa": "۸ ساله",
+      "picto": {
+        "sheet": "soc01_life",
+        "cell": 9
+      },
+      "audio_key": "SOC-01_ev_read"
+    },
+    {
+      "event_id": "SEED",
+      "rank": 0,
+      "caption_fa": "دانه",
+      "text_fa": "دانه در خاک گلدان است.",
+      "tts_fa": "دانه در خاکِ گلدان است.",
+      "age_fa": "روز اول",
+      "picto": {
+        "sheet": "soc01_plant",
+        "cell": 0
+      },
+      "audio_key": "SOC-01_pl_seed"
+    },
+    {
+      "event_id": "SPROUT",
+      "rank": 1,
+      "caption_fa": "جوانه",
+      "text_fa": "از دانه یک جوانه‌ی کوچک بیرون آمد.",
+      "tts_fa": "از دانه یک جوانه‌ی کوچک بیرون آمد.",
+      "age_fa": "چند روز بعد",
+      "picto": {
+        "sheet": "soc01_plant",
+        "cell": 1
+      },
+      "audio_key": "SOC-01_pl_sprout"
+    },
+    {
+      "event_id": "LEAVES",
+      "rank": 2,
+      "caption_fa": "برگ‌ها",
+      "text_fa": "گیاه ساقه‌ی کوتاهی دارد و چند برگ تازه درآورده است.",
+      "tts_fa": "گیاه ساقه‌ی کوتاهی دارد و چند برگِ تازه درآورده است.",
+      "age_fa": "یک هفته بعد",
+      "picto": {
+        "sheet": "soc01_plant",
+        "cell": 2
+      },
+      "audio_key": "SOC-01_pl_leaves"
+    },
+    {
+      "event_id": "BUD",
+      "rank": 3,
+      "caption_fa": "غنچه",
+      "text_fa": "گیاه بزرگ‌تر شده و یک غنچه دارد.",
+      "tts_fa": "گیاه بزرگ‌تر شده و یک غنچه دارد.",
+      "age_fa": "دو هفته بعد",
+      "picto": {
+        "sheet": "soc01_plant",
+        "cell": 3
+      },
+      "audio_key": "SOC-01_pl_bud"
+    },
+    {
+      "event_id": "FLOWER",
+      "rank": 4,
+      "caption_fa": "گل",
+      "text_fa": "غنچه باز شد و گیاه گل داد.",
+      "tts_fa": "غنچه باز شد و گیاه گُل داد.",
+      "age_fa": "یک ماه بعد",
+      "picto": {
+        "sheet": "soc01_plant",
+        "cell": 4
+      },
+      "audio_key": "SOC-01_pl_flower"
+    }
+  ],
+  "stages": [
+    {
+      "puzzle_id": "SOC-01_ENC",
+      "stage": "encounter",
+      "kind": "timeline_life",
+      "title_key": "timeline.SOC-01.enc",
+      "objective_fa": {
+        "place": "عکس‌های آلبوم امیر را به ترتیب زمان روی خط زمان بچین.",
+        "done": "ساعت خانه دوباره کار می‌کند!"
+      },
+      "events": [
+        "BIRTH",
+        "CRADLE",
+        "STEPS",
+        "SCHOOL",
+        "TODAY"
+      ],
+      "album_order": [
+        "SCHOOL",
+        "BIRTH",
+        "TODAY",
+        "CRADLE",
+        "STEPS"
+      ],
+      "source_prop": "album",
+      "show_age_tags": false,
+      "hints": [
+        {
+          "level": 1,
+          "text_key": "hint.SOC-01.1",
+          "text_fa": "کدام اتفاق زودتر رخ داده؟",
+          "tts_fa": "کدام اتفاق زودتر رخ داده؟",
+          "effect": "pulse_pair",
+          "audio_key": "SOC-01_hint_1",
+          "trigger_wrong": 1,
+          "trigger_idle_s": 45
+        },
+        {
+          "level": 2,
+          "text_key": "hint.SOC-01.2",
+          "text_fa": "به سن و مرحله‌ی زندگی دقت کن.",
+          "tts_fa": "به سن و مرحله‌ی زندگی دقت کن.",
+          "effect": "show_age_tags",
+          "audio_key": "SOC-01_hint_2",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 60
+        },
+        {
+          "level": 3,
+          "text_key": "hint.SOC-01.3",
+          "text_fa": "از تولد شروع کن و به امروز برس.",
+          "tts_fa": "از تولد شروع کن و به امروز برس.",
+          "effect": "guide_from_start",
+          "audio_key": "SOC-01_hint_3",
+          "trigger_wrong": 3,
+          "trigger_idle_s": 75
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "records_mastery": false,
+        "action": "lock_ends",
+        "note": "the earliest and the latest event slide to the first and the last slot and lock; three cards stay to order"
+      }
+    },
+    {
+      "puzzle_id": "SOC-01_PRA",
+      "stage": "practice",
+      "kind": "timeline_life_new_set",
+      "title_key": "timeline.SOC-01.pra",
+      "objective_fa": {
+        "place": "این بار خاطره‌های دیگری از امیر را به ترتیب زمان بچین.",
+        "done": "خاطره‌های تازه هم سر جایشان رفتند."
+      },
+      "events": [
+        "CERT",
+        "TOOTH",
+        "TRIKE",
+        "LOST_TOOTH",
+        "READ"
+      ],
+      "album_order": [
+        "TRIKE",
+        "READ",
+        "CERT",
+        "LOST_TOOTH",
+        "TOOTH"
+      ],
+      "source_prop": "memory_box",
+      "show_age_tags": false,
+      "hints": [
+        {
+          "level": 1,
+          "text_key": "hint.SOC-01.1",
+          "text_fa": "کدام اتفاق زودتر رخ داده؟",
+          "tts_fa": "کدام اتفاق زودتر رخ داده؟",
+          "effect": "pulse_pair",
+          "audio_key": "SOC-01_hint_1",
+          "trigger_wrong": 1,
+          "trigger_idle_s": 45
+        },
+        {
+          "level": 2,
+          "text_key": "hint.SOC-01.2",
+          "text_fa": "به سن و مرحله‌ی زندگی دقت کن.",
+          "tts_fa": "به سن و مرحله‌ی زندگی دقت کن.",
+          "effect": "show_age_tags",
+          "audio_key": "SOC-01_hint_2",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 60
+        },
+        {
+          "level": 3,
+          "text_key": "hint.SOC-01.3",
+          "text_fa": "از تولد شروع کن و به امروز برس.",
+          "tts_fa": "از تولد شروع کن و به امروز برس.",
+          "effect": "guide_from_start",
+          "audio_key": "SOC-01_hint_3",
+          "trigger_wrong": 3,
+          "trigger_idle_s": 75
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "records_mastery": false,
+        "action": "lock_ends",
+        "note": "the earliest and the latest event slide to the first and the last slot and lock; three cards stay to order"
+      }
+    },
+    {
+      "puzzle_id": "SOC-01_TRA",
+      "stage": "transfer",
+      "kind": "timeline_plant_growth",
+      "title_key": "timeline.SOC-01.tra",
+      "objective_fa": {
+        "place": "گیاه کنار پنجره هم بزرگ شده؛ مرحله‌های رشدش را به ترتیب بچین.",
+        "done": "گیاه کنار پنجره گل داد!"
+      },
+      "events": [
+        "SEED",
+        "SPROUT",
+        "LEAVES",
+        "BUD",
+        "FLOWER"
+      ],
+      "album_order": [
+        "LEAVES",
+        "SEED",
+        "FLOWER",
+        "SPROUT",
+        "BUD"
+      ],
+      "source_prop": "window_pot",
+      "show_age_tags": false,
+      "hints": [
+        {
+          "level": 1,
+          "text_key": "hint.SOC-01.1",
+          "text_fa": "کدام اتفاق زودتر رخ داده؟",
+          "tts_fa": "کدام اتفاق زودتر رخ داده؟",
+          "effect": "pulse_pair",
+          "audio_key": "SOC-01_hint_1",
+          "trigger_wrong": 1,
+          "trigger_idle_s": 45
+        },
+        {
+          "level": 2,
+          "text_key": "hint.SOC-01.2_plant",
+          "text_fa": "به اندازه‌ی گیاه دقت کن.",
+          "tts_fa": "به اندازه‌ی گیاه دقت کن.",
+          "effect": "show_age_tags",
+          "audio_key": "SOC-01_hint_2_plant",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 60
+        },
+        {
+          "level": 3,
+          "text_key": "hint.SOC-01.3_plant",
+          "text_fa": "از دانه شروع کن و به گل برس.",
+          "tts_fa": "از دانه شروع کن و به گُل برس.",
+          "effect": "guide_from_start",
+          "audio_key": "SOC-01_hint_3_plant",
+          "trigger_wrong": 3,
+          "trigger_idle_s": 75
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "records_mastery": false,
+        "action": "lock_ends",
+        "note": "the earliest and the latest event slide to the first and the last slot and lock; three cards stay to order"
+      }
+    }
+  ],
+  "feedback": [
+    {
+      "rule": "newer_before_older",
+      "text_key": "feedback.SOC-01.newer_before_older"
+    },
+    {
+      "rule": "timeline_reversed",
+      "text_key": "feedback.SOC-01.reversed"
+    },
+    {
+      "rule": "incomplete",
+      "text_key": "feedback.SOC-01.incomplete"
+    }
+  ],
+  "story": {
+    "intro_key": "story.SOC-01.intro",
+    "payoff_key": "story.SOC-01.payoff",
+    "transfer_key": "story.SOC-01.transfer",
+    "practice_done_key": "story.SOC-01.practice_done",
+    "finale_key": "story.SOC-01.finale",
+    "child_name_fa": "امیر",
+    "note": "Amir = the textbook's own example child (C307 p. 6: 9 years old, grade 3); his house in the silent village: the album spilled, the mantel clock stopped."
+  },
+  "reading": {
+    "audio_optional": true,
+    "audio_unlock_s": 3,
+    "audio_dir": "Content/Audio/VO",
+    "vo_status": "ready",
+    "vo_ready": [],
+    "note": "tap a card → the Reading Card with the full sentence; the listen button appears after 3 s. vo_status 'ready' = all 20 clips exist (15 cards + 5 hints; round 15: encounter + hints, round 16: practice + transfer). 'partial' would voice only the keys in vo_ready.",
+    "tts_rule": "light marking (round 13): text_fa + kasra only for an unwritten ezafe, «ـهٔ» after a silent ه, damma on پُر/گُل/نُه (نه = nine vs no); digits are spoken words in tts_fa (۹ → نُه)."
+  },
+  "misconceptions": [
+    {
+      "code": "SOC_TIME_ORDER_IRRELEVANT",
+      "alias": "SOC01-M01",
+      "rule": "newer_before_older",
+      "error_type": "SequenceError",
+      "description": "card: «هر تصویر فقط یک اتفاق جداست و ترتیب زمانی مهم نیست.» — a newer event is put before an older one",
+      "targeted_hint": 2
+    },
+    {
+      "code": "SOC_TIMELINE_DIRECTION",
+      "alias": "SOC01-M02",
+      "rule": "timeline_reversed",
+      "error_type": "ObservationError",
+      "description": "the row is built right-to-left (reading direction) — today first, birth last; the arrow of the timeline is ignored",
+      "targeted_hint": 3
+    }
+  ],
+  "misconception_flag_threshold": 1,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "transfer_solved_independently": 4,
+    "highlight_level": 2,
+    "note": "card mastery = a timeline for a NEW event set → the practice (new memories of Amir) without H2/H3 and without Assist gives level 3; the plant transfer on top of it gives 4 (Proficient, plan 06 §9); level 5 needs a transfer in another room (SCI growth, later)."
+  },
+  "analytics_fields": [
+    "timeline_error",
+    "reorder_count",
+    "hint_level"
+  ],
+  "audio": {
+    "on_album": "paper_flip",
+    "on_snap": "wood_snap",
+    "on_marker": "soft_clock_tick per slot",
+    "on_wrong": "soft_error — the pair wobbles, never punishing",
+    "on_solve": "the mantel clock starts ticking + the memory box opens + luma_motif_3_note_ascending"
+  }
+}

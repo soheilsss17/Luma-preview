@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>لوما — LUMA</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <style>
+    html, body { margin: 0; height: 100%; background: #16120d; overflow: hidden; touch-action: none; -webkit-user-select: none; user-select: none; }
+    canvas { display: block; }
+    #loading { position: fixed; inset: 0; display: grid; place-items: center; color: #f3e6c8; font: 700 26px LumaFa, Tahoma, sans-serif; }
+    #debug { position: fixed; left: 8px; bottom: 8px; direction: ltr; white-space: pre; font: 12px/1.35 ui-monospace, monospace;
+             color: #fff6dc; background: rgba(0,0,0,.6); padding: 8px 10px; border-radius: 8px; display: none; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="loading">LUMA …</div>
+  <div id="debug"></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

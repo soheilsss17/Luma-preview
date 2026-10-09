@@ -1,0 +1,319 @@
+{
+  "schema": "luma.sign_place_puzzle/1",
+  "card_id": "P-01",
+  "concept_id": "FA_EXPLICIT_INFO",
+  "quest_id": "Q01",
+  "room_id": "VIL_SIGN_AREA",
+  "area_id": "CROSSROADS_SIGNS",
+  "world_state_on_solve": "VIL_SIGNS_FIXED",
+  "requires_world_state": "GDN_EDGE_BLOOM",
+  "music_layers_max": 4,
+  "source": "Persian grade 3, chapter 1 «نهادها», lesson 1 «محله‌ی ما». Card PERSIAN-01 (source docx L10973: Q01, the signs of the important places were moved; the player places each sign by its short description and the clues of the environment; Read → Observe → Match → Place; signs Drag/Snap; wrong = a place that does not fit the text; misconception «one word in common with the place is enough, the whole sentence does not matter»; H1 «به جمله‌ی کامل توجه کن.», H2 key word highlighted, H3 text clue and scene clue side by side; assets PROP_VILLAGE_SIGN, PROP_SCHOOL_SIGN, PROP_MARKET_SIGN, PROP_LIBRARY_SIGN, PROP_WELL, PROP_ROUTE_MARKER; the sign snaps and the place reacts; wood sound, small confirm bell, village ambience; optional audio read; analytics reading_started, sign_inspected, location_selected, wrong_context, hint_used, puzzle_solved; mastery = a NEW text connected to the right place without Highlight; Transfer: find a place in the school from a short description) + FARSI_01 (L738: read the signs and find the right place; skills explicit information, vocabulary, reading comprehension; wrong = choosing the place only from the picture; Transfer: a new text with the same skill). Persian card contract (L10962): short ORIGINAL texts, never long book text; audio help is optional and must not replace reading. Plan 12 §1 row 3.",
+  "places": [
+    {
+      "spot_id": "school",
+      "name_fa": "مدرسه",
+      "cue": "bell",
+      "sign_sprite": "sign_school"
+    },
+    {
+      "spot_id": "market",
+      "name_fa": "بازار",
+      "cue": "fruit",
+      "sign_sprite": "sign_market"
+    },
+    {
+      "spot_id": "library",
+      "name_fa": "کتابخانه",
+      "cue": "books",
+      "sign_sprite": "sign_library"
+    },
+    {
+      "spot_id": "well",
+      "name_fa": "چاه",
+      "cue": "bucket",
+      "sign_sprite": "sign_well"
+    }
+  ],
+  "stages": [
+    {
+      "puzzle_id": "P-01_ENC",
+      "stage": "encounter",
+      "kind": "sign_place",
+      "object_sprite": "sign_blank",
+      "objective_fa": "هر تابلو را بخوان و جلوی جای درستش بگذار.",
+      "signs": [
+        {
+          "sign_id": "S_SCHOOL",
+          "answer": "school",
+          "text_fa": "بچه‌ها با صدای زنگ این‌جا می‌آیند و درس می‌خوانند.",
+          "keys": [
+            "صدای زنگ",
+            "درس"
+          ],
+          "traps": [
+            {
+              "spot": "library",
+              "word": "می‌خوانند"
+            }
+          ],
+          "audio_key": "P-01_enc_school",
+          "tts_fa": "بچه‌ها با صدای زنگْ این‌جا می‌آیند و درس می‌خوانند."
+        },
+        {
+          "sign_id": "S_LIBRARY",
+          "answer": "library",
+          "text_fa": "این‌جا کتاب قرض می‌گیریم و آرام می‌خوانیم.",
+          "keys": [
+            "کتاب قرض"
+          ],
+          "traps": [
+            {
+              "spot": "school",
+              "word": "می‌خوانیم"
+            }
+          ],
+          "audio_key": "P-01_enc_library",
+          "tts_fa": "این‌جا کتابْ قرض می‌گیریم و آرام می‌خوانیم."
+        },
+        {
+          "sign_id": "S_MARKET",
+          "answer": "market",
+          "text_fa": "این‌جا میوه و آب‌میوه می‌فروشند.",
+          "keys": [
+            "میوه",
+            "می‌فروشند"
+          ],
+          "traps": [
+            {
+              "spot": "well",
+              "word": "آب"
+            }
+          ],
+          "audio_key": "P-01_enc_market",
+          "tts_fa": "این‌جا میوه و آب‌میوه می‌فروشند."
+        },
+        {
+          "sign_id": "S_WELL",
+          "answer": "well",
+          "text_fa": "مردم با سطل از این‌جا آب برمی‌دارند و میوه‌ها را می‌شویند.",
+          "keys": [
+            "سطل",
+            "آب برمی‌دارند"
+          ],
+          "traps": [
+            {
+              "spot": "market",
+              "word": "میوه"
+            }
+          ],
+          "audio_key": "P-01_enc_well",
+          "tts_fa": "مردم با سطلْ از این‌جا آب برمی‌دارند و میوه‌ها را می‌شویند."
+        }
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 45,
+          "target": "whole_sentence",
+          "animation": "LUMI flies under the whole sentence on the reading card, right to left; each word glows in turn (card H1: pay attention to the whole sentence)",
+          "text_key": "hint.P-01.enc.1",
+          "audio_key": "P-01_hint_1",
+          "tts_fa": "به جمله‌ی کامل توجه کن."
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "keyword",
+          "animation": "the key words of the sentence are highlighted on the reading card (card H2); trap words stay plain",
+          "text_key": "",
+          "audio_key": ""
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "text_and_scene_clue",
+          "animation": "two clues side by side (card H3): the highlighted key words on the card and a round lens with the matching clue of the scene (bell, fruit, books, bucket), joined by a dotted line to that place",
+          "text_key": "",
+          "audio_key": ""
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "two_places_only",
+        "records_mastery": false
+      }
+    },
+    {
+      "puzzle_id": "P-01_PRA",
+      "stage": "practice",
+      "kind": "route_marker_place",
+      "object_sprite": "route_marker",
+      "objective_fa": "نوشته‌ی هر نشانه را بخوان و آن را سرِ راهِ درست بگذار.",
+      "signs": [
+        {
+          "sign_id": "R_MARKET",
+          "answer": "market",
+          "text_fa": "این راه به جایی می‌رسد که پشتِ چاه است و در آن میوه می‌فروشند.",
+          "keys": [
+            "میوه می‌فروشند"
+          ],
+          "traps": [
+            {
+              "spot": "well",
+              "word": "چاه"
+            }
+          ],
+          "audio_key": "P-01_pra_market",
+          "tts_fa": "این راه به جایی می‌رسد که پشتِ چاه است و در آن میوه می‌فروشند."
+        },
+        {
+          "sign_id": "R_LIBRARY",
+          "answer": "library",
+          "text_fa": "این راه به جایی می‌رسد که زنگ ندارد، ولی پر از کتاب است.",
+          "keys": [
+            "زنگ ندارد",
+            "پر از کتاب"
+          ],
+          "traps": [
+            {
+              "spot": "school",
+              "word": "زنگ"
+            }
+          ],
+          "audio_key": "P-01_pra_library",
+          "tts_fa": "این راه به جایی می‌رسد که زنگْ ندارد، ولی پُر از کتاب است."
+        },
+        {
+          "sign_id": "R_SCHOOL",
+          "answer": "school",
+          "text_fa": "این راه به جایی می‌رسد که زنگ دارد و بچه‌ها کتاب‌هایشان را آن‌جا می‌برند.",
+          "keys": [
+            "زنگ دارد",
+            "بچه‌ها"
+          ],
+          "traps": [
+            {
+              "spot": "library",
+              "word": "کتاب"
+            }
+          ],
+          "audio_key": "P-01_pra_school",
+          "tts_fa": "این راه به جایی می‌رسد که زنگْ دارد و بچه‌ها کتاب‌هایشان را آن‌جا می‌برند."
+        },
+        {
+          "sign_id": "R_WELL",
+          "answer": "well",
+          "text_fa": "این راه به وسطِ میدان می‌رسد؛ آن‌جا آب هست، ولی چیزی نمی‌فروشند.",
+          "keys": [
+            "وسطِ میدان",
+            "آب هست"
+          ],
+          "traps": [
+            {
+              "spot": "market",
+              "word": "می‌فروشند"
+            }
+          ],
+          "audio_key": "P-01_pra_well",
+          "tts_fa": "این راه به وسطِ میدان می‌رسد؛ آن‌جا آب هست، ولی چیزی نمی‌فروشند."
+        }
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 45,
+          "target": "whole_sentence",
+          "animation": "LUMI flies under the whole sentence on the reading card, right to left; each word glows in turn (card H1: pay attention to the whole sentence)",
+          "text_key": "hint.P-01.pra.1",
+          "audio_key": "P-01_hint_1",
+          "tts_fa": "به جمله‌ی کامل توجه کن."
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "keyword",
+          "animation": "the key words of the sentence are highlighted on the reading card (card H2); trap words stay plain",
+          "text_key": "",
+          "audio_key": ""
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "text_and_scene_clue",
+          "animation": "two clues side by side (card H3): the highlighted key words on the card and a round lens with the matching clue of the scene (bell, fruit, books, bucket), joined by a dotted line to that place",
+          "text_key": "",
+          "audio_key": ""
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "two_places_only",
+        "records_mastery": false
+      }
+    }
+  ],
+  "reading": {
+    "audio_optional": true,
+    "audio_unlock_s": 3,
+    "audio_dir": "Content/Audio/VO",
+    "note": "the listen button appears after the reading card has been on screen for 3 s, so the child tries to read first (card contract: audio must not replace reading); audio use is logged, it does not block mastery",
+    "tts_rule": "tts_fa = the exact TTS input, LIGHTLY marked (user decision, round 13: full vocalization made the voice worse): text_fa as written + kasra only for a spoken ezafe that is not written (کنارِ), «ـهٔ» for an ezafe after a silent ه, a word-final sukun only where the voice would otherwise add a false ezafe (کتابْ قرض), and a vowel only on known homographs (پُر، گُل). No fatha/damma/tashdid/sukun elsewhere. Stripped of the marks it equals text_fa."
+  },
+  "guess_read_ms": 1500,
+  "misconceptions": [
+    {
+      "code": "FA_SINGLE_WORD_MATCH",
+      "alias": "P01-M01",
+      "rule": "trap",
+      "error_type": "ConceptError",
+      "description": "Matches the place by one word the text shares with it; the rest of the sentence is ignored (card PERSIAN-01 misconception).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "FA_PICTURE_ONLY_GUESS",
+      "alias": "P01-M02",
+      "rule": "guess",
+      "error_type": "StrategyError",
+      "description": "Chooses a place from the picture only, without reading: a wrong placement less than 1.5 s after the sign was picked up (FARSI_01 «انتخاب مکان صرفاً براساس تصویر»; team code).",
+      "targeted_hint": 1
+    }
+  ],
+  "misconception_flag_threshold": 2,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "highlight_level": 2,
+    "note": "card: mastery = a NEW text connected to the right place WITHOUT Highlight → the practice route markers (new texts) solved without H2 (highlight), H3 or Answer Assist; H1 (attend to the whole sentence) and audio are allowed. Levels 4-5 need the Transfer in the school (outside this room)."
+  },
+  "analytics_fields": [
+    "puzzle_id",
+    "attempt_id",
+    "duration",
+    "sign_id",
+    "spot_id",
+    "error_type",
+    "hint_level",
+    "read_ms",
+    "audio_used"
+  ],
+  "audio": {
+    "on_pick": "soft wood lift",
+    "on_place": "wood knock into the ground + small confirm bell; the place reacts (bell ring, page flutter, fruit rustle, water splash)",
+    "on_wrong": "the sign wobbles and floats back, soft wood boop, never punishing",
+    "on_solve": "route markers chime in sequence + luma_motif_3_note_ascending"
+  }
+}

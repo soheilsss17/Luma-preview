@@ -1,0 +1,491 @@
+{
+  "schema": "luma.story_board_puzzle/1",
+  "card_id": "P-13",
+  "concept_id": "FA_TOPIC_COHERENT_TEXT",
+  "quest_id": "Q01",
+  "room_id": "VIL_PLAZA",
+  "area_id": "FESTIVAL_BOARD",
+  "world_state_on_solve": "VIL_FESTIVAL_POSTER_UP",
+  "requires_world_state": "VIL_INTRO_BOARD_UP",
+  "music_layers_max": 4,
+  "source": "بازی آموزشی کل دروس سوم ابتدایی.docx — PERSIAN-13 (فارسی سوم، فصل ۶ ایران من، درس ۱۳ درس آزاد); plan 04 row P-13; plan 12 §2 row 6 (VS version: festival story board, 6 slots, open-ended but constrained).",
+  "design_note": "Slot 1 = the topic (a word card with a pictogram, «انتخاب واژه»). Slots 2–6 = sentence cards, filled top-down without gaps (cards slide up). Any composition is accepted when: every sentence is about the chosen topic, no idea is said twice, the main sentence comes first, a closing sentence (optional) comes last, and at least two detail sentences are used. 44 valid compositions per topic. «ثبت» (the engraving stamp) submits.",
+  "slots": {
+    "topic": 1,
+    "sentences": 5,
+    "min_details": 2
+  },
+  "cards": [
+    {
+      "card_id": "BR_MAIN",
+      "topic": "BREAD",
+      "role": "main",
+      "idea": "bread_main",
+      "text_fa": "نانوایی محله‌ی ما هر روز صبح نان تازه می‌پزد.",
+      "tts_fa": "نانوایی محله‌ی ما هر روز صبحْ نانِ تازه می‌پزد.",
+      "audio_key": "P-13_br_main"
+    },
+    {
+      "card_id": "BR_OVEN",
+      "topic": "BREAD",
+      "role": "detail",
+      "idea": "oven",
+      "text_fa": "نانوا خمیر را در تنور داغ می‌گذارد.",
+      "tts_fa": "نانوا خمیر را در تنورِ داغ می‌گذارد.",
+      "audio_key": "P-13_br_oven"
+    },
+    {
+      "card_id": "BR_SMELL",
+      "topic": "BREAD",
+      "role": "detail",
+      "idea": "smell",
+      "text_fa": "بوی نان تازه تا سر کوچه می‌رسد.",
+      "tts_fa": "بوی نانِ تازه تا سرِ کوچه می‌رسد.",
+      "audio_key": "P-13_br_smell"
+    },
+    {
+      "card_id": "BR_LINE",
+      "topic": "BREAD",
+      "role": "detail",
+      "idea": "line",
+      "text_fa": "مردم صبح زود برای خرید نان صف می‌کشند.",
+      "tts_fa": "مردم صبحْ زود برای خریدِ نان صف می‌کشند.",
+      "audio_key": "P-13_br_line"
+    },
+    {
+      "card_id": "BR_SMELL2",
+      "topic": "BREAD",
+      "role": "detail",
+      "idea": "smell",
+      "text_fa": "بوی خوب نان تا ته کوچه هم می‌آید.",
+      "tts_fa": "بوی خوبِ نان تا تهِ کوچه هم می‌آید.",
+      "audio_key": "P-13_br_smell2"
+    },
+    {
+      "card_id": "BR_END",
+      "topic": "BREAD",
+      "role": "closing",
+      "idea": "bread_end",
+      "text_fa": "ما نانوایی محله‌مان را خیلی دوست داریم.",
+      "tts_fa": "ما نانوایی محله‌مان را خیلی دوست داریم.",
+      "audio_key": "P-13_br_end"
+    },
+    {
+      "card_id": "CA_MAIN",
+      "topic": "CARPET",
+      "role": "main",
+      "idea": "carpet_main",
+      "text_fa": "مادربزرگ مینا در خانه فرش می‌بافد.",
+      "tts_fa": "مادربزرگِ مینا در خانه فرش می‌بافد.",
+      "audio_key": "P-13_ca_main"
+    },
+    {
+      "card_id": "CA_LOOM",
+      "topic": "CARPET",
+      "role": "detail",
+      "idea": "loom",
+      "text_fa": "دار قالی او کنار پنجره است.",
+      "tts_fa": "دارِ قالیِ او کنارِ پنجره است.",
+      "audio_key": "P-13_ca_loom"
+    },
+    {
+      "card_id": "CA_COLOR",
+      "topic": "CARPET",
+      "role": "detail",
+      "idea": "color",
+      "text_fa": "نخ‌های فرش قرمز و آبی و زرد هستند.",
+      "tts_fa": "نخ‌های فرشْ قرمز و آبی و زرد هستند.",
+      "audio_key": "P-13_ca_color"
+    },
+    {
+      "card_id": "CA_TIME",
+      "topic": "CARPET",
+      "role": "detail",
+      "idea": "time",
+      "text_fa": "بافتن یک فرش کوچک چند ماه طول می‌کشد.",
+      "tts_fa": "بافتنِ یک فرشِ کوچک چند ماه طول می‌کشد.",
+      "audio_key": "P-13_ca_time"
+    },
+    {
+      "card_id": "CA_COLOR2",
+      "topic": "CARPET",
+      "role": "detail",
+      "idea": "color",
+      "text_fa": "رنگ نخ‌ها قرمز و آبی و زرد است.",
+      "tts_fa": "رنگِ نخ‌ها قرمز و آبی و زرد است.",
+      "audio_key": "P-13_ca_color2"
+    },
+    {
+      "card_id": "CA_END",
+      "topic": "CARPET",
+      "role": "closing",
+      "idea": "carpet_end",
+      "text_fa": "فرش او گرم و نرم و زیباست.",
+      "tts_fa": "فرشِ او گرم و نرم و زیباست.",
+      "audio_key": "P-13_ca_end"
+    },
+    {
+      "card_id": "SA_MAIN",
+      "topic": "SAMOVAR",
+      "role": "main",
+      "idea": "samovar_main",
+      "text_fa": "در چای‌خانه‌ی میدان یک سماور بزرگ هست.",
+      "tts_fa": "در چای‌خانه‌ی میدان یک سماورِ بزرگ هست.",
+      "audio_key": "P-13_sa_main"
+    },
+    {
+      "card_id": "SA_WATER",
+      "topic": "SAMOVAR",
+      "role": "detail",
+      "idea": "water",
+      "text_fa": "آب سماور همیشه گرم است و می‌جوشد.",
+      "tts_fa": "آبِ سماور همیشه گرم است و می‌جوشد.",
+      "audio_key": "P-13_sa_water"
+    },
+    {
+      "card_id": "SA_POUR",
+      "topic": "SAMOVAR",
+      "role": "detail",
+      "idea": "pour",
+      "text_fa": "صاحب چای‌خانه چای را در استکان‌های کوچک می‌ریزد.",
+      "tts_fa": "صاحبِ چای‌خانه چای را در استکان‌های کوچک می‌ریزد.",
+      "audio_key": "P-13_sa_pour"
+    },
+    {
+      "card_id": "SA_TALK",
+      "topic": "SAMOVAR",
+      "role": "detail",
+      "idea": "talk",
+      "text_fa": "پدربزرگ‌ها عصرها آن‌جا چای می‌نوشند و حرف می‌زنند.",
+      "tts_fa": "پدربزرگ‌ها عصرها آن‌جا چای می‌نوشند و حرف می‌زنند.",
+      "audio_key": "P-13_sa_talk"
+    },
+    {
+      "card_id": "SA_POUR2",
+      "topic": "SAMOVAR",
+      "role": "detail",
+      "idea": "pour",
+      "text_fa": "چای را در استکان‌های کوچک به مردم می‌دهند.",
+      "tts_fa": "چای را در استکان‌های کوچک به مردم می‌دهند.",
+      "audio_key": "P-13_sa_pour2"
+    },
+    {
+      "card_id": "SA_END",
+      "topic": "SAMOVAR",
+      "role": "closing",
+      "idea": "samovar_end",
+      "text_fa": "چای‌خانه جای گرمی برای دور هم بودن است.",
+      "tts_fa": "چای‌خانه جای گرمی برای دورِ هم بودن است.",
+      "audio_key": "P-13_sa_end"
+    },
+    {
+      "card_id": "LI_MAIN",
+      "topic": "LIBRARY",
+      "role": "main",
+      "idea": "library_main",
+      "text_fa": "کتابخانه‌ی محله‌ی ما یک جای آرام برای خواندن است.",
+      "tts_fa": "کتابخانه‌ی محله‌ی ما یک جای آرام برای خواندن است.",
+      "audio_key": "P-13_li_main"
+    },
+    {
+      "card_id": "LI_SHELF",
+      "topic": "LIBRARY",
+      "role": "detail",
+      "idea": "shelf",
+      "text_fa": "قفسه‌هایش پر از کتاب‌های قصه و علمی است.",
+      "tts_fa": "قفسه‌هایش پُر از کتاب‌های قصه و علمی است.",
+      "audio_key": "P-13_li_shelf"
+    },
+    {
+      "card_id": "LI_HELP",
+      "topic": "LIBRARY",
+      "role": "detail",
+      "idea": "help",
+      "text_fa": "کتابدار به ما کمک می‌کند کتاب مناسب پیدا کنیم.",
+      "tts_fa": "کتابدار به ما کمک می‌کند کتابِ مناسب پیدا کنیم.",
+      "audio_key": "P-13_li_help"
+    },
+    {
+      "card_id": "LI_LOAN",
+      "topic": "LIBRARY",
+      "role": "detail",
+      "idea": "loan",
+      "text_fa": "هر هفته می‌توانیم دو کتاب امانت بگیریم.",
+      "tts_fa": "هر هفته می‌توانیم دو کتابْ امانت بگیریم.",
+      "audio_key": "P-13_li_loan"
+    },
+    {
+      "card_id": "LI_HELP2",
+      "topic": "LIBRARY",
+      "role": "detail",
+      "idea": "help",
+      "text_fa": "کتابدار کمک می‌کند کتاب خوبی انتخاب کنیم.",
+      "tts_fa": "کتابدار کمک می‌کند کتابِ خوبی انتخاب کنیم.",
+      "audio_key": "P-13_li_help2"
+    },
+    {
+      "card_id": "LI_END",
+      "topic": "LIBRARY",
+      "role": "closing",
+      "idea": "library_end",
+      "text_fa": "من کتابخانه را جای دوست‌داشتنی محله می‌دانم.",
+      "tts_fa": "من کتابخانه را جای دوست‌داشتنیِ محله می‌دانم.",
+      "audio_key": "P-13_li_end"
+    }
+  ],
+  "stages": [
+    {
+      "puzzle_id": "P-13_ENC",
+      "stage": "encounter",
+      "kind": "story_board_free_topic",
+      "objective_fa": {
+        "topic": "موضوع تابلو را انتخاب کن.",
+        "compose": "با جمله‌ها یک معرفی کوتاه بساز و ثبتش کن.",
+        "done": "پوستر جشن آماده شد!"
+      },
+      "topics": [
+        {
+          "topic_id": "BREAD",
+          "word_fa": "نانوایی",
+          "picto": "bread",
+          "name_key": "topic.P-13.BREAD"
+        },
+        {
+          "topic_id": "CARPET",
+          "word_fa": "فرش‌بافی",
+          "picto": "carpet",
+          "name_key": "topic.P-13.CARPET"
+        },
+        {
+          "topic_id": "SAMOVAR",
+          "word_fa": "چای‌خانه",
+          "picto": "samovar",
+          "name_key": "topic.P-13.SAMOVAR"
+        }
+      ],
+      "fixed_topic": null,
+      "show_pictos": false,
+      "trays": [
+        {
+          "topic": "BREAD",
+          "cards": [
+            "BR_SMELL",
+            "CA_COLOR",
+            "BR_MAIN",
+            "BR_LINE",
+            "SA_WATER",
+            "BR_END",
+            "BR_SMELL2",
+            "BR_OVEN"
+          ]
+        },
+        {
+          "topic": "CARPET",
+          "cards": [
+            "CA_TIME",
+            "BR_SMELL",
+            "CA_LOOM",
+            "CA_END",
+            "CA_MAIN",
+            "SA_POUR",
+            "CA_COLOR2",
+            "CA_COLOR"
+          ]
+        },
+        {
+          "topic": "SAMOVAR",
+          "cards": [
+            "SA_POUR2",
+            "SA_TALK",
+            "BR_LINE",
+            "SA_MAIN",
+            "CA_LOOM",
+            "SA_END",
+            "SA_WATER",
+            "SA_POUR"
+          ]
+        }
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text_key": "hint.P-13.1",
+          "text_fa": "جمله‌ها باید درباره یک موضوع مشترک باشند.",
+          "tts_fa": "جمله‌ها باید دربارهٔ یک موضوع مشترک باشند.",
+          "effect": "lumi_circles_topic",
+          "audio_key": "P-13_hint_1",
+          "trigger_wrong": 1,
+          "trigger_idle_s": 45
+        },
+        {
+          "level": 2,
+          "text_key": "hint.P-13.2",
+          "text_fa": "این جمله‌ی اصلی است؛ بقیه‌ی جمله‌ها باید آن را کامل کنند.",
+          "tts_fa": "این جمله‌ی اصلی است؛ بقیه‌ی جمله‌ها باید آن را کامل کنند.",
+          "effect": "mark_main_sentence",
+          "audio_key": "P-13_hint_2",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 60
+        },
+        {
+          "level": 3,
+          "text_key": "hint.P-13.3",
+          "text_fa": "به تصویر گوشه‌ی هر کارت نگاه کن.",
+          "tts_fa": "به تصویرِ گوشه‌ی هر کارت نگاه کن.",
+          "effect": "reveal_pictos_and_threads",
+          "trigger_wrong": 3,
+          "trigger_idle_s": 75
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "records_mastery": false,
+        "action": "remove_off_topic",
+        "note": "off-topic cards leave the board and the tray; a repeated idea gets a soft ghost"
+      },
+      "board_title_key": "board.P-13.enc"
+    },
+    {
+      "puzzle_id": "P-13_PRA",
+      "stage": "practice",
+      "kind": "story_board_fixed_topic",
+      "objective_fa": {
+        "topic": "",
+        "compose": "کتابخانه را با چند جمله‌ی مرتبط معرفی کن.",
+        "done": "معرفی کتابخانه هم روی تابلو رفت."
+      },
+      "topics": [
+        {
+          "topic_id": "LIBRARY",
+          "word_fa": "کتابخانه",
+          "picto": "library",
+          "name_key": "topic.P-13.LIBRARY"
+        }
+      ],
+      "fixed_topic": "LIBRARY",
+      "show_pictos": false,
+      "trays": [
+        {
+          "topic": "LIBRARY",
+          "cards": [
+            "LI_HELP",
+            "BR_OVEN",
+            "LI_END",
+            "LI_LOAN",
+            "LI_MAIN",
+            "SA_WATER",
+            "LI_HELP2",
+            "LI_SHELF"
+          ]
+        }
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text_key": "hint.P-13.1",
+          "text_fa": "جمله‌ها باید درباره یک موضوع مشترک باشند.",
+          "tts_fa": "جمله‌ها باید دربارهٔ یک موضوع مشترک باشند.",
+          "effect": "lumi_circles_topic",
+          "audio_key": "P-13_hint_1",
+          "trigger_wrong": 1,
+          "trigger_idle_s": 45
+        },
+        {
+          "level": 2,
+          "text_key": "hint.P-13.2",
+          "text_fa": "این جمله‌ی اصلی است؛ بقیه‌ی جمله‌ها باید آن را کامل کنند.",
+          "tts_fa": "این جمله‌ی اصلی است؛ بقیه‌ی جمله‌ها باید آن را کامل کنند.",
+          "effect": "mark_main_sentence",
+          "audio_key": "P-13_hint_2",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 60
+        },
+        {
+          "level": 3,
+          "text_key": "hint.P-13.3",
+          "text_fa": "به تصویر گوشه‌ی هر کارت نگاه کن.",
+          "tts_fa": "به تصویرِ گوشه‌ی هر کارت نگاه کن.",
+          "effect": "reveal_pictos_and_threads",
+          "trigger_wrong": 3,
+          "trigger_idle_s": 75
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "records_mastery": false,
+        "action": "remove_off_topic",
+        "note": "off-topic cards leave the board and the tray; a repeated idea gets a soft ghost"
+      },
+      "board_title_key": "board.P-13.pra"
+    }
+  ],
+  "feedback": [
+    {
+      "rule": "off_topic",
+      "text_key": "feedback.P-13.off_topic"
+    },
+    {
+      "rule": "duplicate_idea",
+      "text_key": "feedback.P-13.duplicate"
+    },
+    {
+      "rule": "main_not_first",
+      "text_key": "feedback.P-13.main_first"
+    },
+    {
+      "rule": "closing_not_last",
+      "text_key": "feedback.P-13.closing_last"
+    },
+    {
+      "rule": "too_few",
+      "text_key": "feedback.P-13.too_few"
+    }
+  ],
+  "reading": {
+    "audio_optional": true,
+    "audio_unlock_s": 3,
+    "audio_dir": "Content/Audio/VO",
+    "vo_status": "pending",
+    "note": "tap a card → the Reading Card; listen after 3 s. Clips P-13_* are generated in the VO pass (10 per turn); until then the listen button is hidden.",
+    "tts_rule": "tts_fa = the exact TTS input, LIGHTLY marked (user decision, round 13: full vocalization made the voice worse): text_fa as written + kasra only for a spoken ezafe that is not written (کنارِ), «ـهٔ» for an ezafe after a silent ه, a word-final sukun only where the voice would otherwise add a false ezafe (کتابْ قرض), and a vowel only on known homographs (پُر، گُل). No fatha/damma/tashdid/sukun elsewhere. Stripped of the marks it equals text_fa."
+  },
+  "misconceptions": [
+    {
+      "code": "FA_SEPARATE_SENTENCES_COHERENT",
+      "alias": "P13-M01",
+      "rule": "off_topic",
+      "error_type": "ConceptError",
+      "description": "card: «چند جمله‌ی جدا از هم = متن منسجم.» — good sentences about another topic are put on the board",
+      "targeted_hint": 1
+    },
+    {
+      "code": "WR_MORE_SENTENCES_BETTER",
+      "alias": "P13-M02",
+      "rule": "duplicate_idea",
+      "error_type": "ConceptError",
+      "description": "more sentences is better: the same idea is said twice to fill the board",
+      "targeted_hint": 2
+    }
+  ],
+  "misconception_flag_threshold": 1,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "highlight_level": 2,
+    "note": "card mastery = a short coherent text WITHOUT a full template → the library practice (fixed topic, no pictograms) solved without H2/H3 and without Assist gives level 3."
+  },
+  "analytics_fields": [
+    "sentence_created",
+    "topic_consistency",
+    "revision_count",
+    "hint_level"
+  ],
+  "audio": {
+    "on_pick": "paper_pickup",
+    "on_snap": "wood_snap",
+    "on_submit": "wood engraving (stamp)",
+    "on_wrong": "soft_error — wrong cards wobble, never punishing",
+    "on_solve": "gentle chime + the board fills with light + luma_motif_3_note_ascending"
+  }
+}

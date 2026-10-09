@@ -1,0 +1,296 @@
+{
+  "schema": "luma.place_panel_puzzle/1",
+  "card_id": "MATH-07",
+  "concept_id": "PLACE_VALUE_4_DIGIT",
+  "quest_id": "Q02",
+  "room_id": "WS_GEAR_ROOM",
+  "area_id": "WORKSHOP",
+  "source": "Math grade 3, chapter 2, lesson «ارزش مکانی» (book pp. 31–33). Card MATH-07 (source docx v1 + detailed card): v1 warehouse PLACE_VALUE_ROOM, four columns هزارگان/صدگان/دهگان/یکان, drag + snap, wrong = a token in the wrong column → the weighing machine does not balance; PV-M01 a digit's value confused with the token, PV-M02 columns read from the wrong side; H1 «هر ستون جای مخصوص خودش را دارد.», H2 a visual label on each column, H3 a sample token moves to its place; asset Place Value Board. v2 quest «دستگاه شمارش کارگاه رقم‌های یک شمارهٔ مهم را جابه‌جا کرده است», NUMBER_CONTROL_PANEL, digit drag-drop snapping on four columns, select digit → place → show the value of the place, wrong = Value Preview warns the target is not built, misconception MATH_PV_DIGIT_FACE_VALUE; H1 «هر ستون چه ارزشی دارد؟», H2 pictorial column symbols, H3 one digit placed as an example; assets PROP_PLACE_VALUE_PANEL, PROP_DIGIT_TILE, PROP_VALUE_BEAM; animations digit_snap, column_light, value_expand; sound slot click + rising tone as the value grows; UI four columns + Number Preview; analytics digit_selected, place_selected, placement_error, value_preview, solved; mastery: build several four-digit numbers + «ارزش این رقم چیست؟» in the transfer; transfer: a number on a shipment label, the value of a marked digit. Textbook p.31: bundles 1000/100/10/1 → table → digits; «یکان ۴، دهگان ۵، صدگان صفر، هزارگان ۷» → ۷۰۵۴; p.33: ۵۳۲۱ = ۱ یکی، ۲ ده‌تایی، ۳ صدتایی، ۵ هزارتایی; ۴۰۳۰ = ۴ هزارتایی و ۳ ده‌تایی; expanded forms (۵+۲۰۰+۸۰۰۰=۸۲۰۵).",
+  "world_state_on_solve": "WS_NUMBER_PANEL_FIXED",
+  "requires_world_state": "WS_STORAGE_SORTED",
+  "music_layers_max": 4,
+  "strategy_tag": "model_with_objects",
+  "places": [
+    {
+      "id": "thousands",
+      "value": 1000,
+      "name_fa": "هزارگان",
+      "sprite": "thousand_crate"
+    },
+    {
+      "id": "hundreds",
+      "value": 100,
+      "name_fa": "صدگان",
+      "sprite": "hundred_crate"
+    },
+    {
+      "id": "tens",
+      "value": 10,
+      "name_fa": "دهگان",
+      "sprite": "crate_small"
+    },
+    {
+      "id": "ones",
+      "value": 1,
+      "name_fa": "یکان",
+      "sprite": "counting_block"
+    }
+  ],
+  "misconceptions": [
+    {
+      "code": "MATH_PV_DIGIT_FACE_VALUE",
+      "alias": "PV-M01",
+      "rule": "swapped",
+      "error_type": "ConceptError",
+      "description": "Puts digits in columns as if a digit were worth its face whatever its place (card v2: the value of a digit is taken as independent of its place; v1: value confused with the token).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "MATH_PV_DIGIT_FACE_VALUE",
+      "alias": "PV-M01",
+      "rule": "zero_misplaced",
+      "error_type": "ConceptError",
+      "description": "Keeps the other digits in order but moves the zero, as if an empty place did not need holding (textbook p.31: ۷۰۵۴, «صدگان صفر»).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "MATH_PV_DIGIT_FACE_VALUE",
+      "alias": "PV-M01",
+      "rule": "face_value",
+      "error_type": "ConceptError",
+      "description": "Answers the marked digit's value with the digit itself (۳ for the ۳ of ۴۰۳۰).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "MATH_PV_DIGIT_FACE_VALUE",
+      "alias": "PV-M02",
+      "rule": "reversed",
+      "error_type": "ConceptError",
+      "description": "Builds the exact mirror order — reads the columns from the wrong side (card v1 PV-M02; a real risk for children who read Persian right-to-left while numbers are written thousands-first).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "MATH_PV_DIGIT_FACE_VALUE",
+      "alias": "PV-M02",
+      "rule": "reversed_place",
+      "error_type": "ConceptError",
+      "description": "Gives the marked digit the value of the mirror column (۳۰۰ for the ۳ of ۴۰۳۰).",
+      "targeted_hint": 2
+    }
+  ],
+  "procedure_errors": [
+    {
+      "rule": "incomplete",
+      "error_type": "ProcedureError",
+      "event": "placement_error",
+      "note": "pulling the weigh lever with an empty column: the lever stops half-way, the empty columns blink amber and NEO says every column takes a digit — an empty place is a zero. Counts as a wrong attempt for hints; not a misconception."
+    }
+  ],
+  "design_mitigations": [
+    {
+      "alias": "PV-M01",
+      "code": "MATH_PV_DIGIT_FACE_VALUE",
+      "note": "all tiles look the same; only the column gives a digit its value — the moment a tile snaps, its readout window shows the column value (value_expand: ۵ in دهگان reads ۵۰) and that many crates of the column's size drop onto the right pan, so the value is concrete before any weighing."
+    },
+    {
+      "alias": "PV-M02",
+      "code": "MATH_PV_DIGIT_FACE_VALUE",
+      "note": "the panel is ordered like the textbook table (هزارگان left … یکان right); the pans' stacks keep the same left → right order and the thousand-crates are the biggest, so a mirrored build puts big crates where small ones belong."
+    }
+  ],
+  "misconception_flag_threshold": 2,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "transfer_solved_independently": 4,
+    "note": "card: L1 sees a number built, L2 builds with H1/H2, L3 builds the practice number (with a zero) alone, L4 answers «ارزش این رقم چیست؟» on two shipment labels without hints. L5 needs the later market transfer (plan 04: market counter)."
+  },
+  "analytics_fields": [
+    "puzzle_id",
+    "attempt_id",
+    "duration",
+    "digit",
+    "place",
+    "value_preview",
+    "placement_error",
+    "error_type",
+    "misconception",
+    "alias",
+    "hint_level",
+    "solved"
+  ],
+  "audio": {
+    "on_select": "SFX_DIGIT_PICK (small wooden tap)",
+    "on_snap": "SFX_SLOT_CLICK (mechanical slot click) + a rising tone whose pitch follows the column value (card: rising tone as the value grows)",
+    "on_weigh": "SFX_BEAM_RELEASE (latch) then SFX_BEAM_SWING (creak) — never harsh",
+    "on_wrong": "the beam leans, amber blink on the wrong columns, soft flicker",
+    "on_solve": "luma_motif_3_note_ascending; bell when the panel lamps come on"
+  },
+  "stages": [
+    {
+      "puzzle_id": "MATH-07_ENC",
+      "stage": "encounter",
+      "kind": "build",
+      "target": 2354,
+      "tiles": [
+        5,
+        2,
+        4,
+        3
+      ],
+      "objective_fa": "عدد موجودی انبار را روی صفحه بساز و اهرم ترازو را بکش.",
+      "done_line_key": "line.MATH-07.enc_done",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "columns",
+          "animation": "LUMI flies along the four columns left → right; each column lamp blinks in turn while the matching stack on the left pan (thousand-crates, hundred-crates, ten-crates, blocks) pulses (card v2 H1: «هر ستون چه ارزشی دارد؟»; v1 H1: every column has its own place)",
+          "text_key": "hint.MATH-07.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "column_labels",
+          "animation": "the blank name plates light up with the column names هزارگان / صدگان / دهگان / یکان and a small picture of the column's crate (card v2 H2: pictorial symbols on the columns; v1 H2: a visual label on each column); they stay for the rest of the stage",
+          "text_key": "hint.MATH-07.2"
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "example_tile",
+          "animation": "one tile rises from the tray (or from a wrong column) and flies to its right column, snaps and locks with a brass clip (card v1 H3: a sample token moves to its place; v2 H3: one digit placed as an example)",
+          "text_key": "hint.MATH-07.3"
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "return_wrong_lock_right",
+        "note": "tiles in wrong columns go back to the tray, the right ones lock with a brass clip; with none right one example tile is placed and locked",
+        "records_mastery": false
+      },
+      "source_note": "textbook p.31 activity: bundles of 1000/100/10/1 are put in the table and written as a number — here the left pan holds the stock as 2 thousand-crates, 3 hundred-crates, 5 ten-crates and 4 blocks (MATH-06 crates) and the child builds ۲۳۵۴. Mirror build ۴۵۳۲ = PV-M02."
+    },
+    {
+      "puzzle_id": "MATH-07_PRA",
+      "stage": "practice",
+      "kind": "build",
+      "target": 7054,
+      "tiles": [
+        4,
+        0,
+        7,
+        5
+      ],
+      "objective_fa": "یکان ۴، دهگان ۵، صدگان صفر، هزارگان ۷ — عدد را بساز.",
+      "done_line_key": "line.MATH-07.pra_done",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 40,
+          "target": "columns",
+          "animation": "LUMI flies along the four columns left → right; each column lamp blinks in turn while the matching stack on the left pan (thousand-crates, hundred-crates, ten-crates, blocks) pulses (card v2 H1: «هر ستون چه ارزشی دارد؟»; v1 H1: every column has its own place)",
+          "text_key": "hint.MATH-07.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "column_labels",
+          "animation": "the blank name plates light up with the column names هزارگان / صدگان / دهگان / یکان and a small picture of the column's crate (card v2 H2: pictorial symbols on the columns; v1 H2: a visual label on each column); they stay for the rest of the stage",
+          "text_key": "hint.MATH-07.2"
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "example_tile",
+          "animation": "one tile rises from the tray (or from a wrong column) and flies to its right column, snaps and locks with a brass clip (card v1 H3: a sample token moves to its place; v2 H3: one digit placed as an example)",
+          "text_key": "hint.MATH-07.3"
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "return_wrong_lock_right",
+        "note": "tiles in wrong columns go back to the tray, the right ones lock with a brass clip; with none right one example tile is placed and locked",
+        "records_mastery": false
+      },
+      "source_note": "textbook p.31 Q3 verbatim: «رقم یکان ۴، دهگان ۵، صدگان صفر، هزارگان ۷» → ۷۰۵۴ «هفت هزار و پنجاه و چهار». The left pan has no hundred-crates — the zero holds the place. ۷۵۴۰ / ۷۵۰۴ = zero_misplaced, ۴۵۰۷ = reversed."
+    },
+    {
+      "puzzle_id": "MATH-07_TRA",
+      "stage": "transfer",
+      "kind": "digit_value",
+      "rounds": [
+        {
+          "number": 4030,
+          "index": 2,
+          "options": [
+            3,
+            30,
+            300
+          ],
+          "answer": 30
+        },
+        {
+          "number": 8205,
+          "index": 1,
+          "options": [
+            20,
+            200,
+            2
+          ],
+          "answer": 200
+        }
+      ],
+      "objective_fa": "ارزش این رقم چیست؟",
+      "done_line_key": "line.MATH-07.tra_done",
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 1,
+          "trigger_idle_s": 40,
+          "target": "marked_digit",
+          "animation": "LUMI circles the lit digit on the shipment label; four small column ticks appear under the label's digits",
+          "text_key": "hint.MATH-07.T1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "label_on_panel",
+          "animation": "the label's four digits fly into the panel's columns (the column names show); the lit digit's column glows",
+          "text_key": "hint.MATH-07.T2"
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "value_expand",
+          "animation": "value_expand on the lit digit: zeros slide in after it, one per column to its right (۳ → ۳۰), then fade",
+          "text_key": "hint.MATH-07.T3"
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "remove_one_wrong_option",
+        "records_mastery": false
+      },
+      "source_note": "card transfer: a number on a shipment label, the value of a marked digit. Textbook p.33: «۴۰۳۰ یعنی ۴ هزارتایی و ۳ ده‌تایی» (the ۳ is worth ۳۰; ۳۰۰ = the mirror column, PV-M02; ۳ = face value, PV-M01) and «۵+۲۰۰+۸۰۰۰=۸۲۰۵» (the ۲ is worth ۲۰۰; ۲۰ = mirror, ۲ = face)."
+    }
+  ]
+}

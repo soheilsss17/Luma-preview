@@ -1,0 +1,216 @@
+{
+  "schema": "luma.mirror_grid_puzzle/1",
+  "card_id": "MATH-05",
+  "concept_id": "LINE_SYMMETRY",
+  "quest_id": "Q01",
+  "room_id": "VIL_GARDEN_EDGE",
+  "area_id": "SYMMETRY_BED",
+  "source": "Math grade 3, chapter 1 «الگوها», lesson «الگوهای متقارن» (book p. 19). Card v1.0 (source docx L1920: half of the decorative bed is ready, the player completes the other side; Mirror Drag, snap to the mirrored coordinate; wrong = a flower near but not symmetric; SYM-M01 only equalises the number of flowers, SYM-M02 ignores the distance to the axis; H1 «به خط وسط باغچه دقت کن.», H2 the symmetry line appears, H3 the distance of one flower to the axis is shown; assets PROP_GARDEN_BED, PROP_FLOWER_A/B/C, PROP_SYMMETRY_STONE, PROP_CENTER_LINE; Transfer: the Library window) + card v1.1 (L2964: soft grid snap; select piece → observe the axis → drag → snap; wrong = the piece does not stay and a Ghost Mirror shows; misconception: symmetry taken as «same shape» without the position relative to the axis; H1 «محور را پیدا کن.», H2 distance of the piece to the axis, H3 ghost location; PROP_GARDEN_TILE, PROP_SYMMETRY_AXIS, PROP_MIRROR_GHOST; tile_snap, ghost_appear, garden_bloom, success_wave; ceramic click, soft garden chime; analytics axis_identified, tile_moved, tile_error, mirror_preview, solved; mastery = symmetry completed on two axes / a different design; Transfer: the workshop window with metal parts). Plan 12 §1 row 5, plan 04 MATH-05.",
+  "world_state_on_solve": "GDN_EDGE_BLOOM",
+  "requires_world_state": "VIL_STALL_READY",
+  "music_layers_max": 4,
+  "stages": [
+    {
+      "puzzle_id": "MATH-05_ENC",
+      "stage": "encounter",
+      "kind": "mirror_drag",
+      "objective_fa": "گل‌ها را آن طرفِ خط وسط، مثل آینه بکار.",
+      "cols": 6,
+      "rows": 3,
+      "piece_types": [
+        "A",
+        "B",
+        "C"
+      ],
+      "phases": [
+        {
+          "phase_id": "bed",
+          "axis": "v",
+          "objective_fa": "گل‌ها را آن طرفِ خط وسط، مثل آینه بکار.",
+          "row_from": 0,
+          "row_to": 2,
+          "given": [
+            {
+              "r": 0,
+              "c": 0,
+              "type": "A"
+            },
+            {
+              "r": 0,
+              "c": 2,
+              "type": "C"
+            },
+            {
+              "r": 1,
+              "c": 1,
+              "type": "B"
+            },
+            {
+              "r": 2,
+              "c": 2,
+              "type": "A"
+            }
+          ]
+        }
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 45,
+          "target": "center_line",
+          "animation": "LUMI flies slowly along the centre line of the bed, back to front; the pebbles twinkle one after another",
+          "text_key": "hint.MATH-05.enc.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "axis_and_distance",
+          "animation": "the brass symmetry axis rises on the centre line (PROP_SYMMETRY_AXIS) and one flower whose mirror is missing shows its distance to the axis as glowing step dots (card v1.0 H2 + v1.1 H2)",
+          "text_key": ""
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "ghost_location",
+          "animation": "the same number of step dots continue on the other side of the axis and end in a Ghost Mirror of that flower (card v1.0 H3 + v1.1 H3)",
+          "text_key": ""
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "mirror_cells_only",
+        "records_mastery": false
+      }
+    },
+    {
+      "puzzle_id": "MATH-05_PRA",
+      "stage": "practice",
+      "kind": "mirror_mosaic",
+      "objective_fa": "کاشی‌ها را مثل آینه بچین؛ اول آن طرفِ خط عمودی، بعد پایینِ خط افقی.",
+      "cols": 4,
+      "rows": 4,
+      "piece_types": [
+        "T"
+      ],
+      "phases": [
+        {
+          "phase_id": "vertical",
+          "axis": "v",
+          "objective_fa": "کاشی‌ها را آن طرفِ خط عمودی، مثل آینه بچین.",
+          "row_from": 0,
+          "row_to": 1,
+          "given": [
+            {
+              "r": 0,
+              "c": 1,
+              "type": "T"
+            },
+            {
+              "r": 1,
+              "c": 0,
+              "type": "T"
+            }
+          ]
+        },
+        {
+          "phase_id": "horizontal",
+          "axis": "h",
+          "objective_fa": "حالا کاشی‌ها را پایینِ خط افقی، مثل آینه بچین.",
+          "row_from": 0,
+          "row_to": 3,
+          "given": []
+        }
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "kind": "attention",
+          "trigger_wrong": 2,
+          "trigger_idle_s": 45,
+          "target": "axis",
+          "animation": "LUMI flies along the active axis of the mosaic frame",
+          "text_key": "hint.MATH-05.pra.1"
+        },
+        {
+          "level": 2,
+          "kind": "representation",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "axis_and_distance",
+          "animation": "the axis glows and one tile shows its distance to the axis as step dots",
+          "text_key": ""
+        },
+        {
+          "level": 3,
+          "kind": "scaffold",
+          "trigger_wrong": 0,
+          "trigger_idle_s": 0,
+          "target": "ghost_location",
+          "animation": "the step dots continue across the axis and end in a ghost tile",
+          "text_key": ""
+        }
+      ],
+      "answer_assist": {
+        "after_wrong": 3,
+        "action": "mirror_cells_only",
+        "records_mastery": false
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "code": "MATH_SYMMETRY_COUNT_ONLY",
+      "alias": "SYM-M01",
+      "rule": "count_only",
+      "error_type": "ConceptError",
+      "description": "Only makes the number of flowers equal on both sides; the flower is put somewhere on the empty half without matching a flower of the other half (card v1.0).",
+      "targeted_hint": 1
+    },
+    {
+      "code": "MATH_SYMMETRY_DISTANCE",
+      "alias": "SYM-M02",
+      "rule": "distance",
+      "error_type": "ConceptError",
+      "description": "Right row and right flower, but the distance to the axis is not kept (card v1.0).",
+      "targeted_hint": 2
+    },
+    {
+      "code": "MATH_SYMMETRY_TRANSLATE_NOT_REFLECT",
+      "alias": "",
+      "rule": "translated",
+      "error_type": "ConceptError",
+      "description": "Copies the half by sliding it across (same shape, same order) instead of reflecting it: «same shape» without the position relative to the axis (card v1.1 misconception; team code, plan 04).",
+      "targeted_hint": 2
+    }
+  ],
+  "misconception_flag_threshold": 2,
+  "mastery": {
+    "encounter_seen": 1,
+    "solved_with_h1_or_h2": 2,
+    "practice_solved_independently": 3,
+    "note": "card v1.1 mastery: symmetry completed on two axes / a different design → the practice mosaic (vertical then horizontal axis). Levels 4-5 need the Transfer (Library window, variant: workshop window with metal parts) — outside this room."
+  },
+  "analytics_fields": [
+    "puzzle_id",
+    "attempt_id",
+    "duration",
+    "phase_id",
+    "axis",
+    "piece_type",
+    "cell",
+    "error_type",
+    "hint_level"
+  ],
+  "audio": {
+    "on_pick": "soft soil rustle",
+    "on_place": "flower: soft soil pat + soft garden chime; tile: ceramic click (tile_snap)",
+    "on_wrong": "soft wobble, no punishment; Ghost Mirror shimmer (ghost_appear)",
+    "on_solve": "garden_bloom / success_wave + luma_motif_3_note_ascending"
+  }
+}

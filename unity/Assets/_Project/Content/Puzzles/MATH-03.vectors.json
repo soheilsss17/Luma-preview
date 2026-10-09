@@ -1,0 +1,461 @@
+{
+  "schema": "luma.vectors/1",
+  "card_id": "MATH-03",
+  "note": "Shared test vectors (generated from an independent Python implementation): web/test/math03.test.js and Tests/EditMode/IoRulesTests.cs must both pass them. stage = index into stages (0 ENC ×۲, 1 PRA +۳ reverse question, 2 TRA ×۳). inverse.x = -1 with defined=false when no whole-number input exists (JsonUtility has no null).",
+  "apply": [
+    {
+      "rule": {
+        "op": "add",
+        "n": 5
+      },
+      "x": 0,
+      "y": 5
+    },
+    {
+      "rule": {
+        "op": "add",
+        "n": 5
+      },
+      "x": 3,
+      "y": 8
+    },
+    {
+      "rule": {
+        "op": "add",
+        "n": 5
+      },
+      "x": 10,
+      "y": 15
+    },
+    {
+      "rule": {
+        "op": "mul",
+        "n": 2
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "rule": {
+        "op": "mul",
+        "n": 2
+      },
+      "x": 3,
+      "y": 6
+    },
+    {
+      "rule": {
+        "op": "mul",
+        "n": 2
+      },
+      "x": 10,
+      "y": 20
+    },
+    {
+      "rule": {
+        "op": "mul",
+        "n": 3
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "rule": {
+        "op": "mul",
+        "n": 3
+      },
+      "x": 3,
+      "y": 9
+    },
+    {
+      "rule": {
+        "op": "mul",
+        "n": 3
+      },
+      "x": 10,
+      "y": 30
+    },
+    {
+      "rule": {
+        "op": "add",
+        "n": 0
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "rule": {
+        "op": "add",
+        "n": 0
+      },
+      "x": 3,
+      "y": 3
+    },
+    {
+      "rule": {
+        "op": "add",
+        "n": 0
+      },
+      "x": 10,
+      "y": 10
+    }
+  ],
+  "inverse": [
+    {
+      "rule": {
+        "op": "add",
+        "n": 5
+      },
+      "y": 15,
+      "x": 10,
+      "defined": true
+    },
+    {
+      "rule": {
+        "op": "add",
+        "n": 5
+      },
+      "y": 8,
+      "x": 3,
+      "defined": true
+    },
+    {
+      "rule": {
+        "op": "add",
+        "n": 3
+      },
+      "y": 2,
+      "x": -1,
+      "defined": false
+    },
+    {
+      "rule": {
+        "op": "mul",
+        "n": 2
+      },
+      "y": 8,
+      "x": 4,
+      "defined": true
+    },
+    {
+      "rule": {
+        "op": "mul",
+        "n": 2
+      },
+      "y": 7,
+      "x": -1,
+      "defined": false
+    },
+    {
+      "rule": {
+        "op": "mul",
+        "n": 3
+      },
+      "y": 12,
+      "x": 4,
+      "defined": true
+    }
+  ],
+  "gears": [
+    {
+      "stage": 0,
+      "gear": "g_add2",
+      "rule": "single_example"
+    },
+    {
+      "stage": 0,
+      "gear": "g_mul2",
+      "rule": ""
+    },
+    {
+      "stage": 0,
+      "gear": "g_mul3",
+      "rule": "no_fit"
+    },
+    {
+      "stage": 1,
+      "gear": "g_add3",
+      "rule": ""
+    },
+    {
+      "stage": 1,
+      "gear": "g_mul4",
+      "rule": "single_example"
+    },
+    {
+      "stage": 1,
+      "gear": "g_add4",
+      "rule": "no_fit"
+    },
+    {
+      "stage": 2,
+      "gear": "g_add4",
+      "rule": "single_example"
+    },
+    {
+      "stage": 2,
+      "gear": "g_mul3",
+      "rule": ""
+    },
+    {
+      "stage": 2,
+      "gear": "g_mul2",
+      "rule": "no_fit"
+    }
+  ],
+  "answers": [
+    {
+      "stage": 0,
+      "value": 6,
+      "rule": "wrong_value"
+    },
+    {
+      "stage": 0,
+      "value": 7,
+      "rule": "wrong_value"
+    },
+    {
+      "stage": 0,
+      "value": 8,
+      "rule": ""
+    },
+    {
+      "stage": 0,
+      "value": 9,
+      "rule": "wrong_value"
+    },
+    {
+      "stage": 1,
+      "value": 7,
+      "rule": ""
+    },
+    {
+      "stage": 1,
+      "value": 13,
+      "rule": "reverse_forward"
+    },
+    {
+      "stage": 1,
+      "value": 6,
+      "rule": "wrong_value"
+    },
+    {
+      "stage": 1,
+      "value": 8,
+      "rule": "wrong_value"
+    },
+    {
+      "stage": 2,
+      "value": 9,
+      "rule": "wrong_value"
+    },
+    {
+      "stage": 2,
+      "value": 15,
+      "rule": ""
+    },
+    {
+      "stage": 2,
+      "value": 10,
+      "rule": "wrong_value"
+    },
+    {
+      "stage": 2,
+      "value": 16,
+      "rule": "wrong_value"
+    }
+  ],
+  "runs": [
+    {
+      "stage": 0,
+      "gear": "g_add2",
+      "rows": [
+        {
+          "row": 0,
+          "in": 2,
+          "expected": 4,
+          "got": 4,
+          "ok": true
+        },
+        {
+          "row": 1,
+          "in": 3,
+          "expected": 6,
+          "got": 5,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "stage": 0,
+      "gear": "g_mul2",
+      "rows": [
+        {
+          "row": 0,
+          "in": 2,
+          "expected": 4,
+          "got": 4,
+          "ok": true
+        },
+        {
+          "row": 1,
+          "in": 3,
+          "expected": 6,
+          "got": 6,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "stage": 0,
+      "gear": "g_mul3",
+      "rows": [
+        {
+          "row": 0,
+          "in": 2,
+          "expected": 4,
+          "got": 6,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "gear": "g_add3",
+      "rows": [
+        {
+          "row": 0,
+          "in": 1,
+          "expected": 4,
+          "got": 4,
+          "ok": true
+        },
+        {
+          "row": 1,
+          "in": 5,
+          "expected": 8,
+          "got": 8,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "gear": "g_mul4",
+      "rows": [
+        {
+          "row": 0,
+          "in": 1,
+          "expected": 4,
+          "got": 4,
+          "ok": true
+        },
+        {
+          "row": 1,
+          "in": 5,
+          "expected": 8,
+          "got": 20,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "gear": "g_add4",
+      "rows": [
+        {
+          "row": 0,
+          "in": 1,
+          "expected": 4,
+          "got": 5,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "gear": "g_add4",
+      "rows": [
+        {
+          "row": 0,
+          "in": 2,
+          "expected": 6,
+          "got": 6,
+          "ok": true
+        },
+        {
+          "row": 1,
+          "in": 4,
+          "expected": 12,
+          "got": 8,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "gear": "g_mul3",
+      "rows": [
+        {
+          "row": 0,
+          "in": 2,
+          "expected": 6,
+          "got": 6,
+          "ok": true
+        },
+        {
+          "row": 1,
+          "in": 4,
+          "expected": 12,
+          "got": 12,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "gear": "g_mul2",
+      "rows": [
+        {
+          "row": 0,
+          "in": 2,
+          "expected": 6,
+          "got": 4,
+          "ok": false
+        }
+      ]
+    }
+  ],
+  "textbook": [
+    {
+      "rule": {
+        "op": "add",
+        "n": 5
+      },
+      "in": 3,
+      "out": 8
+    },
+    {
+      "rule": {
+        "op": "add",
+        "n": 5
+      },
+      "reverse_out": 15,
+      "in": 10
+    }
+  ],
+  "answer_of": [
+    {
+      "stage": 0,
+      "answer": 8
+    },
+    {
+      "stage": 1,
+      "answer": 7
+    },
+    {
+      "stage": 2,
+      "answer": 15
+    }
+  ]
+}

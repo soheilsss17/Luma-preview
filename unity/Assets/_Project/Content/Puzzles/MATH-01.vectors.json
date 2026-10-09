@@ -1,0 +1,23 @@
+{
+  "about": "Shared test vectors for PatternRules (web/js/edu/pattern_rules.js and Unity PatternRules.cs must both pass).",
+  "classify": [
+    { "stage": 0, "slots": ["A", "B", "A", "B", "", ""], "index": 4, "placed": "A", "correct": true,  "rule": "" },
+    { "stage": 0, "slots": ["A", "B", "A", "B", "", ""], "index": 4, "placed": "B", "correct": false, "rule": "repeat_nearest" },
+    { "stage": 0, "slots": ["A", "B", "A", "B", "A", ""], "index": 5, "placed": "A", "correct": false, "rule": "repeat_nearest" },
+    { "stage": 0, "slots": ["A", "B", "A", "B", "", ""], "index": 5, "placed": "B", "correct": true,  "rule": "" },
+    { "stage": 0, "slots": ["A", "B", "A", "B", "", ""], "index": 5, "placed": "A", "correct": false, "rule": "wrong_unit_length" },
+    { "stage": 1, "slots": ["C", "S", "S", "C", "", ""], "index": 4, "placed": "C", "correct": false, "rule": "repeat_nearest" },
+    { "stage": 1, "slots": ["C", "S", "S", "C", "S", ""], "index": 5, "placed": "C", "correct": false, "rule": "wrong_unit_length" },
+    { "stage": 1, "slots": ["C", "S", "S", "C", "S", ""], "index": 5, "placed": "S", "correct": true,  "rule": "" }
+  ],
+  "assist": [
+    { "stage": 0, "slots": ["A", "B", "A", "B", "", ""], "remove": 2, "left": ["A"] },
+    { "stage": 0, "slots": ["A", "B", "A", "B", "A", "A"], "remove": 2, "left": ["B"] },
+    { "stage": 1, "slots": ["C", "S", "S", "C", "", ""], "remove": 2, "left": ["S"] }
+  ],
+  "solved": [
+    { "stage": 0, "slots": ["A", "B", "A", "B", "A", "B"], "solved": true },
+    { "stage": 0, "slots": ["A", "B", "A", "B", "A", "A"], "solved": false },
+    { "stage": 1, "slots": ["C", "S", "S", "C", "S", "S"], "solved": true }
+  ]
+}

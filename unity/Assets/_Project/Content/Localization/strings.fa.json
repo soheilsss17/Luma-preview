@@ -1,0 +1,1202 @@
+{
+ "schema": "luma.strings/1",
+ "locale": "fa-IR",
+ "fallback_locale": "en",
+ "note": "Every on-screen string outside puzzle cards. Puzzle objectives stay in each *.puzzle.json (objective_fa). Rendered by the engine only (RTLTMPro in Unity, canvas direction=rtl on the web) with Vazirmatn Round-Dots; never drawn into art.",
+ "entries": [
+  {
+   "key": "game.title",
+   "fa": "لوما",
+   "en": "LUMA",
+   "context": "title on the main menu"
+  },
+  {
+   "key": "game.loading",
+   "fa": "در حال آماده شدن…",
+   "en": "Getting ready…",
+   "context": "loading screen"
+  },
+  {
+   "key": "game.load_error",
+   "fa": "بارگذاری ناموفق بود: ",
+   "en": "Loading failed: ",
+   "context": "loading screen error prefix"
+  },
+  {
+   "key": "menu.continue",
+   "fa": "ادامه",
+   "en": "Continue",
+   "context": "main menu (plan 09): only when a save exists"
+  },
+  {
+   "key": "menu.start",
+   "fa": "شروع",
+   "en": "Start",
+   "context": "main menu: first launch"
+  },
+  {
+   "key": "menu.new_game",
+   "fa": "بازی تازه",
+   "en": "New game",
+   "context": "main menu: wipes progress after a second tap"
+  },
+  {
+   "key": "menu.new_game_confirm",
+   "fa": "دوباره لمس کن تا همه‌چیز از اول شروع شود",
+   "en": "Tap again to start over",
+   "context": "second-tap confirmation"
+  },
+  {
+   "key": "menu.settings",
+   "fa": "تنظیمات",
+   "en": "Settings",
+   "context": "main menu"
+  },
+  {
+   "key": "menu.parents",
+   "fa": "بخش والدین",
+   "en": "For parents",
+   "context": "main menu, behind the Parent Gate"
+  },
+  {
+   "key": "menu.wake_neo",
+   "fa": "NEO خواب است؛ لمسش کن",
+   "en": "NEO is asleep — tap him",
+   "context": "accessibility label only (never shown as a caption)"
+  },
+  {
+   "key": "gate.hold",
+   "fa": "برای ورود، دکمه را سه ثانیه نگه دارید",
+   "en": "Hold the button for three seconds",
+   "context": "Parent Gate (plan 07: hold 3 s)"
+  },
+  {
+   "key": "settings.title",
+   "fa": "تنظیمات",
+   "en": "Settings",
+   "context": "settings sheet title"
+  },
+  {
+   "key": "settings.music",
+   "fa": "موسیقی",
+   "en": "Music",
+   "context": "toggle"
+  },
+  {
+   "key": "settings.sfx",
+   "fa": "صداها",
+   "en": "Sounds",
+   "context": "toggle"
+  },
+  {
+   "key": "settings.reduce_motion",
+   "fa": "حرکت کمتر",
+   "en": "Reduce motion",
+   "context": "toggle (plan 09 accessibility)"
+  },
+  {
+   "key": "settings.on",
+   "fa": "روشن",
+   "en": "On",
+   "context": "toggle state"
+  },
+  {
+   "key": "settings.off",
+   "fa": "خاموش",
+   "en": "Off",
+   "context": "toggle state"
+  },
+  {
+   "key": "ui.back",
+   "fa": "بازگشت",
+   "en": "Back",
+   "context": "sheet close button"
+  },
+  {
+   "key": "parents.title",
+   "fa": "درخت نور",
+   "en": "Tree of Light",
+   "context": "parent dashboard title (plan 10 §5)"
+  },
+  {
+   "key": "parents.intro",
+   "fa": "مفاهیمی که فرزندتان در بازی با آن‌ها آشنا شده و در حال رشدند:",
+   "en": "Concepts your child has met and is growing in:",
+   "context": "parent dashboard"
+  },
+  {
+   "key": "parents.none",
+   "fa": "هنوز مفهومی دیده نشده است. با اولین پازل، اولین برگ روشن می‌شود.",
+   "en": "No concept yet — the first puzzle lights the first leaf.",
+   "context": "parent dashboard, empty state"
+  },
+  {
+   "key": "parents.no_ranking",
+   "fa": "اینجا نمره، رتبه یا مقایسه‌ای نمایش داده نمی‌شود.",
+   "en": "No scores, ranks or comparisons are shown here.",
+   "context": "parent dashboard footer (plan 10 §5)"
+  },
+  {
+   "key": "parents.privacy",
+   "fa": "همهٔ داده‌ها فقط روی همین دستگاه می‌ماند. رویدادهای ثبت‌شده: ",
+   "en": "All data stays on this device. Events recorded: ",
+   "context": "parent dashboard footer (plan 10 privacy, offline)"
+  },
+  {
+   "key": "parents.activity_title",
+   "fa": "پیشنهاد برای بیرون از صفحه",
+   "en": "Off-screen idea",
+   "context": "parent dashboard"
+  },
+  {
+   "key": "mastery.0",
+   "fa": "هنوز شروع نشده",
+   "en": "Not introduced",
+   "context": "Mastery L0 (plan 06 §9), positive wording for parents"
+  },
+  {
+   "key": "mastery.1",
+   "fa": "آشنا شده",
+   "en": "Introduced",
+   "context": "Mastery L1"
+  },
+  {
+   "key": "mastery.2",
+   "fa": "جوانه زده",
+   "en": "Emerging",
+   "context": "Mastery L2"
+  },
+  {
+   "key": "mastery.3",
+   "fa": "در حال رشد",
+   "en": "Developing",
+   "context": "Mastery L3"
+  },
+  {
+   "key": "mastery.4",
+   "fa": "توانا",
+   "en": "Proficient",
+   "context": "Mastery L4"
+  },
+  {
+   "key": "mastery.5",
+   "fa": "شکوفا",
+   "en": "Mastered",
+   "context": "Mastery L5"
+  },
+  {
+   "key": "concept.PATTERN_REPEAT",
+   "fa": "الگوهای تکرارشونده — ریاضی سوم، فصل ۱",
+   "en": "Repeating patterns — Math 3, chapter 1",
+   "context": "concept name (MATH-01)"
+  },
+  {
+   "key": "activity.PATTERN_REPEAT",
+   "fa": "با هم در خانه الگو پیدا کنید (کاشی، فرش، دکمه‌های لباس) و با قاشق و چنگال یک الگو بچینید تا فرزندتان ادامه‌اش دهد.",
+   "en": "Find patterns at home together (tiles, rugs, buttons) and lay a spoon-fork pattern for your child to continue.",
+   "context": "parent off-screen activity (plan 10 §5 example style)"
+  },
+  {
+   "key": "room.WS_MAIN_FLOOR",
+   "fa": "کارگاه میرا",
+   "en": "MIRA's workshop",
+   "context": "room name (map, parent area)"
+  },
+  {
+   "key": "room.VIL_PLAZA",
+   "fa": "میدان شهرک",
+   "en": "Village plaza",
+   "context": "room name"
+  },
+  {
+   "key": "a11y.btn_hint",
+   "fa": "راهنما",
+   "en": "Hint",
+   "context": "button label for screen readers"
+  },
+  {
+   "key": "a11y.btn_undo",
+   "fa": "برگرداندن آخرین حرکت",
+   "en": "Undo last move",
+   "context": "button label"
+  },
+  {
+   "key": "a11y.btn_reset",
+   "fa": "از نو",
+   "en": "Start this puzzle again",
+   "context": "button label"
+  },
+  {
+   "key": "hint.MATH-02.enc.1",
+   "fa": "آیا لازم است هر میوه را جداگانه بشماری؟",
+   "en": "Do you need to count every fruit separately?",
+   "context": "MATH-02 encounter H1 (card v1.1, source docx L2770 — verbatim)"
+  },
+  {
+   "key": "hint.MATH-02.pra.1",
+   "fa": "قرار است همه‌ی سبدها سهم یکسانی داشته باشند.",
+   "en": "All the baskets should get the same share.",
+   "context": "MATH-02 practice H1 (card v1.0, source docx L1689 — verbatim)"
+  },
+  {
+   "key": "concept.SKIP_COUNT_EQUAL_GROUPS",
+   "fa": "شمارش چندتاچندتا با گروه‌های مساوی — ریاضی سوم، فصل ۱",
+   "en": "Skip counting with equal groups — Math 3, chapter 1",
+   "context": "concept name (MATH-02)"
+  },
+  {
+   "key": "activity.SKIP_COUNT_EQUAL_GROUPS",
+   "fa": "موقع چیدن میز، قاشق‌ها را دوتادوتا و جوراب‌ها را جفت‌جفت بشمارید؛ بعد بپرسید: «اگر یکی‌یکی می‌شمردیم، زودتر تمام می‌شد؟»",
+   "en": "When setting the table, count spoons in twos and socks in pairs; then ask: “Would counting one by one have been faster?”",
+   "context": "parent off-screen activity (plan 10 §5 example style)"
+  },
+  {
+   "key": "room.VIL_PLAZA_STALL",
+   "fa": "غرفهٔ جشن میدان",
+   "en": "Festival stall in the plaza",
+   "context": "room name (MATH-02)"
+  },
+  {
+   "key": "hint.MATH-05.enc.1",
+   "fa": "به خط وسط باغچه دقت کن.",
+   "en": "Look closely at the middle line of the flower bed.",
+   "context": "MATH-05 encounter H1 (card v1.0, verbatim)"
+  },
+  {
+   "key": "hint.MATH-05.pra.1",
+   "fa": "محور را پیدا کن.",
+   "en": "Find the axis.",
+   "context": "MATH-05 practice H1 (card v1.1, verbatim)"
+  },
+  {
+   "key": "concept.LINE_SYMMETRY",
+   "fa": "تقارن و الگوهای متقارن — ریاضی سوم، فصل ۱",
+   "en": "Line symmetry and symmetric patterns — Math 3, chapter 1",
+   "context": "concept name (MATH-05)"
+  },
+  {
+   "key": "activity.LINE_SYMMETRY",
+   "fa": "یک کاغذ را از وسط تا کنید، نیمهٔ یک پروانه را روی آن بکشید و ببُرید؛ بعد تا را باز کنید و ببینید هر نقطه چقدر تا خط تا فاصله دارد. کاشی‌ها و پنجره‌های خانه را هم با هم نگاه کنید: کدام‌ها متقارن‌اند؟",
+   "en": "Fold a paper in half, draw half a butterfly on it and cut it out; unfold it and see how far each point is from the fold. Look at tiles and windows at home together: which ones are symmetric?",
+   "context": "parent off-screen activity (plan 10 §5 example style)"
+  },
+  {
+   "key": "room.VIL_GARDEN_EDGE",
+   "fa": "لبهٔ باغ روستا",
+   "en": "The village garden edge",
+   "context": "room name (MATH-05)"
+  },
+  {
+   "key": "hint.P-01.enc.1",
+   "fa": "به جمله‌ی کامل توجه کن.",
+   "en": "Pay attention to the whole sentence.",
+   "context": "P-01 encounter H1 (card PERSIAN-01, verbatim)"
+  },
+  {
+   "key": "hint.P-01.pra.1",
+   "fa": "به جمله‌ی کامل توجه کن.",
+   "en": "Pay attention to the whole sentence.",
+   "context": "P-01 practice H1 (card PERSIAN-01, verbatim)"
+  },
+  {
+   "key": "place.school",
+   "fa": "مدرسه",
+   "en": "School",
+   "context": "P-01 place name on the restored sign"
+  },
+  {
+   "key": "place.market",
+   "fa": "بازار",
+   "en": "Market",
+   "context": "P-01 place name on the restored sign"
+  },
+  {
+   "key": "place.library",
+   "fa": "کتابخانه",
+   "en": "Library",
+   "context": "P-01 place name on the restored sign"
+  },
+  {
+   "key": "place.well",
+   "fa": "چاه",
+   "en": "Well",
+   "context": "P-01 place name on the restored sign"
+  },
+  {
+   "key": "ui.listen",
+   "fa": "بشنو",
+   "en": "Listen",
+   "context": "Reading card: optional read-aloud button (unlocks after 3 s)"
+  },
+  {
+   "key": "ui.read_card",
+   "fa": "بخوان",
+   "en": "Read",
+   "context": "Reading card title"
+  },
+  {
+   "key": "concept.FA_EXPLICIT_INFO",
+   "fa": "اطلاعات آشکار متن و واژه‌های محله — فارسی سوم، درس ۱ «محله‌ی ما»",
+   "en": "Explicit information in a text and neighbourhood words — Persian 3, lesson 1 «Our neighbourhood»",
+   "context": "concept name (P-01)"
+  },
+  {
+   "key": "activity.FA_EXPLICIT_INFO",
+   "fa": "در خانه یا محله، یک جمله‌ی کوتاه درباره‌ی جایی بگویید یا بنویسید (مثلاً «این‌جا نان می‌پزند و صبح‌ها شلوغ است») و بگذارید کودک بگوید کجاست و از کدام کلمه‌ها فهمید؛ بعد جای‌تان را عوض کنید و او برای شما یک جمله بسازد.",
+   "en": "At home or in the neighbourhood, say or write one short sentence about a place (e.g. «here they bake bread and it is busy in the morning»); let the child say where it is and which words told them; then swap roles and let the child make a sentence for you.",
+   "context": "parent activity (P-01 transfer, card: find a place from a short description)"
+  },
+  {
+   "key": "room.VIL_SIGN_AREA",
+   "fa": "چهارراه تابلوهای روستا",
+   "en": "The village crossroads signs",
+   "context": "room name (P-01)"
+  },
+  {
+   "key": "hint.W-01.1",
+   "fa": "اول ببین درباره چه مکانی صحبت می‌کنیم.",
+   "en": "First see which place we are talking about.",
+   "context": "W-01 H1 (card WRITING-01, verbatim) — joining a sentence to its picture"
+  },
+  {
+   "key": "hint.W-01.2",
+   "fa": "جمله‌ها را طوری بچین که خواننده بتواند مسیر را دنبال کند.",
+   "en": "Arrange the sentences so the reader can follow the route.",
+   "context": "W-01 H2 (card WRITING-01, verbatim) — ordering the rows"
+  },
+  {
+   "key": "hint.W-01.3",
+   "fa": "از جایی شروع کن که معرفی‌کننده محله است و بعد به مکان‌های دیگر برو.",
+   "en": "Start from the one that introduces the neighbourhood, then go to the other places.",
+   "context": "W-01 H3 (card WRITING-01, verbatim)"
+  },
+  {
+   "key": "board.W-01.enc",
+   "fa": "محله‌ی ما",
+   "en": "Our neighbourhood",
+   "context": "title painted on the intro board (engine text)"
+  },
+  {
+   "key": "board.W-01.pra",
+   "fa": "کتابخانه‌ی محله",
+   "en": "The neighbourhood library",
+   "context": "title of the library board (W-01 practice)"
+  },
+  {
+   "key": "ui.stamp",
+   "fa": "مهر تأیید",
+   "en": "Approval stamp",
+   "context": "W-01 stamp button (approve the order)"
+  },
+  {
+   "key": "card.W-01.HOUSE",
+   "fa": "خانه",
+   "en": "House",
+   "context": "W-01 picture card name"
+  },
+  {
+   "key": "card.W-01.SCHOOL",
+   "fa": "مدرسه",
+   "en": "School",
+   "context": "W-01 picture card name"
+  },
+  {
+   "key": "card.W-01.MARKET",
+   "fa": "بازار",
+   "en": "Market",
+   "context": "W-01 picture card name"
+  },
+  {
+   "key": "card.W-01.PARK",
+   "fa": "پارک",
+   "en": "Park",
+   "context": "W-01 picture card name"
+  },
+  {
+   "key": "card.W-01.LIB_BUILDING",
+   "fa": "ساختمان کتابخانه",
+   "en": "Library building",
+   "context": "W-01 picture card name"
+  },
+  {
+   "key": "card.W-01.LIB_SHELVES",
+   "fa": "قفسه‌ی کتاب",
+   "en": "Bookshelves",
+   "context": "W-01 picture card name"
+  },
+  {
+   "key": "card.W-01.LIB_TABLE",
+   "fa": "میز مطالعه",
+   "en": "Reading table",
+   "context": "W-01 picture card name"
+  },
+  {
+   "key": "card.W-01.LIB_DESK",
+   "fa": "میز کتابدار",
+   "en": "Librarian desk",
+   "context": "W-01 picture card name"
+  },
+  {
+   "key": "concept.WR_COHERENT_DESCRIPTION",
+   "fa": "توصیف یک مکان با جمله‌های پیوسته — نگارش سوم، درس ۱ «محله‌ی ما»",
+   "en": "Describing a place with connected sentences — Writing 3, lesson 1 «Our neighbourhood»",
+   "context": "concept name (W-01)"
+  },
+  {
+   "key": "activity.WR_COHERENT_DESCRIPTION",
+   "fa": "با کودک از خانه تا یک جای آشنا (نانوایی، مسجد یا پارک) قدم بزنید؛ بعد از او بخواهید چهار جمله درباره‌ی مسیر بگوید: اول محله را معرفی کند و در هر جمله بگوید از کجا به کجا رسیدید. جمله‌ها را روی کاغذ بنویسید، ببُرید، به هم بریزید و بگذارید دوباره به ترتیب بچیند.",
+   "en": "Walk with the child from home to a familiar place (bakery, mosque or park); then ask for four sentences about the route: first introduce the neighbourhood, then in each sentence say where you went next. Write the sentences on paper, cut them apart, shuffle them and let the child put them back in order.",
+   "context": "parent activity (W-01 transfer, card: describe a familiar place with connected sentences)"
+  },
+  {
+   "key": "concept.FA_TOPIC_COHERENT_TEXT",
+   "fa": "متن کوتاه منسجم دربارهٔ یک موضوع",
+   "en": "A short coherent text about one topic",
+   "context": "P-13 concept"
+  },
+  {
+   "key": "activity.FA_TOPIC_COHERENT_TEXT",
+   "fa": "پوستر جشن میدان",
+   "en": "The festival poster",
+   "context": "P-13 activity"
+  },
+  {
+   "key": "board.P-13.enc",
+   "fa": "جشن میدان",
+   "en": "The square festival",
+   "context": "P-13 board title (encounter)"
+  },
+  {
+   "key": "board.P-13.pra",
+   "fa": "کتابخانه‌ی محله",
+   "en": "The neighbourhood library",
+   "context": "P-13 board title (practice)"
+  },
+  {
+   "key": "topic.P-13.BREAD",
+   "fa": "نانوایی",
+   "en": "Bakery",
+   "context": "topic word card"
+  },
+  {
+   "key": "topic.P-13.CARPET",
+   "fa": "فرش‌بافی",
+   "en": "Carpet weaving",
+   "context": "topic word card"
+  },
+  {
+   "key": "topic.P-13.SAMOVAR",
+   "fa": "چای‌خانه",
+   "en": "Tea house",
+   "context": "topic word card"
+  },
+  {
+   "key": "topic.P-13.LIBRARY",
+   "fa": "کتابخانه",
+   "en": "Library",
+   "context": "topic word card"
+  },
+  {
+   "key": "hint.P-13.1",
+   "fa": "جمله‌ها باید درباره یک موضوع مشترک باشند.",
+   "en": "The sentences must be about one shared topic.",
+   "context": "P-13 H1 (card)"
+  },
+  {
+   "key": "hint.P-13.2",
+   "fa": "این جمله‌ی اصلی است؛ بقیه‌ی جمله‌ها باید آن را کامل کنند.",
+   "en": "This is the main sentence; the others must complete it.",
+   "context": "P-13 H2 (card: the main sentence is marked)"
+  },
+  {
+   "key": "hint.P-13.3",
+   "fa": "به تصویر گوشه‌ی هر کارت نگاه کن.",
+   "en": "Look at the picture in the corner of each card.",
+   "context": "P-13 H3 (card: pictures connect the sentences)"
+  },
+  {
+   "key": "feedback.P-13.off_topic",
+   "fa": "این جمله دربارهٔ موضوع دیگری است.",
+   "en": "This sentence is about another topic.",
+   "context": "P-13 submit feedback"
+  },
+  {
+   "key": "feedback.P-13.duplicate",
+   "fa": "این دو جمله یک چیز را می‌گویند؛ یکی کافی است.",
+   "en": "These two sentences say the same thing; one is enough.",
+   "context": "P-13 submit feedback (WR_MORE_SENTENCES_BETTER)"
+  },
+  {
+   "key": "feedback.P-13.main_first",
+   "fa": "جمله‌ی اصلی باید اول بیاید.",
+   "en": "The main sentence comes first.",
+   "context": "P-13 submit feedback"
+  },
+  {
+   "key": "feedback.P-13.closing_last",
+   "fa": "جمله‌ی پایانی آخر متن می‌آید.",
+   "en": "The closing sentence comes last.",
+   "context": "P-13 submit feedback"
+  },
+  {
+   "key": "feedback.P-13.too_few",
+   "fa": "یک جمله‌ی دیگر دربارهٔ همین موضوع اضافه کن.",
+   "en": "Add one more sentence about this topic.",
+   "context": "P-13 submit feedback"
+  },
+  {
+   "key": "feedback.P-13.full",
+   "fa": "تابلو جای خالی ندارد؛ اول یک جمله را بردار.",
+   "en": "The board is full; take one sentence off first.",
+   "context": "P-13 submit feedback"
+  },
+  {
+   "key": "timeline.SOC-01.enc",
+   "fa": "زندگی امیر",
+   "en": "Amir's life",
+   "context": "SOC-01 timeline title (encounter)"
+  },
+  {
+   "key": "timeline.SOC-01.pra",
+   "fa": "خاطره‌های دیگر امیر",
+   "en": "More of Amir's memories",
+   "context": "SOC-01 timeline title (practice)"
+  },
+  {
+   "key": "timeline.SOC-01.tra",
+   "fa": "رشد گیاه کنار پنجره",
+   "en": "The window plant grows",
+   "context": "SOC-01 timeline title (transfer)"
+  },
+  {
+   "key": "timeline.label.past",
+   "fa": "گذشته",
+   "en": "past",
+   "context": "timeline label under the first slot (textbook: گذشته)"
+  },
+  {
+   "key": "timeline.label.present",
+   "fa": "حال",
+   "en": "present",
+   "context": "timeline label under the last slot (textbook: حال)"
+  },
+  {
+   "key": "timeline.label.future",
+   "fa": "آینده",
+   "en": "future",
+   "context": "timeline label on the arrow head (textbook: آینده)"
+  },
+  {
+   "key": "hint.SOC-01.1",
+   "fa": "کدام اتفاق زودتر رخ داده؟",
+   "en": "Which one happened first?",
+   "context": "SOC-01 H1 (source)"
+  },
+  {
+   "key": "hint.SOC-01.2",
+   "fa": "به سن و مرحله‌ی زندگی دقت کن.",
+   "en": "Look at the age and the stage of life.",
+   "context": "SOC-01 H2 (source)"
+  },
+  {
+   "key": "hint.SOC-01.3",
+   "fa": "از تولد شروع کن و به امروز برس.",
+   "en": "Start at birth and arrive at today.",
+   "context": "SOC-01 H3 (source)"
+  },
+  {
+   "key": "hint.SOC-01.2_plant",
+   "fa": "به اندازه‌ی گیاه دقت کن.",
+   "en": "Look at how big the plant is.",
+   "context": "SOC-01 H2 in the plant transfer"
+  },
+  {
+   "key": "hint.SOC-01.3_plant",
+   "fa": "از دانه شروع کن و به گل برس.",
+   "en": "Start at the seed and arrive at the flower.",
+   "context": "SOC-01 H3 in the plant transfer"
+  },
+  {
+   "key": "feedback.SOC-01.newer_before_older",
+   "fa": "زمان این‌جا گیر کرد: این دو اتفاق جابه‌جا هستند.",
+   "en": "Time got stuck here: these two events are swapped.",
+   "context": "SOC-01 marker stops"
+  },
+  {
+   "key": "feedback.SOC-01.reversed",
+   "fa": "خط زمان از گذشته شروع می‌شود؛ فلش به طرف امروز و آینده می‌رود.",
+   "en": "A timeline starts in the past; the arrow points to today and the future.",
+   "context": "SOC-01 reversed row"
+  },
+  {
+   "key": "feedback.SOC-01.incomplete",
+   "fa": "اول همه‌ی خانه‌های خط زمان را پر کن.",
+   "en": "Fill every slot of the timeline first.",
+   "context": "SOC-01 key pressed too early"
+  },
+  {
+   "key": "story.SOC-01.intro",
+   "fa": "این‌جا خانه‌ی امیر است. آلبومش به هم ریخته و ساعت خانه ایستاده.",
+   "en": "This is Amir's house. His album spilled and the house clock stopped.",
+   "context": "SOC-01 entering the house"
+  },
+  {
+   "key": "story.SOC-01.payoff",
+   "fa": "ساعت دوباره تیک‌تاک می‌کند! جعبه‌ی خاطره‌ها هم باز شد: کف پای جوهری امیر، از روز تولدش.",
+   "en": "The clock ticks again! The memory box opened too: Amir's ink footprint from the day he was born.",
+   "context": "SOC-01 payoff"
+  },
+  {
+   "key": "story.SOC-01.transfer",
+   "fa": "گیاه کنار پنجره هم داستان رشد خودش را دارد.",
+   "en": "The plant by the window has its own growing story.",
+   "context": "SOC-01 before the transfer"
+  },
+  {
+   "key": "story.SOC-01.practice_done",
+   "fa": "هر خاطره سر جای زمان خودش نشست؛ از گذشته تا امروز.",
+   "en": "Every memory sits in its own time now, from the past to today.",
+   "context": "SOC-01 LUMI after the practice is solved (the header already shows objective_fa.done)"
+  },
+  {
+   "key": "story.SOC-01.finale",
+   "fa": "گیاه هم مثل امیر بزرگ شد: از دانه تا گل.",
+   "en": "The plant grew up just like Amir: from seed to flower.",
+   "context": "SOC-01 LUMI when the window plant blooms (the header already shows objective_fa.done)"
+  },
+  {
+   "key": "timeline.key",
+   "fa": "کلید زمان",
+   "en": "time key",
+   "context": "SOC-01 brass key at the left end of the rail"
+  },
+  {
+   "key": "concept.SOC_LIFE_TIMELINE_ORDER",
+   "fa": "مرتب کردن اتفاق‌های زندگی روی خط زمان",
+   "en": "Ordering life events on a timeline",
+   "context": "SOC-01 concept"
+  },
+  {
+   "key": "activity.SOC_LIFE_TIMELINE_ORDER",
+   "fa": "خط زمان خانهٔ امیر",
+   "en": "The timeline in Amir's house",
+   "context": "SOC-01 activity"
+  },
+  {
+   "key": "map.room.workshop",
+   "fa": "کارگاه میرا",
+   "en": "MIRA's workshop",
+   "context": "world map fast-travel chip"
+  },
+  {
+   "key": "map.room.plaza",
+   "fa": "میدان فانوس‌ها",
+   "en": "Lantern square",
+   "context": "world map fast-travel chip (MATH-01)"
+  },
+  {
+   "key": "map.room.stall",
+   "fa": "غرفه‌ی جشن",
+   "en": "Festival stall",
+   "context": "world map fast-travel chip (MATH-02)"
+  },
+  {
+   "key": "map.room.garden",
+   "fa": "لبه‌ی باغ",
+   "en": "Garden edge",
+   "context": "world map fast-travel chip (MATH-05)"
+  },
+  {
+   "key": "map.room.signs",
+   "fa": "چهارراه تابلوها",
+   "en": "Signpost crossroads",
+   "context": "world map fast-travel chip (P-01)"
+  },
+  {
+   "key": "map.room.board",
+   "fa": "تابلوی معرفی محله",
+   "en": "Neighbourhood board",
+   "context": "world map fast-travel chip (W-01)"
+  },
+  {
+   "key": "map.room.p13",
+   "fa": "تابلوی جشن",
+   "en": "Festival story board",
+   "context": "world map fast-travel chip (P-13)"
+  },
+  {
+   "key": "map.room.house",
+   "fa": "خانه‌ی امیر",
+   "en": "Amir's house",
+   "context": "world map fast-travel chip (SOC-01)"
+  },
+  {
+   "key": "map.area.village",
+   "fa": "شهرک",
+   "en": "The village",
+   "context": "world map area title"
+  },
+  {
+   "key": "map.area.workshop",
+   "fa": "تپه‌ی کارگاه",
+   "en": "Workshop hill",
+   "context": "world map area title"
+  },
+  {
+   "key": "map.area.market_gardens",
+   "fa": "بازار و باغ‌ها",
+   "en": "Market and gardens",
+   "context": "world map area title"
+  },
+  {
+   "key": "map.area.school",
+   "fa": "مدرسه",
+   "en": "School",
+   "context": "world map area title (fogged until Q06)"
+  },
+  {
+   "key": "map.area.library",
+   "fa": "کتابخانه",
+   "en": "Library",
+   "context": "world map area title (fogged until Q05)"
+  },
+  {
+   "key": "map.area.observatory",
+   "fa": "رصدخانه",
+   "en": "Observatory",
+   "context": "world map area title (fogged until Q09)"
+  },
+  {
+   "key": "map.area.forest",
+   "fa": "جنگل",
+   "en": "Forest",
+   "context": "world map area title (fogged until Q08)"
+  },
+  {
+   "key": "map.area.mill",
+   "fa": "آسیاب",
+   "en": "Mill",
+   "context": "world map area title (fogged until Q04)"
+  },
+  {
+   "key": "map.area.waterworks",
+   "fa": "تأسیسات آب",
+   "en": "Waterworks",
+   "context": "world map area title (fogged until Q03)"
+  },
+  {
+   "key": "map.area.mountain_machine",
+   "fa": "ماشین بزرگ کوه",
+   "en": "The great machine",
+   "context": "world map area title (fogged until Q10)"
+  },
+  {
+   "key": "map.hook",
+   "fa": "ساعت برج یک چرخ‌دنده کم دارد. ماجرای بعدی از کارگاه شروع می‌شود!",
+   "en": "The tower clock is missing a gear. The next adventure starts at the workshop!",
+   "context": "LUMI on the map, next to the gear badge (Q02 hook)"
+  },
+  {
+   "key": "map.fog",
+   "fa": "این‌جا هنوز در مه است.",
+   "en": "This place is still in the fog.",
+   "context": "LUMI when a fogged area is tapped"
+  },
+  {
+   "key": "hint.MATH-03.enc.1",
+   "fa": "دو نمونه را با هم مقایسه کن.",
+   "en": "Compare the two examples.",
+   "context": "MATH-03 encounter H1 (card v1.0, verbatim)"
+  },
+  {
+   "key": "hint.MATH-03.pra.1",
+   "fa": "باز هم دو نمونه را کنار هم ببین.",
+   "en": "Look at the two examples side by side again.",
+   "context": "MATH-03 practice H1 (card H1 idea: compare the two examples)"
+  },
+  {
+   "key": "hint.MATH-03.tra.1",
+   "fa": "قاعده باید برای هر دو نمونه درست باشد.",
+   "en": "The rule has to work for both examples.",
+   "context": "MATH-03 transfer H1 (card IO-M01: a rule from one example is not enough)"
+  },
+  {
+   "key": "map.room.machine",
+   "fa": "ماشین کارگاه",
+   "en": "Workshop machine",
+   "context": "world map fast-travel chip: WS_MACHINE_ROOM (MATH-03)"
+  },
+  {
+   "key": "hint.MATH-06.1.ten",
+   "fa": "چند ده‌تایی داری؟",
+   "en": "How many tens do you have?",
+   "context": "MATH-06 H1 in the hundred-crate phase (card H1 idea with tens)"
+  },
+  {
+   "key": "hint.MATH-06.1.hundred",
+   "fa": "چند صدتایی داری؟",
+   "en": "How many hundreds do you have?",
+   "context": "MATH-06 H1 (card v1, verbatim) — thousand-crate and label phases"
+  },
+  {
+   "key": "hint.MATH-06.2.ten",
+   "fa": "ده‌تا ده‌تا بشمار!",
+   "en": "Count by tens!",
+   "context": "MATH-06 H2 (hundred-crate phase): the ten-crates glow, empty slots show ۱۰ … ۱۰۰"
+  },
+  {
+   "key": "hint.MATH-06.2.hundred",
+   "fa": "صدتا صدتا بشمار!",
+   "en": "Count by hundreds!",
+   "context": "MATH-06 H2: the hundred-crates glow, empty slots / tally show ۱۰۰ … ۱۰۰۰ (strategy «الگوسازی»)"
+  },
+  {
+   "key": "line.MATH-06.hundred_done",
+   "fa": "ده تا ده‌تایی، یک صدتایی!",
+   "en": "Ten tens, one hundred!",
+   "context": "NEO when the hundred-crate closes (textbook p.28 pattern)"
+  },
+  {
+   "key": "line.MATH-06.thousand_done",
+   "fa": "ده تا صدتایی، یک هزارتایی!",
+   "en": "Ten hundreds, one thousand!",
+   "context": "NEO when the thousand-crate closes (card finale line; the ۱۰۰۰ plate appears)"
+  },
+  {
+   "key": "line.MATH-06.incomplete",
+   "fa": "هنوز جای خالی هست!",
+   "en": "There is still an empty space!",
+   "context": "NEO when the rope is pulled with an incomplete group (card wrong answer: highlight)"
+  },
+  {
+   "key": "line.MATH-06.label_done",
+   "fa": "موجودی انبار ثبت شد: هزار!",
+   "en": "The store's stock is recorded: one thousand!",
+   "context": "NEO when the storage room is sorted (quest: record a big stock)"
+  },
+  {
+   "key": "map.room.storage",
+   "fa": "انبار کارگاه",
+   "en": "Workshop storage",
+   "context": "world map fast-travel chip: WS_STORAGE (MATH-06)"
+  },
+  {
+   "key": "map.room.gear",
+   "fa": "اتاق شمارش",
+   "en": "the counting room",
+   "context": "map: WS_GEAR_ROOM / NUMBER_CONTROL_PANEL (MATH-07)"
+  },
+  {
+   "key": "hint.MATH-07.1",
+   "fa": "هر ستون جای مخصوص خودش را دارد.",
+   "en": "every column has its own place",
+   "context": "card v1 H1 verbatim"
+  },
+  {
+   "key": "hint.MATH-07.2",
+   "fa": "این ستون‌ها: یکان، دهگان، صدگان، هزارگان.",
+   "en": "these columns: ones, tens, hundreds, thousands",
+   "context": "card H2: a visual label on each column"
+  },
+  {
+   "key": "hint.MATH-07.3",
+   "fa": "ببین، این رقم این‌جا می‌رود.",
+   "en": "look, this digit goes here",
+   "context": "card H3: one digit placed as an example"
+  },
+  {
+   "key": "hint.MATH-07.T1",
+   "fa": "این رقم در کدام ستون است؟",
+   "en": "which column is this digit in?",
+   "context": "transfer H1"
+  },
+  {
+   "key": "hint.MATH-07.T2",
+   "fa": "عدد را در ستون‌هایش ببین.",
+   "en": "see the number in its columns",
+   "context": "transfer H2"
+  },
+  {
+   "key": "hint.MATH-07.T3",
+   "fa": "رقم را در ستونش بگذار و صفرها را بشمار.",
+   "en": "put the digit in its column and count the zeros",
+   "context": "transfer H3: value_expand"
+  },
+  {
+   "key": "line.MATH-07.enc_done",
+   "fa": "موجودی انبار درست شد!",
+   "en": "the stock is written right",
+   "context": "ENC done"
+  },
+  {
+   "key": "line.MATH-07.pra_done",
+   "fa": "هفت هزار و پنجاه و چهار!",
+   "en": "seven thousand and fifty-four",
+   "context": "PRA done (p.31)"
+  },
+  {
+   "key": "line.MATH-07.tra_done",
+   "fa": "ارزش رقم‌ها درست بود!",
+   "en": "the digits' values were right",
+   "context": "TRA done"
+  },
+  {
+   "key": "line.MATH-07.incomplete",
+   "fa": "هر چهار ستون باید رقم داشته باشد.",
+   "en": "all four columns need a digit",
+   "context": "empty column: an empty place is a zero"
+  },
+  {
+   "key": "line.MATH-07.lean",
+   "fa": "ترازو هنوز بالانس نیست!",
+   "en": "the scale is not balanced yet",
+   "context": "wrong build feedback (v1 weighing machine)"
+  },
+  {
+   "key": "line.MATH-07.wrong_columns",
+   "fa": "این ستون‌ها درست نیستند!",
+   "en": "these columns are wrong",
+   "context": "wrong build feedback"
+  },
+  {
+   "key": "map.room.payment",
+   "fa": "پیشخوانِ بازار",
+   "en": "the market pay counter",
+   "context": "map: MARKET_PAYMENT (MATH-08)"
+  },
+  {
+   "key": "hint.MATH-08.1",
+   "fa": "به ارزش هر قطعه نگاه کن، نه تعداد آن.",
+   "en": "look at the value of each piece, not at how many there are",
+   "context": "card H1 verbatim"
+  },
+  {
+   "key": "hint.MATH-08.2",
+   "fa": "بزرگ‌ترین قطعه‌ای که هنوز لازم داری همین است.",
+   "en": "this is the biggest piece you still need",
+   "context": "card H2: highlight the biggest unit needed"
+  },
+  {
+   "key": "hint.MATH-08.3",
+   "fa": "یک ترکیب درست این است؛ حالا ترکیب دیگری پیدا کن.",
+   "en": "this is one right combination; now find another",
+   "context": "card H3: one combination shown, not the whole answer"
+  },
+  {
+   "key": "line.MATH-08.enc_done",
+   "fa": "بهای چرخ‌دنده پرداخت شد!",
+   "en": "the gear is paid for",
+   "context": "ENC done"
+  },
+  {
+   "key": "line.MATH-08.pra_done",
+   "fa": "خرید بازار انجام شد!",
+   "en": "the market purchase is done",
+   "context": "PRA done"
+  },
+  {
+   "key": "line.MATH-08.tra_done",
+   "fa": "بلیت گرفتی!",
+   "en": "you have the ticket",
+   "context": "TRA done (the ride ticket)"
+  },
+  {
+   "key": "line.MATH-08.short",
+   "fa": "هنوز به مقدار لازم نرسیده‌ایم.",
+   "en": "we have not reached the amount yet",
+   "context": "card: the seller when the payment is short (verbatim)"
+  },
+  {
+   "key": "line.MATH-08.over",
+   "fa": "یک لحظه؛ می‌توانی مقدار مناسب‌تری پیدا کنی؟",
+   "en": "one moment; can you find a more fitting amount?",
+   "context": "card: the seller when the payment is over (verbatim)"
+  },
+  {
+   "key": "line.MATH-08.repeat",
+   "fa": "این همان ترکیب قبلی است؛ یک شکلِ دیگر پیدا کن.",
+   "en": "that is the same combination as before; find a different one",
+   "context": "mastery needs two different combinations (a nudge, not a mistake)"
+  },
+  {
+   "key": "line.MATH-08.again",
+   "fa": "آفرین! حالا همان مبلغ را به یک شکلِ دیگر بپرداز.",
+   "en": "well done! now pay the same amount in a different way",
+   "context": "after the first right combination"
+  },
+  {
+   "key": "line.MATH-08.assist",
+   "fa": "بیا این قطعه را من بگذارم.",
+   "en": "let me put this piece down for you",
+   "context": "answer assist"
+  },
+  {
+   "key": "line.MATH-08.incomplete",
+   "fa": "هنوز چیزی روی پیشخوان نگذاشته‌ای.",
+   "en": "there is nothing on the counter yet",
+   "context": "paying an empty counter"
+  },
+  {
+   "key": "map.room.scilab",
+   "fa": "اتاق آزمایش",
+   "en": "the science lab",
+   "context": "NEO's map: WS_SCI_LAB / SCI-01 (Q02)"
+  },
+  {
+   "key": "hint.SCI-01.enc.1",
+   "fa": "هر بار فقط یک چیز را عوض کن؛ بعد آزمایش کن.",
+   "en": "Change only one thing, then test.",
+   "context": "SCI-01 encounter H1"
+  },
+  {
+   "key": "hint.SCI-01.enc.2",
+   "fa": "سه ستون دفترچه را بخوان: چه دیدم، چه تغییر دادم، چه شد.",
+   "en": "Read the three columns.",
+   "context": "SCI-01 encounter H2"
+  },
+  {
+   "key": "hint.SCI-01.enc.3",
+   "fa": "جای خالی را نگاه کن: یک سیم کم است.",
+   "en": "Look at the empty bay: a wire is missing.",
+   "context": "SCI-01 encounter H3"
+  },
+  {
+   "key": "hint.SCI-01.enc.assist",
+   "fa": "فقط همان قطعه‌ای را بردار که یک چیز را عوض می‌کند.",
+   "en": "Take only the part that changes one thing.",
+   "context": "SCI-01 encounter Answer Assist"
+  },
+  {
+   "key": "hint.SCI-01.pra.1",
+   "fa": "یکی‌یکی عوض کن: باتری یا سیم، نه هر دو.",
+   "en": "One at a time: the battery or the wire, not both.",
+   "context": "SCI-01 practice H1"
+  },
+  {
+   "key": "hint.SCI-01.pra.2",
+   "fa": "ردیف «چه تغییر دادم: باتری» را با ردیف پیش از آن مقایسه کن.",
+   "en": "Compare the row that changed the battery with the one before it.",
+   "context": "SCI-01 practice H2"
+  },
+  {
+   "key": "hint.SCI-01.pra.3",
+   "fa": "باتری کهنه را با باتری تازه عوض کن.",
+   "en": "Swap the old battery for a fresh one.",
+   "context": "SCI-01 practice H3"
+  },
+  {
+   "key": "hint.SCI-01.pra.assist",
+   "fa": "فقط باتری تازه را بردار.",
+   "en": "Take only the fresh battery.",
+   "context": "SCI-01 practice Answer Assist"
+  },
+  {
+   "key": "hint.SCI-01.tra.1",
+   "fa": "فقط رنگ سیم عوض شده؛ چیز دیگری دست نخورده است.",
+   "en": "Only the colour of the wire changed.",
+   "context": "SCI-01 transfer H1"
+  },
+  {
+   "key": "hint.SCI-01.tra.2",
+   "fa": "دو ردیف را ببین: تغییر «رنگ سیم» و نتیجه «همان».",
+   "en": "Two rows: changed the colour, result the same.",
+   "context": "SCI-01 transfer H2"
+  },
+  {
+   "key": "hint.SCI-01.tra.3",
+   "fa": "رنگ سیم اثری ندارد؛ راه باید بسته باشد.",
+   "en": "The colour does not matter; the path must be closed.",
+   "context": "SCI-01 transfer H3"
+  },
+  {
+   "key": "hint.SCI-01.tra.assist",
+   "fa": "یک سیم با رنگ دیگر بردار.",
+   "en": "Take a wire of another colour.",
+   "context": "SCI-01 transfer Answer Assist"
+  },
+  {
+   "key": "map.room.wsmeasure",
+   "fa": "کارگاهِ اندازه‌گیری",
+   "en": "the measuring room of the workshop",
+   "context": "map: the WS_MEASURE room (SCI-03)"
+  },
+  {
+   "key": "map.room.quran01",
+   "fa": "اتاق مطالعه آرام",
+   "en": "quiet reading alcove",
+   "context": "map: LIB_STUDY / QURAN-01"
+  },
+  {
+   "key": "hint.SCI-03.enc.1",
+   "fa": "سه ابزار روی میز است: ترازو جرم را نشان می‌دهد، ظرفِ مدرج حجم را، خط‌کش درازا را. برای این ماده کدام را برمی‌داری؟",
+   "en": "three tools, one quantity each — pick the one that reads this material",
+   "context": "SCI-03 hint 1 (attention)"
+  },
+  {
+   "key": "hint.SCI-03.enc.2",
+   "fa": "دفترچه را بخوان: «چه اندازه گرفتیم / با چه ابزاری / چند شد». ستونِ ابزار را نگاه کن.",
+   "en": "read the notebook columns",
+   "context": "SCI-03 hint 2 (representation)"
+  },
+  {
+   "key": "hint.SCI-03.enc.3",
+   "fa": "وزنه‌ها را یکی‌یکی اضافه کن تا دو کفهٔ ترازو هم‌سطح شود؛ تعدادِ وزنه‌ها همان جرم است.",
+   "en": "add weights until the pans are level",
+   "context": "SCI-03 hint 3 (assist)"
+  },
+  {
+   "key": "hint.SCI-03.enc.assist",
+   "fa": "برای جرم، ترازو را بردار.",
+   "en": "for mass take the balance",
+   "context": "SCI-03 answer assist"
+  },
+  {
+   "key": "hint.SCI-03.pra.1",
+   "fa": "برای خواندنِ ظرفِ مدرج باید چشمت هم‌سطحِ سطحِ آب باشد؛ خطِ چشم را تا روی آب بکش.",
+   "en": "read at eye level",
+   "context": "SCI-03 hint 1 (attention)"
+  },
+  {
+   "key": "hint.SCI-03.pra.2",
+   "fa": "یک ظرف را دو بار ببین: از بالا یک عدد می‌دهد، هم‌سطح با آب عددی دیگر. کدام درست است؟",
+   "en": "the same glass from above and level",
+   "context": "SCI-03 hint 2 (representation)"
+  },
+  {
+   "key": "hint.SCI-03.pra.3",
+   "fa": "خطِ هم‌سطحِ چشم را روی سطحِ آب بگذار؛ عددِ روی شیشه همان‌جاست.",
+   "en": "put the eye band on the surface",
+   "context": "SCI-03 hint 3 (assist)"
+  },
+  {
+   "key": "hint.SCI-03.pra.assist",
+   "fa": "خطِ چشم را روی سطحِ آب بگذار و عدد را بخوان.",
+   "en": "place the eye band and read",
+   "context": "SCI-03 answer assist"
+  },
+  {
+   "key": "hint.SCI-03.tra.1",
+   "fa": "اول بپرس: درازا است یا حجم یا جرم؟ بعد ابزارِ همان اندازه را بردار.",
+   "en": "ask which quantity first",
+   "context": "SCI-03 hint 1 (attention)"
+  },
+  {
+   "key": "hint.SCI-03.tra.2",
+   "fa": "هر ابزار فقط کنارِ اندازهٔ خودش می‌نشیند: خط‌کش کنارِ درازا، ترازو کنارِ جرم، ظرفِ مدرج کنارِ حجم.",
+   "en": "each tool beside its own quantity",
+   "context": "SCI-03 hint 2 (representation)"
+  },
+  {
+   "key": "hint.SCI-03.tra.3",
+   "fa": "در باغ هم همین است: آبِ باغچه را با ظرفِ مدرج اندازه می‌گیریم، نه با خط‌کش.",
+   "en": "the same choice in the garden",
+   "context": "SCI-03 hint 3 (assist)"
+  },
+  {
+   "key": "hint.SCI-03.tra.assist",
+   "fa": "برای این ماده، ابزاری را بردار که اندازهٔ آن را نشان می‌دهد.",
+   "en": "take the tool that reads this quantity",
+   "context": "SCI-03 answer assist"
+  }
+ ]
+}

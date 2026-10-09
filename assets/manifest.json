@@ -1,0 +1,3240 @@
+{
+ "plaza_plate": {
+  "file": "assets/plaza_plate.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/ENV_VIL_PLAZA__PLATE.png"
+ },
+ "plaza_restored": {
+  "file": "assets/plaza_restored.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/ENV_VIL_PLAZA__STATE-restored_and_alive.png"
+ },
+ "plaza_festival": {
+  "file": "assets/plaza_festival.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/ENV_VIL_PLAZA__STATE-festival_night.png"
+ },
+ "lamp_post": {
+  "file": "assets/lamp_post.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   170,
+   21,
+   315,
+   491
+  ],
+  "source": "art/final/VILLAGE/ENVV_LAMP_POST__BASE.png"
+ },
+ "lamp_post_on": {
+  "file": "assets/lamp_post_on.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   170,
+   21,
+   341,
+   491
+  ],
+  "source": "art/final/VILLAGE/ENVV_LAMP_POST__STATE-on.png"
+ },
+ "interaction_glow": {
+  "file": "assets/interaction_glow.jpg",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": null,
+  "source": "art/final/GLOBAL/PROP_INTERACTION_GLOW__SHEET.png"
+ },
+ "lamp_a_off": {
+  "file": "assets/lamp_a_off.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   124,
+   16,
+   258,
+   368
+  ],
+  "source": "art/final/VILLAGE/PROP_PATTERN_LAMP_A__BASE.png"
+ },
+ "lamp_a_on": {
+  "file": "assets/lamp_a_on.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   106,
+   16,
+   277,
+   367
+  ],
+  "source": "art/final/VILLAGE/PROP_PATTERN_LAMP_A__STATE-on.png"
+ },
+ "lamp_b_off": {
+  "file": "assets/lamp_b_off.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   75,
+   16,
+   308,
+   368
+  ],
+  "source": "art/final/VILLAGE/PROP_PATTERN_LAMP_B__BASE.png"
+ },
+ "lamp_b_on": {
+  "file": "assets/lamp_b_on.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   75,
+   16,
+   307,
+   367
+  ],
+  "source": "art/final/VILLAGE/PROP_PATTERN_LAMP_B__STATE-on.png"
+ },
+ "lamp_round_off": {
+  "file": "assets/lamp_round_off.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   94,
+   16,
+   289,
+   367
+  ],
+  "source": "art/final/VILLAGE/ENVV_LAMP_ROUND__BASE.png"
+ },
+ "lamp_round_on": {
+  "file": "assets/lamp_round_on.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   94,
+   16,
+   289,
+   367
+  ],
+  "source": "art/final/VILLAGE/ENVV_LAMP_ROUND__STATE-on.png"
+ },
+ "lamp_square_off": {
+  "file": "assets/lamp_square_off.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   58,
+   16,
+   325,
+   368
+  ],
+  "source": "art/final/VILLAGE/ENVV_LAMP_SQUARE__BASE.png"
+ },
+ "lamp_square_on": {
+  "file": "assets/lamp_square_on.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   58,
+   16,
+   324,
+   367
+  ],
+  "source": "art/final/VILLAGE/ENVV_LAMP_SQUARE__STATE-on.png"
+ },
+ "slot": {
+  "file": "assets/slot.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   16,
+   11,
+   239,
+   245
+  ],
+  "source": "art/final/VILLAGE/PROP_PATTERN_SLOT__BASE.png"
+ },
+ "btn_hint": {
+  "file": "assets/btn_hint.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   7,
+   7,
+   183,
+   183
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_HINT__BASE.png"
+ },
+ "btn_undo": {
+  "file": "assets/btn_undo.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   7,
+   7,
+   183,
+   183
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_UNDO__BASE.png"
+ },
+ "btn_reset": {
+  "file": "assets/btn_reset.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   7,
+   8,
+   183,
+   183
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_RESET__BASE.png"
+ },
+ "btn_hint_pulse": {
+  "file": "assets/btn_hint_pulse.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   7,
+   7,
+   184,
+   184
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_HINT__STATE-available_pulse.png"
+ },
+ "btn_hint_pressed": {
+  "file": "assets/btn_hint_pressed.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   13,
+   14,
+   178,
+   179
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_HINT__STATE-pressed.png"
+ },
+ "btn_undo_pressed": {
+  "file": "assets/btn_undo_pressed.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   13,
+   14,
+   178,
+   179
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_UNDO__STATE-pressed.png"
+ },
+ "btn_undo_disabled": {
+  "file": "assets/btn_undo_disabled.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   8,
+   8,
+   183,
+   183
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_UNDO__STATE-disabled.png"
+ },
+ "btn_reset_pressed": {
+  "file": "assets/btn_reset_pressed.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   13,
+   14,
+   178,
+   179
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_RESET__STATE-pressed.png"
+ },
+ "lamp_a_hl": {
+  "file": "assets/lamp_a_hl.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   123,
+   16,
+   259,
+   368
+  ],
+  "source": "art/final/VILLAGE/PROP_PATTERN_LAMP_A__STATE-highlighted.png"
+ },
+ "lamp_b_hl": {
+  "file": "assets/lamp_b_hl.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   75,
+   15,
+   308,
+   368
+  ],
+  "source": "art/final/VILLAGE/PROP_PATTERN_LAMP_B__STATE-highlighted.png"
+ },
+ "ws_plate": {
+  "file": "assets/ws_plate.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_MAIN_FLOOR__PLATE.png"
+ },
+ "gear_board": {
+  "file": "assets/gear_board.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   42,
+   685,
+   981,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_TUT_GEAR_BOARD__BASE.png"
+ },
+ "gear_board_open": {
+  "file": "assets/gear_board_open.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   43,
+   685,
+   981,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_TUT_GEAR_BOARD__STATE-hatch_open.png"
+ },
+ "axle_peg": {
+  "file": "assets/axle_peg.png",
+  "size": [
+   128,
+   128
+  ],
+  "bbox": [
+   5,
+   5,
+   122,
+   122
+  ],
+  "source": "art/final/WORKSHOP/PROP_TUT_AXLE_PEG__BASE.png"
+ },
+ "apple_red": {
+  "file": "assets/apple_red.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   14,
+   8,
+   177,
+   184
+  ],
+  "source": "art/final/MARKET/PROP_APPLE_RED__BASE.png"
+ },
+ "basket": {
+  "file": "assets/basket.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   15,
+   18,
+   367,
+   368
+  ],
+  "source": "art/final/MARKET/PROP_MARKET_BASKET__BASE.png"
+ },
+ "apple_green": {
+  "file": "assets/apple_green.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   14,
+   8,
+   177,
+   184
+  ],
+  "source": "art/final/MARKET/PROP_APPLE_GREEN__BASE.png"
+ },
+ "crate_open": {
+  "file": "assets/crate_open.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   15,
+   95,
+   367,
+   368
+  ],
+  "source": "art/final/GLOBAL/PROP_CRATE__STATE-open_empty.png"
+ },
+ "packing_table": {
+  "file": "assets/packing_table.png",
+  "size": [
+   896,
+   896
+  ],
+  "bbox": [
+   36,
+   449,
+   858,
+   859
+  ],
+  "source": "art/final/MARKET/PROP_PACKING_TABLE__BASE.png"
+ },
+ "stall": {
+  "file": "assets/stall.png",
+  "size": [
+   640,
+   640
+  ],
+  "bbox": [
+   26,
+   51,
+   613,
+   613
+  ],
+  "source": "art/final/MARKET/ENVM_STALL__BASE.png"
+ },
+ "stall_stocked": {
+  "file": "assets/stall_stocked.png",
+  "size": [
+   640,
+   640
+  ],
+  "bbox": [
+   26,
+   51,
+   613,
+   613
+  ],
+  "source": "art/final/MARKET/ENVM_STALL__STATE-stocked.png"
+ },
+ "fruit_counter": {
+  "file": "assets/fruit_counter.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   48,
+   16,
+   334,
+   368
+  ],
+  "source": "art/final/MARKET/PROP_FRUIT_COUNTER__BASE.png"
+ },
+ "count_marker": {
+  "file": "assets/count_marker.png",
+  "size": [
+   96,
+   96
+  ],
+  "bbox": [
+   4,
+   4,
+   91,
+   92
+  ],
+  "source": "art/final/MARKET/PROP_COUNT_MARKER__BASE.png"
+ },
+ "fruit_heap": {
+  "file": "assets/fruit_heap.png",
+  "size": [
+   320,
+   320
+  ],
+  "bbox": [
+   13,
+   30,
+   306,
+   306
+  ],
+  "source": "art/final/MARKET/PROP_FRUIT_BASKET__BASE.png"
+ },
+ "garden_plate": {
+  "file": "assets/garden_plate.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/ENV_VIL_GARDEN_EDGE__PLATE.png"
+ },
+ "garden_plate_on": {
+  "file": "assets/garden_plate_on.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/ENV_VIL_GARDEN_EDGE__STATE-restored_and_alive.png"
+ },
+ "sign_plate": {
+  "file": "assets/sign_plate.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/ENV_VIL_SIGN_AREA__PLATE.png"
+ },
+ "sign_plate_on": {
+  "file": "assets/sign_plate_on.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/ENV_VIL_SIGN_AREA__STATE-restored_and_alive.png"
+ },
+ "sign_blank": {
+  "file": "assets/sign_blank.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   50,
+   21,
+   461,
+   490
+  ],
+  "source": "art/final/VILLAGE/PROP_VILLAGE_SIGN__BASE.png"
+ },
+ "sign_blank_hl": {
+  "file": "assets/sign_blank_hl.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   49,
+   21,
+   461,
+   490
+  ],
+  "source": "art/final/VILLAGE/PROP_VILLAGE_SIGN__STATE-highlighted.png"
+ },
+ "sign_school": {
+  "file": "assets/sign_school.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   50,
+   21,
+   461,
+   490
+  ],
+  "source": "art/final/SCHOOL/PROP_SCHOOL_SIGN__BASE.png"
+ },
+ "sign_market": {
+  "file": "assets/sign_market.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   50,
+   21,
+   461,
+   490
+  ],
+  "source": "art/final/MARKET/PROP_MARKET_SIGN__BASE.png"
+ },
+ "sign_library": {
+  "file": "assets/sign_library.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   50,
+   21,
+   461,
+   490
+  ],
+  "source": "art/final/LIBRARY/PROP_LIBRARY_SIGN__BASE.png"
+ },
+ "sign_well": {
+  "file": "assets/sign_well.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   50,
+   21,
+   461,
+   490
+  ],
+  "source": "art/final/VILLAGE/PROP_WELL_SIGN__BASE.png"
+ },
+ "route_marker": {
+  "file": "assets/route_marker.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   31,
+   23,
+   479,
+   491
+  ],
+  "source": "art/final/SCHOOL/PROP_ROUTE_MARKER__BASE.png"
+ },
+ "garden_bed": {
+  "file": "assets/garden_bed.png",
+  "size": [
+   1536,
+   768
+  ],
+  "bbox": [
+   31,
+   123,
+   1503,
+   736
+  ],
+  "source": "art/final/GARDEN/PROP_GARDEN_BED__BASE.png"
+ },
+ "flower_a": {
+  "file": "assets/flower_a.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   52,
+   10,
+   203,
+   245
+  ],
+  "source": "art/final/GARDEN/PROP_FLOWER_A__BASE.png"
+ },
+ "flower_b": {
+  "file": "assets/flower_b.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   43,
+   10,
+   212,
+   245
+  ],
+  "source": "art/final/GARDEN/PROP_FLOWER_B__BASE.png"
+ },
+ "flower_c": {
+  "file": "assets/flower_c.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   26,
+   10,
+   229,
+   245
+  ],
+  "source": "art/final/GARDEN/PROP_FLOWER_C__BASE.png"
+ },
+ "garden_tile": {
+  "file": "assets/garden_tile.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   7,
+   8,
+   183,
+   184
+  ],
+  "source": "art/final/GARDEN/PROP_GARDEN_TILE__BASE.png"
+ },
+ "center_line": {
+  "file": "assets/center_line.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   233,
+   21,
+   278,
+   491
+  ],
+  "source": "art/final/GARDEN/PROP_CENTER_LINE__BASE.png"
+ },
+ "center_line_glow": {
+  "file": "assets/center_line_glow.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   233,
+   21,
+   278,
+   491
+  ],
+  "source": "art/final/GARDEN/PROP_CENTER_LINE__STATE-glowing.png"
+ },
+ "mirror_ghost": {
+  "file": "assets/mirror_ghost.jpg",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": null,
+  "source": "art/final/GARDEN/PROP_MIRROR_GHOST__SHEET.png"
+ },
+ "symmetry_axis": {
+  "file": "assets/symmetry_axis.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   232,
+   22,
+   278,
+   491
+  ],
+  "source": "art/final/GARDEN/PROP_SYMMETRY_AXIS__BASE.png"
+ },
+ "symmetry_stone": {
+  "file": "assets/symmetry_stone.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   10,
+   87,
+   245,
+   245
+  ],
+  "source": "art/final/GARDEN/PROP_SYMMETRY_STONE__BASE.png"
+ },
+ "w01_board": {
+  "file": "assets/w01_board.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   44,
+   43,
+   978,
+   982
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_01__BASE.png"
+ },
+ "w01_plaque": {
+  "file": "assets/w01_plaque.png",
+  "size": [
+   768,
+   768
+  ],
+  "bbox": [
+   31,
+   315,
+   735,
+   451
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_03__BASE.png"
+ },
+ "w01_tray": {
+  "file": "assets/w01_tray.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   193,
+   43,
+   830,
+   982
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_04__BASE.png"
+ },
+ "w01_stamp": {
+  "file": "assets/w01_stamp.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   128,
+   16,
+   255,
+   368
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_05__BASE.png"
+ },
+ "w01_card_house": {
+  "file": "assets/w01_card_house.png",
+  "size": [
+   240,
+   320
+  ],
+  "bbox": [
+   13,
+   13,
+   226,
+   306
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_02__BASE__HOUSE.png"
+ },
+ "w01_card_school": {
+  "file": "assets/w01_card_school.png",
+  "size": [
+   240,
+   320
+  ],
+  "bbox": [
+   13,
+   13,
+   225,
+   306
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_02__BASE__SCHOOL.png"
+ },
+ "w01_card_market": {
+  "file": "assets/w01_card_market.png",
+  "size": [
+   240,
+   320
+  ],
+  "bbox": [
+   13,
+   13,
+   225,
+   306
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_02__BASE__MARKET.png"
+ },
+ "w01_card_park": {
+  "file": "assets/w01_card_park.png",
+  "size": [
+   240,
+   320
+  ],
+  "bbox": [
+   13,
+   13,
+   225,
+   306
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_02__BASE__PARK.png"
+ },
+ "w01_card_building": {
+  "file": "assets/w01_card_building.png",
+  "size": [
+   240,
+   320
+  ],
+  "bbox": [
+   15,
+   13,
+   223,
+   306
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_02__BASE__LIB_BUILDING.png"
+ },
+ "w01_card_shelves": {
+  "file": "assets/w01_card_shelves.png",
+  "size": [
+   240,
+   320
+  ],
+  "bbox": [
+   15,
+   13,
+   223,
+   306
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_02__BASE__LIB_SHELVES.png"
+ },
+ "w01_card_table": {
+  "file": "assets/w01_card_table.png",
+  "size": [
+   240,
+   320
+  ],
+  "bbox": [
+   19,
+   13,
+   220,
+   306
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_02__BASE__LIB_TABLE.png"
+ },
+ "w01_card_desk": {
+  "file": "assets/w01_card_desk.png",
+  "size": [
+   240,
+   320
+  ],
+  "bbox": [
+   19,
+   13,
+   220,
+   306
+  ],
+  "source": "art/final/VILLAGE/W01_ASSET_02__BASE__LIB_DESK.png"
+ },
+ "p13_board": {
+  "file": "assets/p13_board.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   52,
+   43,
+   970,
+   982
+  ],
+  "source": "art/final/VILLAGE/PROP_VILLAGE_BOARD__BASE.png"
+ },
+ "p13_board_festival": {
+  "file": "assets/p13_board_festival.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   53,
+   43,
+   970,
+   982
+  ],
+  "source": "art/final/VILLAGE/PROP_VILLAGE_BOARD__STATE-complete.png"
+ },
+ "p13_card_bread": {
+  "file": "assets/p13_card_bread.png",
+  "size": [
+   288,
+   384
+  ],
+  "bbox": [
+   12,
+   27,
+   275,
+   356
+  ],
+  "source": "art/final/VILLAGE/PROP_WORD_CARD_SET__BASE__BREAD.png"
+ },
+ "p13_card_carpet": {
+  "file": "assets/p13_card_carpet.png",
+  "size": [
+   288,
+   384
+  ],
+  "bbox": [
+   22,
+   15,
+   264,
+   367
+  ],
+  "source": "art/final/VILLAGE/PROP_WORD_CARD_SET__BASE__CARPET.png"
+ },
+ "p13_card_samovar": {
+  "file": "assets/p13_card_samovar.png",
+  "size": [
+   288,
+   384
+  ],
+  "bbox": [
+   17,
+   15,
+   270,
+   367
+  ],
+  "source": "art/final/VILLAGE/PROP_WORD_CARD_SET__BASE__SAMOVAR.png"
+ },
+ "p13_card_library": {
+  "file": "assets/p13_card_library.png",
+  "size": [
+   288,
+   384
+  ],
+  "bbox": [
+   13,
+   16,
+   274,
+   367
+  ],
+  "source": "art/final/VILLAGE/PROP_WORD_CARD_SET__BASE__LIBRARY.png"
+ },
+ "house_plate": {
+  "file": "assets/house_plate.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/ENV_VIL_HOUSE__PLATE.png"
+ },
+ "soc01_timeline": {
+  "file": "assets/soc01_timeline.png",
+  "size": [
+   1600,
+   640
+  ],
+  "bbox": [
+   65,
+   239,
+   1533,
+   613
+  ],
+  "source": "art/final/SCHOOL/SOC01_ASSET_03__BASE.png"
+ },
+ "machine_room": {
+  "file": "assets/machine_room.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_MACHINE_ROOM__PLATE.png"
+ },
+ "machine_room_on": {
+  "file": "assets/machine_room_on.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_MACHINE_ROOM__STATE-restored_and_alive.png"
+ },
+ "io_machine": {
+  "file": "assets/io_machine.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   42,
+   83,
+   981,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_IO_MACHINE__BASE.png"
+ },
+ "io_board": {
+  "file": "assets/io_board.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   42,
+   58,
+   981,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_IO_RULE_BOARD__BASE.png"
+ },
+ "io_counter": {
+  "file": "assets/io_counter.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   24,
+   21,
+   487,
+   491
+  ],
+  "source": "art/final/WORKSHOP/PROP_OUTPUT_COUNTER__BASE.png"
+ },
+ "token_in": {
+  "file": "assets/token_in.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   13,
+   10,
+   242,
+   245
+  ],
+  "source": "art/final/WORKSHOP/PROP_INPUT_TOKEN__BASE.png"
+ },
+ "token_out": {
+  "file": "assets/token_out.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   10,
+   11,
+   245,
+   245
+  ],
+  "source": "art/final/WORKSHOP/PROP_OUTPUT_TOKEN__BASE.png"
+ },
+ "lever_up": {
+  "file": "assets/lever_up.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   60,
+   16,
+   283,
+   366
+  ],
+  "source": "art/final/GLOBAL/PROP_LEVER_A__BASE.png"
+ },
+ "lever_down": {
+  "file": "assets/lever_down.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   60,
+   88,
+   322,
+   368
+  ],
+  "source": "art/final/GLOBAL/PROP_LEVER_A__STATE-down___on.png"
+ },
+ "soc01_card": {
+  "file": "assets/soc01_card.png",
+  "size": [
+   384,
+   512
+  ],
+  "bbox": [
+   16,
+   28,
+   367,
+   483
+  ],
+  "source": "art/final/SCHOOL/SOC01_ASSET_02__BASE.png"
+ },
+ "soc01_album": {
+  "file": "assets/soc01_album.png",
+  "size": [
+   640,
+   254
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_ASSET_01__BASE.png",
+  "transform": "table foreshortening: height x0.5, far edge x0.92"
+ },
+ "soc01_album_open": {
+  "file": "assets/soc01_album_open.png",
+  "size": [
+   900,
+   350
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_ASSET_01__STATE-open_blank_pages.png",
+  "transform": "table foreshortening: height x0.5, far edge x0.92"
+ },
+ "soc01_box": {
+  "file": "assets/soc01_box.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   15,
+   179,
+   367,
+   368
+  ],
+  "source": "art/final/SCHOOL/SOC01_ASSET_04__BASE.png"
+ },
+ "soc01_box_open": {
+  "file": "assets/soc01_box_open.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   15,
+   24,
+   367,
+   368
+  ],
+  "source": "art/final/SCHOOL/SOC01_ASSET_04__STATE-open.png"
+ },
+ "soc01_clock": {
+  "file": "assets/soc01_clock.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   34,
+   16,
+   348,
+   368
+  ],
+  "source": "art/final/SCHOOL/SOC01_ASSET_05__BASE.png"
+ },
+ "map_world": {
+  "file": "assets/map_world.png",
+  "size": [
+   1400,
+   1050
+  ],
+  "bbox": [
+   56,
+   62,
+   1342,
+   987
+  ],
+  "source": "art/final/GLOBAL/MAP_WORLD__STATE-all_areas_revealed.png"
+ },
+ "map_cloth": {
+  "file": "assets/map_cloth.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   42,
+   236,
+   981,
+   786
+  ],
+  "source": "art/final/GLOBAL/UI_MAP_CLOTH__BASE.png"
+ },
+ "map_pin": {
+  "file": "assets/map_pin.png",
+  "size": [
+   160,
+   160
+  ],
+  "bbox": [
+   59,
+   6,
+   100,
+   153
+  ],
+  "source": "art/final/SCHOOL/PROP_MAP_MARKER__BASE.png"
+ },
+ "btn_map": {
+  "file": "assets/btn_map.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   7,
+   57,
+   182,
+   133
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_MAP__BASE.png"
+ },
+ "btn_map_new": {
+  "file": "assets/btn_map_new.png",
+  "size": [
+   192,
+   192
+  ],
+  "bbox": [
+   8,
+   57,
+   183,
+   133
+  ],
+  "source": "art/final/GLOBAL/UI_BTN_MAP__STATE-new_area.png"
+ },
+ "storage_room": {
+  "file": "assets/storage_room.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_STORAGE__PLATE.png"
+ },
+ "storage_room_on": {
+  "file": "assets/storage_room_on.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_STORAGE__STATE-restored_and_alive.png"
+ },
+ "hundred_crate": {
+  "file": "assets/hundred_crate.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   42,
+   658,
+   981,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_HUNDRED_CRATE__BASE.png"
+ },
+ "thousand_crate": {
+  "file": "assets/thousand_crate.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   84,
+   43,
+   939,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_THOUSAND_CRATE__BASE.png"
+ },
+ "thousand_crate_open": {
+  "file": "assets/thousand_crate_open.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   84,
+   44,
+   939,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_THOUSAND_CRATE__STATE-open_empty.png"
+ },
+ "crate_small": {
+  "file": "assets/crate_small.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   166,
+   21,
+   345,
+   491
+  ],
+  "source": "art/final/WORKSHOP/PROP_CRATE_SMALL__BASE.png"
+ },
+ "warehouse_rack": {
+  "file": "assets/warehouse_rack.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   245,
+   43,
+   777,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_WAREHOUSE_RACK__BASE.png"
+ },
+ "gear_room": {
+  "file": "assets/gear_room.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_GEAR_ROOM__PLATE.png"
+ },
+ "gear_room_on": {
+  "file": "assets/gear_room_on.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_GEAR_ROOM__STATE-restored_and_alive.png"
+ },
+ "pv_panel": {
+  "file": "assets/pv_panel.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   42,
+   354,
+   981,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_PLACE_VALUE_PANEL__BASE.png"
+ },
+ "pv_panel_lit": {
+  "file": "assets/pv_panel_lit.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": [
+   42,
+   354,
+   981,
+   982
+  ],
+  "source": "art/final/WORKSHOP/PROP_PLACE_VALUE_PANEL__STATE-columns_lit.png"
+ },
+ "digit_tile": {
+  "file": "assets/digit_tile.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   10,
+   11,
+   245,
+   245
+  ],
+  "source": "art/final/WORKSHOP/PROP_DIGIT_TILE__BASE.png"
+ },
+ "digit_tile_placed": {
+  "file": "assets/digit_tile_placed.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   15,
+   11,
+   240,
+   245
+  ],
+  "source": "art/final/WORKSHOP/PROP_DIGIT_TILE__STATE-placed.png"
+ },
+ "digit_tile_hi": {
+  "file": "assets/digit_tile_hi.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   10,
+   11,
+   245,
+   245
+  ],
+  "source": "art/final/WORKSHOP/PROP_DIGIT_TILE__STATE-highlighted.png"
+ },
+ "quran_lamp": {
+  "file": "assets/quran_lamp.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   137,
+   21,
+   374,
+   491
+  ],
+  "source": "art/final/LIBRARY/QPROP_LAMP__BASE.png"
+ },
+ "quran_lamp_on": {
+  "file": "assets/quran_lamp_on.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   137,
+   22,
+   374,
+   491
+  ],
+  "source": "art/final/LIBRARY/QPROP_LAMP__STATE-on.png"
+ },
+ "quran_book_stand": {
+  "file": "assets/quran_book_stand.png",
+  "size": [
+   640,
+   640
+  ],
+  "bbox": [
+   26,
+   96,
+   613,
+   613
+  ],
+  "source": "art/final/LIBRARY/QPROP_QURAN_BOOK_STAND__STATE-holding_an_open.png"
+ },
+ "mkt_money": {
+  "file": "assets/mkt_money.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/MARKET/ENV_MKT_MONEY__PLATE.png"
+ },
+ "mkt_money_on": {
+  "file": "assets/mkt_money_on.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/MARKET/ENV_MKT_MONEY__STATE-restored_and_alive.png"
+ },
+ "market_counter": {
+  "file": "assets/market_counter.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   21,
+   197,
+   490,
+   491
+  ],
+  "source": "art/final/MARKET/PROP_MARKET_COUNTER__BASE.png"
+ },
+ "sci_lab": {
+  "file": "assets/sci_lab.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_SCI_LAB__PLATE.png"
+ },
+ "sci_lab_on": {
+  "file": "assets/sci_lab_on.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_SCI_LAB__STATE-restored_and_alive.png"
+ },
+ "battery_unit": {
+  "file": "assets/battery_unit.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   21,
+   35,
+   490,
+   491
+  ],
+  "source": "art/final/WORKSHOP/PROP_BATTERY_UNIT__BASE.png"
+ },
+ "lamp_unit": {
+  "file": "assets/lamp_unit.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   139,
+   21,
+   372,
+   491
+  ],
+  "source": "art/final/WORKSHOP/PROP_LAMP_UNIT__BASE.png"
+ },
+ "lamp_unit_on": {
+  "file": "assets/lamp_unit_on.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   145,
+   21,
+   363,
+   491
+  ],
+  "source": "art/final/WORKSHOP/PROP_LAMP_UNIT__STATE-on.png"
+ },
+ "lamp_unit_flicker": {
+  "file": "assets/lamp_unit_flicker.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   140,
+   20,
+   370,
+   488
+  ],
+  "source": "art/final/WORKSHOP/PROP_LAMP_UNIT__STATE-flicker.png"
+ },
+ "switch_unit": {
+  "file": "assets/switch_unit.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   15,
+   32,
+   367,
+   368
+  ],
+  "source": "art/final/WORKSHOP/PROP_SWITCH_UNIT__BASE.png"
+ },
+ "switch_unit_on": {
+  "file": "assets/switch_unit_on.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": [
+   29,
+   18,
+   369,
+   369
+  ],
+  "source": "art/final/WORKSHOP/PROP_SWITCH_UNIT__STATE-on.png"
+ },
+ "notebook": {
+  "file": "assets/notebook.png",
+  "size": [
+   640,
+   640
+  ],
+  "bbox": [
+   26,
+   202,
+   613,
+   613
+  ],
+  "source": "art/final/WORKSHOP/PROP_EXPERIMENT_NOTEBOOK__BASE.png"
+ },
+ "notebook_blank": {
+  "file": "assets/notebook_blank.png",
+  "size": [
+   640,
+   640
+  ],
+  "bbox": [
+   25,
+   205,
+   610,
+   610
+  ],
+  "source": "art/final/WORKSHOP/PROP_EXPERIMENT_NOTEBOOK__STATE-open_blank.png"
+ },
+ "notebook_drawn": {
+  "file": "assets/notebook_drawn.png",
+  "size": [
+   640,
+   640
+  ],
+  "bbox": [
+   24,
+   205,
+   610,
+   610
+  ],
+  "source": "art/final/WORKSHOP/PROP_EXPERIMENT_NOTEBOOK__STATE-open_with_drawn.png"
+ },
+ "result_marker": {
+  "file": "assets/result_marker.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   10,
+   61,
+   245,
+   245
+  ],
+  "source": "art/final/WORKSHOP/PROP_RESULT_MARKER__BASE.png"
+ },
+ "result_marker_ok": {
+  "file": "assets/result_marker_ok.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   10,
+   61,
+   245,
+   245
+  ],
+  "source": "art/final/WORKSHOP/PROP_RESULT_MARKER__STATE-success.png"
+ },
+ "observation_tray": {
+  "file": "assets/observation_tray.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   21,
+   358,
+   490,
+   491
+  ],
+  "source": "art/final/WORKSHOP/PROP_OBSERVATION_TRAY__BASE.png"
+ },
+ "safety_card": {
+  "file": "assets/safety_card.png",
+  "size": [
+   576,
+   768
+  ],
+  "bbox": [
+   24,
+   149,
+   551,
+   618
+  ],
+  "source": "art/final/WORKSHOP/PROP_WORKSHOP_SAFETY_CARD__BASE.png"
+ },
+ "magnifier": {
+  "file": "assets/magnifier.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": [
+   74,
+   10,
+   181,
+   245
+  ],
+  "source": "art/final/GLOBAL/PROP_MAGNIFIER__BASE.png"
+ },
+ "ws_measure": {
+  "file": "assets/ws_measure.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_MEASURE_ROOM__PLATE.png"
+ },
+ "ws_measure_on": {
+  "file": "assets/ws_measure_on.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/ENV_WS_MEASURE_ROOM__STATE-restored_and_alive.png"
+ },
+ "tool_balance": {
+  "file": "assets/tool_balance.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   21,
+   165,
+   490,
+   491
+  ],
+  "source": "art/final/WORKSHOP/PROP_BALANCE_SCALE__BASE.png"
+ },
+ "tool_balance_left": {
+  "file": "assets/tool_balance_left.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   25,
+   80,
+   494,
+   509
+  ],
+  "source": "art/final/WORKSHOP/PROP_BALANCE_SCALE__STATE-left_heavier.png"
+ },
+ "tool_balance_right": {
+  "file": "assets/tool_balance_right.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   19,
+   92,
+   488,
+   507
+  ],
+  "source": "art/final/WORKSHOP/PROP_BALANCE_SCALE__STATE-right_heavier.png"
+ },
+ "tool_cylinder": {
+  "file": "assets/tool_cylinder.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   87,
+   21,
+   424,
+   491
+  ],
+  "source": "art/final/WORKSHOP/PROP_MEASURING_CONTAINER__BASE.png"
+ },
+ "tool_ruler": {
+  "file": "assets/tool_ruler.png",
+  "size": [
+   512,
+   512
+  ],
+  "bbox": [
+   21,
+   424,
+   490,
+   491
+  ],
+  "source": "art/final/WORKSHOP/PROP_RULER__BASE.png"
+ },
+ "unit_marker": {
+  "file": "assets/unit_marker.png",
+  "size": [
+   128,
+   128
+  ],
+  "bbox": [
+   5,
+   94,
+   122,
+   122
+  ],
+  "source": "art/final/WORKSHOP/PROP_UNIT_MARKER__BASE.png"
+ },
+ "zero_marker": {
+  "file": "assets/zero_marker.png",
+  "size": [
+   128,
+   128
+  ],
+  "bbox": [
+   31,
+   5,
+   96,
+   122
+  ],
+  "source": "art/final/WORKSHOP/PROP_ZERO_MARKER__BASE.png"
+ },
+ "measure_card": {
+  "file": "assets/measure_card.png",
+  "size": [
+   576,
+   768
+  ],
+  "bbox": [
+   112,
+   149,
+   462,
+   618
+  ],
+  "source": "art/final/WORKSHOP/PROP_MEASURE_RECORD_CARD__BASE.png"
+ },
+ "mat_water": {
+  "file": "assets/mat_water.png",
+  "size": [
+   104,
+   256
+  ],
+  "bbox": [
+   0,
+   0,
+   103,
+   254
+  ],
+  "source": "art/final/WORKSHOP/PROP_MEASURE_MATERIAL_SET__ITEM0.png"
+ },
+ "mat_block": {
+  "file": "assets/mat_block.png",
+  "size": [
+   256,
+   250
+  ],
+  "bbox": [
+   1,
+   1,
+   254,
+   248
+  ],
+  "source": "art/final/WORKSHOP/PROP_MEASURE_MATERIAL_SET__ITEM1.png"
+ },
+ "mat_bag": {
+  "file": "assets/mat_bag.png",
+  "size": [
+   256,
+   153
+  ],
+  "bbox": [
+   0,
+   0,
+   255,
+   151
+  ],
+  "source": "art/final/WORKSHOP/PROP_MEASURE_MATERIAL_SET__ITEM2.png"
+ },
+ "mat_stick": {
+  "file": "assets/mat_stick.png",
+  "size": [
+   37,
+   256
+  ],
+  "bbox": [
+   0,
+   0,
+   36,
+   254
+  ],
+  "source": "art/final/WORKSHOP/PROP_MEASURE_MATERIAL_SET__ITEM3.png"
+ },
+ "mat_jar": {
+  "file": "assets/mat_jar.png",
+  "size": [
+   153,
+   256
+  ],
+  "bbox": [
+   0,
+   0,
+   152,
+   254
+  ],
+  "source": "art/final/WORKSHOP/PROP_MEASURE_MATERIAL_SET__ITEM4.png"
+ },
+ "mat_stone": {
+  "file": "assets/mat_stone.png",
+  "size": [
+   227,
+   256
+  ],
+  "bbox": [
+   0,
+   0,
+   226,
+   254
+  ],
+  "source": "art/final/WORKSHOP/PROP_MEASURE_MATERIAL_SET__ITEM5.png"
+ },
+ "axle_rod": {
+  "file": "assets/axle_rod.png",
+  "size": [
+   53,
+   169
+  ],
+  "bbox": null,
+  "source": "art/final/GLOBAL/PROP_GEAR_SET__SHEET.png"
+ },
+ "gear_small": {
+  "file": "assets/gear_small.png",
+  "size": [
+   200,
+   202
+  ],
+  "bbox": null,
+  "gear": {
+   "tip_r": 99.4,
+   "root_r": 77.3,
+   "pitch_r": 88.3,
+   "teeth": 8,
+   "center": [
+    99.8,
+    100.6
+   ]
+  },
+  "source": "art/final/GLOBAL/PROP_GEAR_SET__SHEET.png"
+ },
+ "gear_medium": {
+  "file": "assets/gear_medium.png",
+  "size": [
+   322,
+   314
+  ],
+  "bbox": null,
+  "gear": {
+   "tip_r": 160.3,
+   "root_r": 124.8,
+   "pitch_r": 142.5,
+   "teeth": 9,
+   "center": [
+    161.0,
+    156.8
+   ]
+  },
+  "source": "art/final/GLOBAL/PROP_GEAR_SET__SHEET.png"
+ },
+ "gear_large": {
+  "file": "assets/gear_large.png",
+  "size": [
+   384,
+   376
+  ],
+  "bbox": null,
+  "gear": {
+   "tip_r": 190.6,
+   "root_r": 158.2,
+   "pitch_r": 174.4,
+   "teeth": 13,
+   "center": [
+    191.8,
+    188.0
+   ]
+  },
+  "source": "art/final/GLOBAL/PROP_GEAR_SET__SHEET.png"
+ },
+ "p13_picto_bread": {
+  "file": "assets/p13_picto_bread.png",
+  "size": [
+   124,
+   128
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/P13_TOPIC_PICTOS__SHEET.png cell 0"
+ },
+ "p13_picto_carpet": {
+  "file": "assets/p13_picto_carpet.png",
+  "size": [
+   124,
+   128
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/P13_TOPIC_PICTOS__SHEET.png cell 1"
+ },
+ "p13_picto_samovar": {
+  "file": "assets/p13_picto_samovar.png",
+  "size": [
+   123,
+   128
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/P13_TOPIC_PICTOS__SHEET.png cell 2"
+ },
+ "p13_picto_library": {
+  "file": "assets/p13_picto_library.png",
+  "size": [
+   123,
+   128
+  ],
+  "bbox": null,
+  "source": "art/final/VILLAGE/P13_TOPIC_PICTOS__SHEET.png cell 3"
+ },
+ "counting_block": {
+  "file": "assets/counting_block.png",
+  "size": [
+   112,
+   128
+  ],
+  "bbox": null,
+  "source": "art/final/WORKSHOP/PROP_COUNTING_BLOCKS__SHEET.png cell 0"
+ },
+ "soc01_life_0": {
+  "file": "assets/soc01_life_0.png",
+  "size": [
+   256,
+   231
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 0 (gap slicing)"
+ },
+ "soc01_life_1": {
+  "file": "assets/soc01_life_1.png",
+  "size": [
+   256,
+   252
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 1 (gap slicing)"
+ },
+ "soc01_life_2": {
+  "file": "assets/soc01_life_2.png",
+  "size": [
+   256,
+   214
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 2 (gap slicing)"
+ },
+ "soc01_life_3": {
+  "file": "assets/soc01_life_3.png",
+  "size": [
+   221,
+   256
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 3 (gap slicing)"
+ },
+ "soc01_life_4": {
+  "file": "assets/soc01_life_4.png",
+  "size": [
+   256,
+   218
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 4 (gap slicing)"
+ },
+ "soc01_life_5": {
+  "file": "assets/soc01_life_5.png",
+  "size": [
+   184,
+   256
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 5 (gap slicing)"
+ },
+ "soc01_life_6": {
+  "file": "assets/soc01_life_6.png",
+  "size": [
+   256,
+   245
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 6 (gap slicing)"
+ },
+ "soc01_life_7": {
+  "file": "assets/soc01_life_7.png",
+  "size": [
+   256,
+   217
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 7 (gap slicing)"
+ },
+ "soc01_life_8": {
+  "file": "assets/soc01_life_8.png",
+  "size": [
+   256,
+   192
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 8 (gap slicing)"
+ },
+ "soc01_life_9": {
+  "file": "assets/soc01_life_9.png",
+  "size": [
+   256,
+   197
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 9 (gap slicing)"
+ },
+ "soc01_life_10": {
+  "file": "assets/soc01_life_10.png",
+  "size": [
+   113,
+   256
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 10 (gap slicing)"
+ },
+ "soc01_life_11": {
+  "file": "assets/soc01_life_11.png",
+  "size": [
+   256,
+   186
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_LIFE__SHEET.png item 11 (gap slicing)"
+ },
+ "soc01_plant_0": {
+  "file": "assets/soc01_plant_0.png",
+  "size": [
+   227,
+   320
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_PLANT__SHEET.png item 0 (gap slicing, uniform box)"
+ },
+ "soc01_plant_1": {
+  "file": "assets/soc01_plant_1.png",
+  "size": [
+   227,
+   320
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_PLANT__SHEET.png item 1 (gap slicing, uniform box)"
+ },
+ "soc01_plant_2": {
+  "file": "assets/soc01_plant_2.png",
+  "size": [
+   227,
+   320
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_PLANT__SHEET.png item 2 (gap slicing, uniform box)"
+ },
+ "soc01_plant_3": {
+  "file": "assets/soc01_plant_3.png",
+  "size": [
+   227,
+   320
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_PLANT__SHEET.png item 3 (gap slicing, uniform box)"
+ },
+ "soc01_plant_4": {
+  "file": "assets/soc01_plant_4.png",
+  "size": [
+   227,
+   320
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_PLANT__SHEET.png item 4 (gap slicing, uniform box)"
+ },
+ "soc01_plant_5": {
+  "file": "assets/soc01_plant_5.png",
+  "size": [
+   227,
+   320
+  ],
+  "bbox": null,
+  "source": "art/final/SCHOOL/SOC01_PICTOS_PLANT__SHEET.png item 5 (gap slicing, uniform box)"
+ },
+ "vil_shop_front": {
+  "file": "assets/vil_shop_front.png",
+  "size": [
+   249,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   249,
+   420
+  ],
+  "foot": [
+   124,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   120,
+   114,
+   642,
+   990
+  ]
+ },
+ "vil_tailor_front": {
+  "file": "assets/vil_tailor_front.png",
+  "size": [
+   162,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   162,
+   420
+  ],
+  "foot": [
+   80,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   702,
+   84,
+   1056,
+   990
+  ]
+ },
+ "vil_basket_front": {
+  "file": "assets/vil_basket_front.png",
+  "size": [
+   210,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   210,
+   420
+  ],
+  "foot": [
+   94,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   1146,
+   120,
+   1590,
+   990
+  ]
+ },
+ "vil_elder_front": {
+  "file": "assets/vil_elder_front.png",
+  "size": [
+   245,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   245,
+   420
+  ],
+  "foot": [
+   113,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   1620,
+   120,
+   2130,
+   990
+  ]
+ },
+ "vil_kite_front": {
+  "file": "assets/vil_kite_front.png",
+  "size": [
+   213,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   213,
+   420
+  ],
+  "foot": [
+   79,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   2196,
+   96,
+   2652,
+   990
+  ]
+ },
+ "vil_book_front": {
+  "file": "assets/vil_book_front.png",
+  "size": [
+   147,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   147,
+   420
+  ],
+  "foot": [
+   72,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   2670,
+   210,
+   2952,
+   990
+  ]
+ },
+ "vil_shop_side": {
+  "file": "assets/vil_shop_side.png",
+  "size": [
+   169,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   169,
+   420
+  ],
+  "foot": [
+   86,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   192,
+   1038,
+   570,
+   1968
+  ]
+ },
+ "vil_tailor_side": {
+  "file": "assets/vil_tailor_side.png",
+  "size": [
+   112,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   112,
+   420
+  ],
+  "foot": [
+   55,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   750,
+   1044,
+   1008,
+   1968
+  ]
+ },
+ "vil_basket_side": {
+  "file": "assets/vil_basket_side.png",
+  "size": [
+   142,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   142,
+   420
+  ],
+  "foot": [
+   78,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   1176,
+   1062,
+   1494,
+   1968
+  ]
+ },
+ "vil_elder_side": {
+  "file": "assets/vil_elder_side.png",
+  "size": [
+   221,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   221,
+   420
+  ],
+  "foot": [
+   118,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   1644,
+   1062,
+   2130,
+   1968
+  ]
+ },
+ "vil_kite_side": {
+  "file": "assets/vil_kite_side.png",
+  "size": [
+   213,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   213,
+   420
+  ],
+  "foot": [
+   64,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   2232,
+   1128,
+   2664,
+   1968
+  ]
+ },
+ "vil_book_side": {
+  "file": "assets/vil_book_side.png",
+  "size": [
+   138,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   138,
+   420
+  ],
+  "foot": [
+   72,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_VILLAGERS_SET__TURNAROUND.png",
+  "box": [
+   2670,
+   1128,
+   2952,
+   1968
+  ]
+ },
+ "kid_tall_run": {
+  "file": "assets/kid_tall_run.png",
+  "size": [
+   238,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   238,
+   420
+  ],
+  "foot": [
+   127,
+   420
+  ],
+  "source": "art/final/SCHOOL/NPC_CHILDREN_SET__KEY_POSES.png",
+  "box": [
+   168,
+   78,
+   618,
+   858
+  ]
+ },
+ "kid_small_run": {
+  "file": "assets/kid_small_run.png",
+  "size": [
+   272,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   272,
+   420
+  ],
+  "foot": [
+   132,
+   420
+  ],
+  "source": "art/final/SCHOOL/NPC_CHILDREN_SET__KEY_POSES.png",
+  "box": [
+   678,
+   222,
+   1092,
+   858
+  ]
+ },
+ "kid_curly_run": {
+  "file": "assets/kid_curly_run.png",
+  "size": [
+   253,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   253,
+   420
+  ],
+  "foot": [
+   141,
+   420
+  ],
+  "source": "art/final/SCHOOL/NPC_CHILDREN_SET__KEY_POSES.png",
+  "box": [
+   1110,
+   102,
+   1572,
+   864
+  ]
+ },
+ "kid_tall_happy": {
+  "file": "assets/kid_tall_happy.png",
+  "size": [
+   138,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   138,
+   420
+  ],
+  "foot": [
+   65,
+   420
+  ],
+  "source": "art/final/SCHOOL/NPC_CHILDREN_SET__KEY_POSES.png",
+  "box": [
+   234,
+   1158,
+   504,
+   1968
+  ]
+ },
+ "kid_small_happy": {
+  "file": "assets/kid_small_happy.png",
+  "size": [
+   259,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   259,
+   420
+  ],
+  "foot": [
+   110,
+   420
+  ],
+  "source": "art/final/SCHOOL/NPC_CHILDREN_SET__KEY_POSES.png",
+  "box": [
+   648,
+   1278,
+   1038,
+   1906
+  ]
+ },
+ "kid_curly_happy": {
+  "file": "assets/kid_curly_happy.png",
+  "size": [
+   261,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   261,
+   420
+  ],
+  "foot": [
+   131,
+   420
+  ],
+  "source": "art/final/SCHOOL/NPC_CHILDREN_SET__KEY_POSES.png",
+  "box": [
+   1044,
+   1200,
+   1530,
+   1968
+  ]
+ },
+ "kid_thin_happy": {
+  "file": "assets/kid_thin_happy.png",
+  "size": [
+   208,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   208,
+   420
+  ],
+  "foot": [
+   105,
+   420
+  ],
+  "source": "art/final/SCHOOL/NPC_CHILDREN_SET__KEY_POSES.png",
+  "box": [
+   2514,
+   1230,
+   2880,
+   1968
+  ]
+ },
+ "baker_walk": {
+  "file": "assets/baker_walk.png",
+  "size": [
+   196,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   196,
+   420
+  ],
+  "foot": [
+   84,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_BAKER__KEY_POSES.png",
+  "box": [
+   642,
+   606,
+   1272,
+   1950
+  ]
+ },
+ "baker_happy": {
+  "file": "assets/baker_happy.png",
+  "size": [
+   192,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   192,
+   420
+  ],
+  "foot": [
+   71,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_BAKER__KEY_POSES.png",
+  "box": [
+   1836,
+   606,
+   2430,
+   1908
+  ]
+ },
+ "baker_front": {
+  "file": "assets/baker_front.png",
+  "size": [
+   164,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   164,
+   420
+  ],
+  "foot": [
+   81,
+   420
+  ],
+  "source": "art/final/VILLAGE/NPC_BAKER__TURNAROUND.png",
+  "box": [
+   120,
+   246,
+   720,
+   1764
+  ]
+ },
+ "merchant_front": {
+  "file": "assets/merchant_front.png",
+  "size": [
+   233,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   233,
+   420
+  ],
+  "foot": [
+   116,
+   420
+  ],
+  "source": "art/final/MARKET/CHAR_MERCHANT__TURNAROUND.png",
+  "box": [
+   123,
+   329,
+   846,
+   1634
+  ]
+ },
+ "merchant_threequarter": {
+  "file": "assets/merchant_threequarter.png",
+  "size": [
+   212,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   212,
+   420
+  ],
+  "foot": [
+   118,
+   420
+  ],
+  "source": "art/final/MARKET/CHAR_MERCHANT__TURNAROUND.png",
+  "box": [
+   924,
+   342,
+   1576,
+   1634
+  ]
+ },
+ "merchant_side": {
+  "file": "assets/merchant_side.png",
+  "size": [
+   152,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   152,
+   420
+  ],
+  "foot": [
+   77,
+   420
+  ],
+  "source": "art/final/MARKET/CHAR_MERCHANT__TURNAROUND.png",
+  "box": [
+   1685,
+   342,
+   2152,
+   1630
+  ]
+ },
+ "merchant_back": {
+  "file": "assets/merchant_back.png",
+  "size": [
+   227,
+   420
+  ],
+  "bbox": [
+   0,
+   0,
+   227,
+   420
+  ],
+  "foot": [
+   106,
+   420
+  ],
+  "source": "art/final/MARKET/CHAR_MERCHANT__TURNAROUND.png",
+  "box": [
+   2259,
+   354,
+   2947,
+   1626
+  ]
+ },
+ "beam_stand": {
+  "file": "assets/beam_stand.png",
+  "size": [
+   315,
+   748
+  ],
+  "bbox": [
+   0,
+   0,
+   315,
+   748
+  ],
+  "pivots": {
+   "hub": [
+    159.0,
+    44.5
+   ],
+   "foot": [
+    157.5,
+    745.5
+   ]
+  },
+  "source": "/home/user/Luma/art/final/WORKSHOP/PROP_VALUE_BEAM_PARTS__SHEET.png",
+  "box": [
+   82,
+   480,
+   704,
+   1967
+  ]
+ },
+ "beam_bar": {
+  "file": "assets/beam_bar.png",
+  "size": [
+   648,
+   196
+  ],
+  "bbox": [
+   0,
+   0,
+   648,
+   196
+  ],
+  "pivots": {
+   "pivot": [
+    319.5,
+    92.5
+   ],
+   "hook_l": [
+    19.5,
+    182.0
+   ],
+   "hook_r": [
+    626.0,
+    182.0
+   ]
+  },
+  "source": "/home/user/Luma/art/final/WORKSHOP/PROP_VALUE_BEAM_PARTS__SHEET.png",
+  "box": [
+   678,
+   525,
+   1966,
+   908
+  ]
+ },
+ "beam_pan": {
+  "file": "assets/beam_pan.png",
+  "size": [
+   348,
+   414
+  ],
+  "bbox": [
+   0,
+   0,
+   348,
+   414
+  ],
+  "pivots": {
+   "ring": [
+    172.5,
+    27.5
+   ],
+   "rim_y": 321.0,
+   "floor_y": 333.5
+  },
+  "source": "/home/user/Luma/art/final/WORKSHOP/PROP_VALUE_BEAM_PARTS__SHEET.png",
+  "box": [
+   984,
+   1097,
+   1672,
+   1916
+  ]
+ },
+ "token_100": {
+  "file": "assets/token_100.png",
+  "size": [
+   327,
+   318
+  ],
+  "bbox": [
+   0,
+   0,
+   327,
+   318
+  ],
+  "pivots": {
+   "center": [
+    163.5,
+    158.5
+   ],
+   "base": 315.5
+  },
+  "source": "/home/user/Luma/art/final/MARKET/PROP_CURRENCY_TOKENS__SHEET.png",
+  "box": [
+   78,
+   1343,
+   724,
+   1970
+  ]
+ },
+ "token_1000": {
+  "file": "assets/token_1000.png",
+  "size": [
+   289,
+   248
+  ],
+  "bbox": [
+   0,
+   0,
+   289,
+   248
+  ],
+  "pivots": {
+   "center": [
+    144.5,
+    124.0
+   ],
+   "base": 246.5
+  },
+  "source": "/home/user/Luma/art/final/MARKET/PROP_CURRENCY_TOKENS__SHEET.png",
+  "box": [
+   904,
+   1461,
+   1474,
+   1950
+  ]
+ },
+ "token_500": {
+  "file": "assets/token_500.png",
+  "size": [
+   184,
+   185
+  ],
+  "bbox": [
+   0,
+   0,
+   184,
+   185
+  ],
+  "pivots": {
+   "center": [
+    91.5,
+    92.5
+   ],
+   "base": 183.0
+  },
+  "source": "/home/user/Luma/art/final/MARKET/PROP_CURRENCY_TOKENS__SHEET.png",
+  "box": [
+   1610,
+   1591,
+   1969,
+   1953
+  ]
+ },
+ "gear_board_niche": {
+  "file": "assets/gear_board_niche.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "bbox": null,
+  "source": "composite: PROP_TUT_GEAR_BOARD BASE + STATE-hatch_open niche"
+ },
+ "hatch_door": {
+  "file": "assets/hatch_door.png",
+  "size": [
+   192,
+   206
+  ],
+  "bbox": null,
+  "pivot_board": [
+   760,
+   716
+  ],
+  "hinge_x_local": 6,
+  "hatch": {
+   "cx": 856,
+   "cy": 819,
+   "rx": 90,
+   "ry": 97
+  },
+  "source": "cut from PROP_TUT_GEAR_BOARD BASE"
+ },
+ "basket_front": {
+  "file": "assets/basket_front.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": null,
+  "source": "composite.split_front(basket) of art/final/MARKET/PROP_MARKET_BASKET__BASE.png"
+ },
+ "crate_front": {
+  "file": "assets/crate_front.png",
+  "size": [
+   384,
+   384
+  ],
+  "bbox": null,
+  "source": "composite.split_front(crate) of art/final/GLOBAL/PROP_CRATE__STATE-open_empty.png"
+ },
+ "_containers": {
+  "base": 1024,
+  "apple_bottom": 984,
+  "apple_scale": {
+   "basket": 0.26,
+   "crate": 0.2
+  },
+  "slots": {
+   "basket": [
+    [
+     250,
+     560
+    ],
+    [
+     420,
+     578
+    ],
+    [
+     600,
+     575
+    ],
+    [
+     760,
+     552
+    ],
+    [
+     340,
+     490
+    ],
+    [
+     520,
+     500
+    ],
+    [
+     690,
+     485
+    ]
+   ],
+   "crate": [
+    [
+     140,
+     470
+    ],
+    [
+     290,
+     470
+    ],
+    [
+     440,
+     470
+    ],
+    [
+     590,
+     470
+    ],
+    [
+     740,
+     470
+    ],
+    [
+     180,
+     555
+    ],
+    [
+     330,
+     555
+    ],
+    [
+     480,
+     555
+    ],
+    [
+     630,
+     555
+    ],
+    [
+     780,
+     555
+    ]
+   ]
+  },
+  "note": "BASE-space (1024) apple positions (x, bottom) inside basket / open crate"
+ },
+ "stall_bg": {
+  "file": "assets/stall_bg.jpg",
+  "size": [
+   1920,
+   1080
+  ],
+  "bbox": null,
+  "source": "ENV_VIL_PLAZA STATE-restored crop (700, 236, 1920, 922) (1920 space) + blur 2.4 (depth of field)"
+ },
+ "mira_34": {
+  "file": "assets/mira_34.png",
+  "size": [
+   248,
+   640
+  ],
+  "bbox": null,
+  "foot": [
+   157,
+   636
+  ],
+  "source": "art/final/GLOBAL/CHAR_MIRA__TURNAROUND.png (3/4 view)"
+ },
+ "lumi_front": {
+  "file": "assets/lumi_front.png",
+  "size": [
+   256,
+   256
+  ],
+  "bbox": null,
+  "blend": "normal core + engine additive halo",
+  "source": "art/final/GLOBAL/CHAR_LUMI__TURNAROUND.png"
+ },
+ "_missing": []
+}

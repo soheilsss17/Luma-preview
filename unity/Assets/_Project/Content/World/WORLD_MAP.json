@@ -1,0 +1,305 @@
+{
+ "schema": "luma.world_map/1",
+ "id": "WORLD_MAP",
+ "note": "Plan 09 §1 World Map: NEO's cloth map; only discovered rooms, fast travel. Plan 05 §4.1 Q01 result: «the festival starts and the village map opens». Area centres/radii are normalised to MAP_WORLD (2048×1536, same layout as the raw); the fog of undiscovered areas is drawn by the engine from these circles (web: world_map.js; the checklist BASE image is derived by tools/derive_map_fog.py from the same data).",
+ "map_sprite": "map_world",
+ "cloth_sprite": "map_cloth",
+ "pin_sprite": "map_pin",
+ "button_sprite": "btn_map",
+ "button_new_sprite": "btn_map_new",
+ "areas": [
+  {
+   "id": "village",
+   "name_key": "map.area.village",
+   "cx": 0.454,
+   "cy": 0.43,
+   "r": 0.125,
+   "quest": "Q01"
+  },
+  {
+   "id": "workshop",
+   "name_key": "map.area.workshop",
+   "cx": 0.19,
+   "cy": 0.436,
+   "r": 0.085,
+   "quest": "Q02"
+  },
+  {
+   "id": "market_gardens",
+   "name_key": "map.area.market_gardens",
+   "cx": 0.454,
+   "cy": 0.742,
+   "r": 0.13,
+   "quest": "Q01",
+   "also_quests": [
+    "Q07"
+   ],
+   "note": "Q01 uses the stall (MATH-02) and the garden edge (MATH-05); Q07 «Market Day» (plan 05, MKT_* rooms) returns to the same market later"
+  },
+  {
+   "id": "school",
+   "name_key": "map.area.school",
+   "cx": 0.718,
+   "cy": 0.45,
+   "r": 0.085,
+   "quest": "Q06"
+  },
+  {
+   "id": "library",
+   "name_key": "map.area.library",
+   "cx": 0.596,
+   "cy": 0.267,
+   "r": 0.08,
+   "quest": "Q05"
+  },
+  {
+   "id": "observatory",
+   "name_key": "map.area.observatory",
+   "cx": 0.796,
+   "cy": 0.24,
+   "r": 0.09,
+   "quest": "Q09"
+  },
+  {
+   "id": "forest",
+   "name_key": "map.area.forest",
+   "cx": 0.86,
+   "cy": 0.55,
+   "r": 0.09,
+   "quest": "Q08"
+  },
+  {
+   "id": "mill",
+   "name_key": "map.area.mill",
+   "cx": 0.728,
+   "cy": 0.742,
+   "r": 0.1,
+   "quest": "Q04"
+  },
+  {
+   "id": "waterworks",
+   "name_key": "map.area.waterworks",
+   "cx": 0.186,
+   "cy": 0.73,
+   "r": 0.11,
+   "quest": "Q03"
+  },
+  {
+   "id": "mountain_machine",
+   "name_key": "map.area.mountain_machine",
+   "cx": 0.25,
+   "cy": 0.22,
+   "r": 0.15,
+   "quest": "Q10"
+  }
+ ],
+ "rooms": [
+  {
+   "id": "workshop",
+   "area": "workshop",
+   "name_key": "map.room.workshop",
+   "thumb": "ws_plate",
+   "unlock_flag": null,
+   "done_flag": "WS_TUTORIAL_DONE",
+   "route": "workshop",
+   "room_id": "WS_ENTRANCE",
+   "card": "GEAR_TUTORIAL"
+  },
+  {
+   "id": "plaza",
+   "area": "village",
+   "name_key": "map.room.plaza",
+   "thumb": "plaza_restored",
+   "unlock_flag": "WS_TUTORIAL_DONE",
+   "done_flag": "VIL_LAMPS_ON",
+   "route": "plaza",
+   "room_id": "VIL_PLAZA",
+   "card": "MATH-01"
+  },
+  {
+   "id": "stall",
+   "area": "market_gardens",
+   "name_key": "map.room.stall",
+   "thumb": "stall_bg",
+   "unlock_flag": "VIL_LAMPS_ON",
+   "done_flag": "VIL_STALL_READY",
+   "route": "stall",
+   "room_id": "VIL_PLAZA_STALL",
+   "card": "MATH-02"
+  },
+  {
+   "id": "garden",
+   "area": "market_gardens",
+   "name_key": "map.room.garden",
+   "thumb": "garden_plate_on",
+   "unlock_flag": "VIL_STALL_READY",
+   "done_flag": "GDN_EDGE_BLOOM",
+   "route": "garden",
+   "room_id": "VIL_GARDEN_EDGE",
+   "card": "MATH-05"
+  },
+  {
+   "id": "signs",
+   "area": "village",
+   "name_key": "map.room.signs",
+   "thumb": "sign_plate_on",
+   "unlock_flag": "GDN_EDGE_BLOOM",
+   "done_flag": "VIL_SIGNS_FIXED",
+   "route": "signs",
+   "room_id": "VIL_SIGN_AREA",
+   "card": "P-01"
+  },
+  {
+   "id": "board",
+   "area": "village",
+   "name_key": "map.room.board",
+   "thumb": "sign_plate_on",
+   "unlock_flag": "VIL_SIGNS_FIXED",
+   "done_flag": "VIL_INTRO_BOARD_UP",
+   "route": "board",
+   "room_id": "VIL_SIGN_AREA",
+   "card": "W-01"
+  },
+  {
+   "id": "p13",
+   "area": "village",
+   "name_key": "map.room.p13",
+   "thumb": "plaza_festival",
+   "unlock_flag": "VIL_INTRO_BOARD_UP",
+   "done_flag": "VIL_FESTIVAL_POSTER_UP",
+   "route": "p13",
+   "room_id": "VIL_PLAZA",
+   "card": "P-13"
+  },
+  {
+   "id": "house",
+   "area": "village",
+   "name_key": "map.room.house",
+   "thumb": "house_plate",
+   "unlock_flag": "VIL_FESTIVAL_POSTER_UP",
+   "done_flag": "VIL_HOUSE_CLOCK_TICKING",
+   "route": "soc01",
+   "room_id": "VIL_HOUSE",
+   "card": "SOC-01"
+  },
+  {
+   "id": "machine",
+   "area": "workshop",
+   "name_key": "map.room.machine",
+   "thumb": "machine_room",
+   "unlock_flag": "VIL_FESTIVAL_STARTED",
+   "done_flag": "WS_IO_MACHINE_ON",
+   "route": "machine",
+   "room_id": "WS_MACHINE_ROOM",
+   "card": "MATH-03",
+   "quest": "Q02"
+  },
+  {
+   "id": "storage",
+   "area": "workshop",
+   "name_key": "map.room.storage",
+   "thumb": "storage_room",
+   "unlock_flag": "WS_IO_MACHINE_ON",
+   "done_flag": "WS_STORAGE_SORTED",
+   "route": "storage",
+   "room_id": "WS_STORAGE",
+   "card": "MATH-06",
+   "quest": "Q02"
+  },
+  {
+   "id": "gear",
+   "area": "workshop",
+   "name_key": "map.room.gear",
+   "thumb": "storage_room",
+   "unlock_flag": "WS_STORAGE_SORTED",
+   "done_flag": "WS_NUMBER_PANEL_FIXED",
+   "route": "gear",
+   "room_id": "WS_GEAR_ROOM",
+   "card": "MATH-07",
+   "quest": "Q02"
+  },
+  {
+   "id": "payment",
+   "area": "market_gardens",
+   "name_key": "map.room.payment",
+   "thumb": "mkt_money",
+   "unlock_flag": "WS_NUMBER_PANEL_FIXED",
+   "done_flag": "MK_PAYMENT_DONE",
+   "route": "payment",
+   "room_id": "MARKET_PAYMENT",
+   "card": "MATH-08",
+   "quest": "Q02"
+  },
+  {
+   "id": "scilab",
+   "area": "workshop",
+   "name_key": "map.room.scilab",
+   "thumb": "sci_lab",
+   "unlock_flag": "WS_IO_MACHINE_ON",
+   "done_flag": "SCI_LAB_LAMP_ON",
+   "route": "scilab",
+   "room_id": "WS_SCI_LAB",
+   "card": "SCI-01",
+   "quest": "Q02"
+  },
+  {
+   "id": "wsmeasure",
+   "area": "workshop",
+   "name_key": "map.room.wsmeasure",
+   "thumb": "ws_measure",
+   "unlock_flag": "SCI_LAB_LAMP_ON",
+   "done_flag": "WS_MEASURE_AWAKE",
+   "route": "wsmeasure",
+   "room_id": "WS_MEASURE",
+   "card": "SCI-03",
+   "quest": "Q02"
+  },
+  {
+   "id": "quran01",
+   "area": "library",
+   "name_key": "map.room.quran01",
+   "thumb": "quran_book_stand",
+   "unlock_flag": "VIL_FESTIVAL_STARTED",
+   "done_flag": "QUR_READING_PREPARED",
+   "route": "quran01",
+   "room_id": "LIB_STUDY",
+   "card": "QURAN-01",
+   "quest": "Q05"
+  }
+ ],
+ "payoffs": [
+  {
+   "quest": "Q01",
+   "route": "payoff_q01",
+   "requires_flags": [
+    "VIL_LAMPS_ON",
+    "VIL_STALL_READY",
+    "GDN_EDGE_BLOOM",
+    "VIL_SIGNS_FIXED",
+    "VIL_INTRO_BOARD_UP",
+    "VIL_FESTIVAL_POSTER_UP",
+    "VIL_HOUSE_CLOCK_TICKING"
+   ],
+   "sets_flag": "VIL_FESTIVAL_STARTED",
+   "unlocks_map": true,
+   "note": "Plan 12 Payoff Q01 (20–40 s, wordless): the lanterns light, the santur enters, villagers come out; the clock tower stays dark — a missing gear points to the workshop (Q02 hook); the map opens."
+  }
+ ],
+ "next_hook": {
+  "quest": "Q02",
+  "area": "workshop",
+  "requires_flag": "VIL_FESTIVAL_STARTED",
+  "icon_sprite": "gear_large",
+  "built": true,
+  "note": "Q02 «The Workshop That Forgot» starts from the missing clock-tower gear (plan 05 §4.1). Built so far: MATH-03 (WS_MACHINE_ROOM, the parts machine that forgot its rule), MATH-06 (WS_STORAGE, the village stock packed into hundreds and a thousand; opens when the machine works) and MATH-07 (WS_GEAR_ROOM, the counting panel that shuffled the digits of a number; opens when the stock is sorted) — the gear badge on the workshop and LUMI's line lead there; the workshop pin lists the machine room as a fast-travel card."
+ },
+ "base_state_revealed": [
+  "village"
+ ],
+ "fog": {
+  "colour": "#EFE3C8",
+  "alpha": 0.88,
+  "edge": 0.45,
+  "note": "one cream cloth-coloured wash over the whole sheet with a soft hole (radius r × 1.25, feather edge × r) for every revealed area; r is a fraction of the sheet width"
+ }
+}
