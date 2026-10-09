@@ -5,7 +5,7 @@
 
 const NOTE = (m) => 440 * Math.pow(2, (m - 69) / 12);
 
-const MUSIC_DIR = '../unity/Assets/_Project/Content/Audio/Music/';   // same files Unity imports
+const MUSIC_DIR = 'unity/Assets/_Project/Content/Audio/Music/';   // same files Unity imports
 const STEM_LEVEL = 0.8;                                            // rendered stems vs. the old synth loop level
 
 export class LumaAudio {

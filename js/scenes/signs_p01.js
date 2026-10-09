@@ -243,7 +243,7 @@ export class SignsP01 {
     this.card = null;
   }
   listenReady() { return this.card && this.card.t >= this.puzzle.reading.audio_unlock_s; }
-  voUrl(key) { return `../unity/Assets/_Project/${this.puzzle.reading.audio_dir}/${key}.mp3`; }
+  voUrl(key) { return `unity/Assets/_Project/${this.puzzle.reading.audio_dir}/${key}.mp3`; }
   listen() {
     const g = signOf(this.stage, this.card.sign);
     this.card.listened = true; this.card.playT = this.t; this.audioUsed[g.sign_id] = true;

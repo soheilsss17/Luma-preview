@@ -324,7 +324,7 @@ export class TimelineSOC01 {
   }
   cardVoiceKey() { const e = this.card && eventOf(this.puzzle, this.card.id); return e ? e.audio_key : null; }
   listenReady() { return this.card && this.voiceReady(this.cardVoiceKey()) && this.card.t >= this.puzzle.reading.audio_unlock_s; }
-  voUrl(key) { return `../unity/Assets/_Project/${this.puzzle.reading.audio_dir}/${key}.mp3`; }
+  voUrl(key) { return `unity/Assets/_Project/${this.puzzle.reading.audio_dir}/${key}.mp3`; }
   listen() {
     const e = eventOf(this.puzzle, this.card.id), card = this.card;
     card.playT = this.t; card.playDur = 5;

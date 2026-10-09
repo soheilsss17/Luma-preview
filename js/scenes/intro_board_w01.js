@@ -338,7 +338,7 @@ export class IntroBoardW01 {
     this.card = null;
   }
   listenReady() { return this.card && this.card.t >= this.puzzle.reading.audio_unlock_s; }
-  voUrl(key) { return `../unity/Assets/_Project/${this.puzzle.reading.audio_dir}/${key}.mp3`; }
+  voUrl(key) { return `unity/Assets/_Project/${this.puzzle.reading.audio_dir}/${key}.mp3`; }
   listen() {
     const p = plaqueOf(this.stage, this.card.plaque), card = this.card;
     card.playT = this.t; card.playDur = 5; this.audioUsed[p.plaque_id] = true;

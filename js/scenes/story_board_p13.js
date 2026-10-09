@@ -318,7 +318,7 @@ export class StoryBoardP13 {
   }
   voiceReady() { return this.puzzle.reading.vo_status !== 'pending'; }
   listenReady() { return this.card && this.voiceReady() && this.card.t >= this.puzzle.reading.audio_unlock_s; }
-  voUrl(key) { return `../unity/Assets/_Project/${this.puzzle.reading.audio_dir}/${key}.mp3`; }
+  voUrl(key) { return `unity/Assets/_Project/${this.puzzle.reading.audio_dir}/${key}.mp3`; }
   listen() {
     const c = cardOf(this.puzzle, this.card.id), card = this.card;
     card.playT = this.t; card.playDur = 5;
