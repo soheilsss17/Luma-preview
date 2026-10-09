@@ -1,0 +1,5 @@
+/* Vazirmatn Round-Dots v33.0.3 — Saber Rastikerdar, SIL Open Font License 1.1 (Vazirmatn-OFL.txt).
+   Source: https://github.com/rastikerdar/vazirmatn (npm "vazirmatn"). Round dots read softer for 8–9 year olds. */
+@font-face { font-family: 'LumaFa'; src: url('Vazirmatn-RD-Medium.woff2') format('woff2'); font-weight: 500; font-display: block; }
+@font-face { font-family: 'LumaFa'; src: url('Vazirmatn-RD-Bold.woff2') format('woff2'); font-weight: 700; font-display: block; }
+@font-face { font-family: 'LumaFa'; src: url('Vazirmatn-RD-ExtraBold.woff2') format('woff2'); font-weight: 800; font-display: block; }

@@ -1,0 +1,10 @@
+{
+  "name": "luma-web-prototype",
+  "private": true,
+  "type": "module",
+  "description": "Browser prototype of LUMA rooms (reference implementation of the Unity runtime). No dependencies.",
+  "scripts": {
+    "test": "node test/rules.test.js && node test/gears.test.js && node test/scene.test.js && node test/workshop.test.js && node test/math02.test.js && node test/math02_scene.test.js && node test/math05.test.js && node test/math05_scene.test.js && node test/p01.test.js && node test/p01_scene.test.js && node test/w01.test.js && node test/w01_scene.test.js && node test/p13.test.js && node test/p13_scene.test.js && node test/soc01.test.js && node test/soc01_scene.test.js && node test/math03.test.js && node test/math03_scene.test.js && node test/math06.test.js && node test/math06_scene.test.js && node test/math07.test.js && node test/math07_scene.test.js && node test/math08.test.js && node test/math08_scene.test.js && node test/flow.test.js && node test/world_map.test.js && node test/payoff_scene.test.js && node test/music_stems.test.js && node test/sci01.test.js && node test/sci03.test.js",
+    "serve": "python3 ../tools/rig/preview/serve.py 8080"
+  }
+}
