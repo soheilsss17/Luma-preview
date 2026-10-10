@@ -11,7 +11,6 @@ export class RigActor {
     this.imgs = {}; this.clips = {};
   }
   async load() {
-    try {
     const dir = RIG_BASE + this.id + '/';
     this.rig = await (await fetch(dir + this.id + '.rig.json')).json();
     await Promise.all([...this.rig.bones.map((b) => b.image), ...this.rig.swaps.map((s) => s.image)]
@@ -46,9 +45,7 @@ export class RigActor {
     this.order = [...this.rig.bones].sort((a, b) => a.z - b.z);
     this.play('idle');
     return this;
-    } catch(e) { console.warn('Rig fallback:', this.id, e.message); return this._fallbackLoad(); }
   }
-
   has(clip) { return !!this.clips[clip]; }
   play(name, next = null) {
     if (!this.clips[name]) return;
