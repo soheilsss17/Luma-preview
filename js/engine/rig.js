@@ -2,7 +2,7 @@
 // world = parentWorld · T(attach − parentPivot + d) · R(rot, CCW+); draw = world · S(scale) · T(−pivot)
 import { loadImage } from './assets.js';
 
-const RIG_BASE = '../art/rig/';
+const RIG_BASE = 'art/rig/';
 
 export class RigActor {
   /** cfg: {id, scale, x, groundY, face?, follow?, gap?} */
@@ -11,6 +11,7 @@ export class RigActor {
     this.imgs = {}; this.clips = {};
   }
   async load() {
+    try {
     const dir = RIG_BASE + this.id + '/';
     this.rig = await (await fetch(dir + this.id + '.rig.json')).json();
     await Promise.all([...this.rig.bones.map((b) => b.image), ...this.rig.swaps.map((s) => s.image)]
@@ -26,7 +27,28 @@ export class RigActor {
     this.order = [...this.rig.bones].sort((a, b) => a.z - b.z);
     this.play('idle');
     return this;
+    } catch(e) { console.warn('Rig fallback:', this.id, e.message); return this._fallbackLoad(); }
   }
+
+  /** Simple single-bone fallback when rig files are missing. */
+  async _fallbackLoad() {
+    const SPRITES = { NEO: 'merchant_front', TIKO: 'kid_curly_happy' };
+    const sp = SPRITES[this.id] || 'merchant_front';
+    const img = await loadImage('assets/' + sp + '.png');
+    this.rig = { bones: [{ name: 'body', image: sp + '.png', pivot: [img.width/2, img.height], attach: [0, 0], z: 0, rest_deg: 0, parent: null, scale: 1 }], swaps: [], height_px: img.height, foot_y: img.height };
+    this.imgs = { [sp + '.png']: img };
+    this.clipNames = ['idle', 'walk', 'happy'];
+    this.clips = {};
+    for (const n of this.clipNames) {
+      this.clips[n] = { fps: 8, frames: 1, loop: n === 'idle' || n === 'walk', root: { x: [0], y: [0] }, tracks: [], swaps: [], root_motion_px_per_s: n === 'walk' ? 180 : 0 };
+    }
+    this.bones = {}; for (const b of this.rig.bones) this.bones[b.name] = b;
+    this.order = [...this.rig.bones].sort((a, b) => a.z - b.z);
+    this.play('idle');
+    return this;
+    } catch(e) { console.warn('Rig fallback:', this.id, e.message); return this._fallbackLoad(); }
+  }
+
   has(clip) { return !!this.clips[clip]; }
   play(name, next = null) {
     if (!this.clips[name]) return;
