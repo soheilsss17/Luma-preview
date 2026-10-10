@@ -7,15 +7,15 @@ export function loadImage(src) {
     const i = new Image();
     i.onload = () => ok(i);
     i.onerror = () => err(new Error('image failed: ' + src));
-    i.src = src + (src.includes('?') ? 'i.src = src;' : '?') + '_v=' + Date.now();
+    i.src = src;
   });
   cache.set(src, p);
   return p;
 }
 
 export async function loadJSON(src) {
-  const r = await fetch(src + (src.includes('?') ? 'const r = await fetch(src);' : '?') + '_v=' + Date.now(), { cache: 'no-store' });
-  if (!r.ok) { const body = await r.text().catch(()=>""); throw new Error('json failed: ' + src + ' status=' + r.status); }
+  const r = await fetch(src);
+  if (!r.ok) throw new Error('json failed: ' + src);
   return r.json();
 }
 
