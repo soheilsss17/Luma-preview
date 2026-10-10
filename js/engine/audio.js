@@ -229,4 +229,29 @@ export class LumaAudio {
     };
     tick();
   }
+
+  // --- Market (MATH-08): coin sounds ---
+  coinPick() { if (!this.ctx) return; const t = this.ctx.currentTime; this.pluck(84, t, { vel: 0.12, dur: 0.15, bright: 1.2 }); this.pluck(91, t + 0.02, { vel: 0.06, dur: 0.1, bright: 1.4 }); }
+  coinStack() { if (!this.ctx) return; const t = this.ctx.currentTime; this.drum(t, { vel: 0.18 }); this.pluck(55, t, { vel: 0.1, dur: 0.2, bright: 0.6 }); }
+  coinDrop() { if (!this.ctx) return; const t = this.ctx.currentTime; for (let i = 0; i < 3; i++) this.pluck(88 - i * 4, t + i * 0.06, { vel: 0.08 - i * 0.02, dur: 0.12, bright: 1.0 }); }
+  // --- Storage (MATH-06): crate placement ---
+  crateSet() { if (!this.ctx) return; const t = this.ctx.currentTime; this.drum(t, { vel: 0.35 }); this.pluck(38, t + 0.02, { vel: 0.15, dur: 0.4, bright: 0.2 }); this.noise(t, { f: 600, q: 0.5, len: 0.2, vel: 0.08, pow: 3 }); }
+  // --- Counting (MATH-05): digit tile pickup ---
+  digitPick() { if (!this.ctx) return; const t = this.ctx.currentTime; this.pluck(79, t, { vel: 0.1, dur: 0.18, bright: 1.1 }); }
+  // --- Signs (P-01): slot placement click ---
+  slotClick() { if (!this.ctx) return; const t = this.ctx.currentTime; this.drum(t, { vel: 0.12, low: false }); this.pluck(72, t, { vel: 0.08, dur: 0.1, bright: 0.8 }); }
+  // --- Gears (MATH-07): gear rotation tick ---
+  gearRotate() { if (!this.ctx) return; const t = this.ctx.currentTime; this.pluck(67, t, { vel: 0.04, dur: 0.06, bright: 0.4 }); }
+  // --- Balance beam (MATH-03): swing and release ---
+  beamSwing() { if (!this.ctx) return; const t = this.ctx.currentTime; this.noise(t, { f: 800, q: 1.2, len: 0.35, vel: 0.06, pow: 2, sweep: -400 }); }
+  beamRelease() { if (!this.ctx) return; const t = this.ctx.currentTime; this.pluck(50, t, { vel: 0.1, dur: 0.25, bright: 0.3 }); this.drum(t + 0.08, { vel: 0.15 }); }
+  // --- Machine (MATH-03): lid, rope, start, fail, output ---
+  lidClose() { if (!this.ctx) return; const t = this.ctx.currentTime; this.drum(t, { vel: 0.2 }); this.pluck(60, t, { vel: 0.06, dur: 0.15, bright: 0.5 }); }
+  ropePull() { if (!this.ctx) return; const t = this.ctx.currentTime; this.noise(t, { f: 1800, q: 2, len: 0.3, vel: 0.07, pow: 1.5, sweep: -600 }); }
+  machineStart() { if (!this.ctx) return; const t = this.ctx.currentTime; for (let i = 0; i < 4; i++) this.pluck(55 + i * 3, t + i * 0.08, { vel: 0.08, dur: 0.3, bright: 0.4 }); }
+  machineFailSoft() { if (!this.ctx) return; const t = this.ctx.currentTime; this.pluck(50, t, { vel: 0.1, dur: 0.5, bright: 0.2 }); this.pluck(47, t + 0.15, { vel: 0.08, dur: 0.4, bright: 0.2 }); }
+  outputDrop() { if (!this.ctx) return; const t = this.ctx.currentTime; this.pluck(72, t, { vel: 0.1, dur: 0.2, bright: 0.8 }); this.drum(t + 0.12, { vel: 0.15 }); }
+  // --- Total counter update chime ---
+  totalUpdate() { if (!this.ctx) return; const t = this.ctx.currentTime; this.pluck(84, t, { vel: 0.08, dur: 0.3 }); this.pluck(88, t + 0.05, { vel: 0.06, dur: 0.25 }); }
+
 }
