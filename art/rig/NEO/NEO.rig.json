@@ -1,0 +1,315 @@
+{
+ "character": "NEO",
+ "ppu": 1000,
+ "facing": "right",
+ "clips": [
+  "idle",
+  "walk",
+  "happy",
+  "think",
+  "point",
+  "run",
+  "look",
+  "confused",
+  "concerned",
+  "interact",
+  "push",
+  "pull",
+  "read",
+  "write",
+  "build",
+  "celebrate"
+ ],
+ "walk_params": {},
+ "gait": "step",
+ "source": "art/final/GLOBAL/CHAR_NEO__RIG_PARTS.png",
+ "bones": [
+  {
+   "name": "torso",
+   "image": "bones/torso.png",
+   "source_part": "p02",
+   "parent": null,
+   "size": [
+    350,
+    460
+   ],
+   "pivot": [
+    175.0,
+    414.0
+   ],
+   "attach": null,
+   "z": 40,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "arm_far_up",
+   "image": "bones/arm_far_up.png",
+   "source_part": "p07",
+   "parent": "torso",
+   "size": [
+    140,
+    212
+   ],
+   "pivot": [
+    69.2,
+    26.9
+   ],
+   "attach": [
+    126.0,
+    138.0
+   ],
+   "z": 10,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "arm_far_lo",
+   "image": "bones/arm_far_lo.png",
+   "source_part": "p17",
+   "parent": "arm_far_up",
+   "size": [
+    170,
+    536
+   ],
+   "pivot": [
+    71.6,
+    48.4
+   ],
+   "attach": [
+    62.5,
+    174.5
+   ],
+   "z": 11,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "leg_far_up",
+   "image": "bones/leg_far_up.png",
+   "source_part": "p06",
+   "parent": "torso",
+   "size": [
+    154,
+    314
+   ],
+   "pivot": [
+    77.0,
+    37.7
+   ],
+   "attach": [
+    182.0,
+    404.8
+   ],
+   "z": 20,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "leg_far_lo",
+   "image": "bones/leg_far_lo.png",
+   "source_part": "p20",
+   "parent": "leg_far_up",
+   "size": [
+    266,
+    532
+   ],
+   "pivot": [
+    79.3,
+    49.9
+   ],
+   "attach": [
+    77.0,
+    282.6
+   ],
+   "z": 21,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "leg_near_up",
+   "image": "bones/leg_near_up.png",
+   "source_part": "p05",
+   "parent": "torso",
+   "size": [
+    174,
+    320
+   ],
+   "pivot": [
+    87.0,
+    38.4
+   ],
+   "attach": [
+    161.0,
+    404.8
+   ],
+   "z": 50,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "leg_near_lo",
+   "image": "bones/leg_near_lo.png",
+   "source_part": "p19",
+   "parent": "leg_near_up",
+   "size": [
+    226,
+    554
+   ],
+   "pivot": [
+    123.7,
+    53.0
+   ],
+   "attach": [
+    87.0,
+    288.0
+   ],
+   "z": 51,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "bag",
+   "image": "bones/bag.png",
+   "source_part": "p03",
+   "parent": "torso",
+   "size": [
+    468,
+    538
+   ],
+   "pivot": [
+    103.0,
+    53.8
+   ],
+   "attach": [
+    210.0,
+    239.2
+   ],
+   "z": 60,
+   "rest_deg": 0,
+   "scale": 0.62
+  },
+  {
+   "name": "head",
+   "image": "bones/head.png",
+   "source_part": "p00",
+   "parent": "torso",
+   "size": [
+    500,
+    600
+   ],
+   "pivot": [
+    260.0,
+    558.0
+   ],
+   "attach": [
+    175.0,
+    18.4
+   ],
+   "z": 70,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "scarf",
+   "image": "bones/scarf.png",
+   "source_part": "p09",
+   "parent": "torso",
+   "size": [
+    420,
+    428
+   ],
+   "pivot": [
+    126.0,
+    51.4
+   ],
+   "attach": [
+    182.0,
+    23.0
+   ],
+   "z": 75,
+   "rest_deg": 0,
+   "scale": 0.85
+  },
+  {
+   "name": "key",
+   "image": "bones/key.png",
+   "source_part": "p24",
+   "parent": "torso",
+   "size": [
+    198,
+    200
+   ],
+   "pivot": [
+    184.1,
+    99.0
+   ],
+   "attach": [
+    52.5,
+    184.0
+   ],
+   "z": 5,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "arm_near_up",
+   "image": "bones/arm_near_up.png",
+   "source_part": "p04",
+   "parent": "torso",
+   "size": [
+    186,
+    296
+   ],
+   "pivot": [
+    63.9,
+    34.1
+   ],
+   "attach": [
+    126.0,
+    138.0
+   ],
+   "z": 80,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "arm_near_lo",
+   "image": "bones/arm_near_lo.png",
+   "source_part": "p18",
+   "parent": "arm_near_up",
+   "size": [
+    202,
+    474
+   ],
+   "pivot": [
+    143.1,
+    45.6
+   ],
+   "attach": [
+    125.1,
+    246.0
+   ],
+   "z": 81,
+   "rest_deg": 0,
+   "scale": 1.0
+  }
+ ],
+ "swaps": [
+  {
+   "bone": "head",
+   "key": "blink",
+   "image": "bones/head_blink.png",
+   "size": [
+    498,
+    600
+   ],
+   "pivot": [
+    259.0,
+    558.0
+   ]
+  }
+ ],
+ "foot_y": 729,
+ "height_px": 1671
+}

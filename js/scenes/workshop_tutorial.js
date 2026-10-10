@@ -41,15 +41,7 @@ export class WorkshopTutorial {
     this.neo = await new RigActor({ id: 'NEO', scale: 0.36, x: 400, groundY: GROUND, face: 1 }).load();
     this.tiko = await new RigActor({ id: 'TIKO', scale: 0.2, x: 560, groundY: GROUND, face: -1, follow: true, gap: 190 }).load();
     this.actors = [this.tiko, this.neo];
-    // MIRA now runs on her own cut-out rig (art/rig/MIRA, batch 21) instead of the stand-in 3/4 sprite: she can wind
-    // the key (interact) and celebrate (happy). Scale keeps the exact on-screen height the stand-in had
-    // (NEO.heightPx * 1.05), and the lean/hop that drove the static pose now drive the rigged body.
-    // The divisor is the rig's own rest-pose height (art/rig/MIRA/MIRA.rig.json → height_px), measured by
-    // tools/rig/animate.py the same way as every other rig: it was 1247 on the batch-21 sheet and is 983 on the
-    // batch-24a sheet, so a hard-coded 1247 silently shrank her. Read it from the loaded rig instead.
-    this.mira = await new RigActor({ id: 'MIRA', scale: 1, x: 205, groundY: GROUND, face: 1 }).load();
-    this.mira.scale = (this.neo.heightPx * 1.05) / this.mira.heightPx;   // exact: solved against the rig's own measured height
-    this.miraLean = new Spring(0, { stiffness: 60, damping: 8 }); this.miraHop = 0;
+    this.mira = { x: 205, lean: new Spring(0, { stiffness: 60, damping: 8 }), hop: 0 };
     // resume: first unsolved stage; the intro plays only the first time
     const first = this.puzzle.stages.findIndex((s) => !(this.save.puzzle(s.puzzle_id) || {}).solved);
     const stage = first < 0 ? this.puzzle.stages.length - 1 : first;
@@ -62,15 +54,13 @@ export class WorkshopTutorial {
 
   // ---------------------------------------------------------------- intro (skippable by tapping)
   playIntro() {
-    this.phase = 'intro'; this.neoAsleep = true; this.windT = -1;
-    this.neo.play(this.neo.has('windup_wake') ? 'windup_wake' : 'idle', 'idle'); this.neo.rate = 0;   // frame 0 = switched off, slumped
+    this.phase = 'intro'; this.neo.rate = 0; this.neoAsleep = true; this.windT = -1;
     this.tl.tween(1.2, (k) => { this.fade.a = k; });
-    // windup_wake at 0.53x: its 3 key_click events land on MIRA's turns (1.0/1.75/2.5 s) and its 'wake' frame at 3.4 s
-    this.tl.after(0.9, () => { this.windT = 0; this.neo.rate = 0.53; this.mira.play('interact'); });   // MIRA turns the key three times
-    for (let i = 0; i < 3; i++) this.tl.after(1.0 + i * 0.75, () => { this.audio.windClick(); this.miraLean.target = 0.07; this.mira.play('interact', 'idle'); this.tl.after(0.3, () => { this.miraLean.target = 0; }); });
+    this.tl.after(0.9, () => { this.windT = 0; });                       // MIRA turns the key three times
+    for (let i = 0; i < 3; i++) this.tl.after(1.0 + i * 0.75, () => { this.audio.windClick(); this.mira.lean.target = 0.07; this.tl.after(0.3, () => { this.mira.lean.target = 0; }); });
     this.tl.after(3.4, () => {                                           // NEO wakes up
-      this.windT = -1; this.neoAsleep = false; this.wakeGlow = 1; this.neo.rate = 1; if (this.neo.clip !== 'windup_wake') this.neo.play('happy', 'idle'); this.audio.wake();   // clip goes on: straighten, blink, bounce
-      this.miraHop = 0.5; this.mira.play('happy', 'idle'); this.tiko.play('happy', 'idle');
+      this.windT = -1; this.neoAsleep = false; this.wakeGlow = 1; this.neo.rate = 1; this.neo.play('happy', 'idle'); this.audio.wake();
+      this.mira.hop = 0.5; this.tiko.play('happy', 'idle');
     });
     this.tl.after(4.4, () => {                                           // LUMI pops out of the hanging lantern
       this.lumi.mode = 'free'; this.lumi.p.set(LAMP.x, LAMP.y + 30); this.fx.push({ kind: 'pop', x: LAMP.x, y: LAMP.y + 30, t: 0 });
@@ -84,7 +74,6 @@ export class WorkshopTutorial {
   }
   skipIntro(silent = false) {
     this.tl.clear(); this.spot = null; this.windT = -1; this.neoAsleep = false; this.neo.rate = 1; this.fade.a = 1;
-    if (this.neo.clip === 'windup_wake') this.neo.play('idle');
     this.lumi.mode = 'free'; this.lumi.path = null;
     if (!silent) this.log('intro_skipped', {});
     this.beginPlay();
@@ -153,7 +142,7 @@ export class WorkshopTutorial {
     this.save.setFlag(this.puzzle.world_state_on_solve);
     this.hatch.target = 1; this.audio.door(); this.audio.motif(); this.audio.setLayers(4);
     this.lumi.mode = 'celebrate';
-    this.miraHop = 0.6; this.mira.play('celebrate', 'idle');
+    this.mira.hop = 0.6;
     const keyAt = B(856, 819);
     this.tl.after(1.2, () => this.neo.walkTo(keyAt.x - 40, () => {
       this.neo.faceTowards(keyAt.x); this.neo.play('point', 'idle');
@@ -218,7 +207,7 @@ export class WorkshopTutorial {
       }
     }
     for (const a of this.actors) if (a.hit(x, y)) { a.play('happy', 'idle'); return; }
-    if (this.mira.hit(x, y)) { this.miraHop = 0.45; this.mira.play('happy', 'idle'); return; }
+    if (Math.abs(x - this.mira.x) < 70 && y > GROUND - 300 && y < GROUND) { this.mira.hop = 0.45; return; }
     if (y > 820) { this.neo.walkTo(Math.max(300, Math.min(DOOR.x0 - 40, x))); this.floorMark = null; }
   }
   pointerMove(x, y) { if (this.drag) this.drag.p.to(x, y); }
@@ -269,8 +258,8 @@ export class WorkshopTutorial {
     if (this.wakeGlow > 0) this.wakeGlow = Math.max(0, this.wakeGlow - dt * 0.8);
     this.objA = Math.max(0, Math.min(1, (this.objA ?? 1) + (this.phase === 'play' ? 2 : -2) * dt));   // objective fades out for the payoff
     this.t += dt; this.tl.update(dt); if (this.hints && this.phase === 'play') this.hints.tick(dt);
-    this.hatch.update(dt); this.miraLean.update(dt); this.mira.update(dt);
-    if (this.miraHop > 0) this.miraHop = Math.max(0, this.miraHop - dt);
+    this.hatch.update(dt); this.mira.lean.update(dt);
+    if (this.mira.hop > 0) this.mira.hop = Math.max(0, this.mira.hop - dt);
     if (this.windT >= 0) this.windT += dt;
     if (this.jamT > 0) this.jamT -= dt;
     if (this.drag) this.drag.p.update(dt);
@@ -491,13 +480,13 @@ export class WorkshopTutorial {
     ctx.fillStyle = gg; ctx.fillRect(DOOR.x0 - 520, 180, 1040, 900); ctx.restore();
   }
 
-  drawMira(ctx) {                                   // cut-out rig (art/rig/MIRA): lean pivots on her feet, hop lifts her
-    if (!this.mira || !this.mira.rig) return;
-    this.mira.lift = this.miraHop > 0 ? Math.sin((this.miraHop / 0.5) * Math.PI) * 26 : 0;
-    ctx.save(); ctx.translate(this.mira.x, GROUND); ctx.rotate(this.miraLean.value); ctx.translate(-this.mira.x, -GROUND);
-    this.mira.draw(ctx);
-    ctx.restore();
-    this.mira.lift = 0;
+  drawMira(ctx) {                                   // static 3/4 pose until her rig is built (plan 17), procedural life
+    const img = this.sprites.get('mira_34'), info = this.sprites.info('mira_34'); if (!img || !info) return;
+    const s = (this.neo.heightPx * 1.05) / img.height, breath = 1 + 0.012 * Math.sin(this.t * 2.2);
+    const hop = this.mira.hop > 0 ? Math.sin((this.mira.hop / 0.5) * Math.PI) * 26 : 0;
+    ctx.save(); ctx.translate(this.mira.x, GROUND - hop); ctx.rotate(this.mira.lean.value); ctx.scale(s, s * breath);
+    ctx.fillStyle = 'rgba(30,18,8,0.25)'; ctx.beginPath(); ctx.ellipse(0, -4, 90, 16, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.drawImage(img, -info.foot[0], -info.foot[1]); ctx.restore();
   }
 
   drawWindKey(ctx) {                                // the brass winding key on NEO's back turns (3 turns)

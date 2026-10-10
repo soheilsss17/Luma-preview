@@ -79,9 +79,6 @@ export class MasteryEngine {
     // transfer in the same room (new objects/context; plan 06 §9 L4 Proficient) — only on top of an independent practice
     if (evidence.stage === 'transfer' && evidence.solved && evidence.maxHint === 0 && rules.transfer_solved_independently
         && lvl >= rules.practice_solved_independently) lvl = Math.max(lvl, rules.transfer_solved_independently);
-    // MATH-03 card: «a new rule without H3» — the transfer counts with H1/H2, never with the H3 scaffold
-    if (evidence.stage === 'transfer' && evidence.solved && evidence.maxHint <= 2 && rules.transfer_without_h3
-        && lvl >= rules.practice_solved_independently) lvl = Math.max(lvl, rules.transfer_without_h3);
     if (lvl === cur) return null;
     this.data[concept] = { level: lvl, updated: new Date().toISOString() };
     this.store.setItem(this.key, JSON.stringify(this.data));

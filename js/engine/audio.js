@@ -99,102 +99,6 @@ export class LumaAudio {
     this.noise(t + 0.02, { f: 900, q: 0.7, len: 0.45, vel: 0.16, pow: 2.5, sweep: 1400 });
     this.pluck(86, t + 0.32, { vel: 0.05, dur: 0.12, bright: 1.2 }); this.pluck(89, t + 0.5, { vel: 0.04, dur: 0.1, bright: 1.2 });
   }
-  // MATH-03 parts machine (card SFX: SFX_MACHINE_START, SFX_GEAR_ROTATE, SFX_OUTPUT_DROP, SFX_MACHINE_FAIL_SOFT)
-  /** Lever pulled: brass clunk + the boiler breathes in (rising steam whoosh). */
-  machineStart() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.3 }); this.pluck(43, t, { vel: 0.14, dur: 0.35, bright: 0.25 });
-    this.noise(t + 0.08, { f: 500, q: 0.6, len: 0.7, vel: 0.1, pow: 1.2, sweep: 1500 });
-  }
-  /** One gear-train step while a token is inside (call a few times per second). */
-  gearRotate(step = 0) {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.035, low: false }); this.pluck(step % 2 ? 62 : 67, t, { vel: 0.05, dur: 0.1, bright: 0.45 });
-  }
-  /** A walnut token rolls out into the brass tray. */
-  outputDrop() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.pluck(71, t, { vel: 0.12, dur: 0.15, bright: 0.6 }); this.drum(t + 0.05, { vel: 0.12, low: false });
-    this.pluck(76, t + 0.14, { vel: 0.06, dur: 0.1, bright: 0.7 }); this.pluck(74, t + 0.22, { vel: 0.035, dur: 0.08, bright: 0.7 });
-  }
-  /** The machine hiccups and stops: two soft low bumps, a falling note and a puff of steam — never harsh. */
-  machineFailSoft() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.14 }); this.drum(t + 0.16, { vel: 0.1 });
-    this.pluck(55, t + 0.05, { vel: 0.1, dur: 0.5, bright: 0.3 }); this.pluck(50, t + 0.25, { vel: 0.08, dur: 0.7, bright: 0.3 });
-    this.noise(t + 0.3, { f: 2200, q: 0.5, len: 0.55, vel: 0.07, pow: 1.6, sweep: -1200 });
-  }
-  // MATH-06 storage room (AV: SFX_CRATE_SET, SFX_CRATE_LID_CLOSE, SFX_ROPE_PULL): wooden crates, a lid, the pulley rope
-  /** A crate set down on wood; size 0 = a small ten-crate … 1 = a big hundred-crate (lower, heavier). */
-  crateSet(size = 0) {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.08 + 0.1 * size, low: size > 0.5 }); this.pluck(62 - Math.round(14 * size), t, { vel: 0.07, dur: 0.12, bright: 0.35 });
-    this.noise(t, { f: 900 - 400 * size, q: 0.9, len: 0.09, vel: 0.05, pow: 3 });
-  }
-  /** The lid drops shut: a heavy wooden thud, the latch clicks, a little dust. */
-  lidClose() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.3 }); this.pluck(38, t, { vel: 0.12, dur: 0.4, bright: 0.2 });
-    this.drum(t + 0.16, { vel: 0.07, low: false }); this.pluck(81, t + 0.17, { vel: 0.06, dur: 0.08, bright: 1.1 });
-    this.noise(t + 0.02, { f: 700, q: 0.6, len: 0.4, vel: 0.05, pow: 2.2 });
-  }
-  /** The pulley rope: a short creak (rising) as the handle is pulled. */
-  ropePull() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.noise(t, { f: 500, q: 6, len: 0.28, vel: 0.06, pow: 0.8, sweep: 500 });
-    this.pluck(57, t + 0.05, { vel: 0.03, dur: 0.2, bright: 0.2 });
-  }
-  // MATH-07 gear room (AV: SFX_DIGIT_PICK, SFX_SLOT_CLICK, SFX_BEAM_RELEASE, SFX_BEAM_SWING — card §18 mechanical slot
-  // click + a rising tone as the value grows, plus the weighing beam)
-  /** A wooden digit tile is lifted off the tray. */
-  digitPick() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.05, low: false }); this.pluck(74, t, { vel: 0.07, dur: 0.12, bright: 0.7 });
-  }
-  /** The tile snaps into its socket: a mechanical slot click + a rising tone that follows the column's value. */
-  slotClick(place = 0) {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.09, low: false }); this.pluck(69, t, { vel: 0.09, dur: 0.1, bright: 0.9 });
-    this.pluck(67 + place * 2, t + 0.06, { vel: 0.07, dur: 0.35, bright: 0.8 });   // ones → thousands: the value rises
-  }
-  /** The weigh lever is released: a brass latch lets go. */
-  beamRelease() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.12, low: false }); this.pluck(81, t, { vel: 0.09, dur: 0.1, bright: 1.1 });
-    this.noise(t, { f: 1800, q: 2, len: 0.08, vel: 0.05, pow: 2 });
-  }
-  /** The beam swings and settles: a long brass creak, never harsh. dir -1/0/1 = which way it leans. */
-  beamSwing(dir = 0) {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.noise(t, { f: 420, q: 5, len: 0.55, vel: 0.07, pow: 0.9, sweep: dir ? 220 * Math.abs(dir) : 0 });
-    this.pluck(45 + (dir > 0 ? 3 : dir < 0 ? -2 : 0), t + 0.1, { vel: 0.07, dur: 0.7, bright: 0.25 });
-    this.drum(t + 0.5, { vel: 0.06, low: false });
-  }
-  // MATH-08 market counter (AV: SFX_COIN_PICK, SFX_COIN_DROP, SFX_COIN_STACK, SFX_TOTAL_UPDATE — card §18 «metallic
-  // soft coin clicks»; never a cash-register ding, never harsh)
-  /** A token is lifted out of its tray: one soft metallic click. */
-  coinPick() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.05, low: false }); this.pluck(88, t, { vel: 0.06, dur: 0.1, bright: 1.4 });
-  }
-  /** The token lands in the pay counter's compartment: a lower click plus a tiny metal ring. */
-  coinDrop() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    this.drum(t, { vel: 0.09, low: false }); this.pluck(81, t, { vel: 0.07, dur: 0.12, bright: 1.2 });
-    this.noise(t + 0.01, { f: 3200, q: 3, len: 0.09, vel: 0.03, pow: 2 });
-  }
-  /** Two or three quick clicks as a piece settles onto its stack. */
-  coinStack() {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    for (let i = 0; i < 3; i++) { this.drum(t + i * 0.05, { vel: 0.045 - i * 0.008, low: false }); this.pluck(84 - i * 2, t + i * 0.05, { vel: 0.04, dur: 0.09, bright: 1.3 }); }
-  }
-  /** The total counts: a two-note tick, higher when the remaining amount shrinks, lower when it grows. */
-  totalUpdate(shrinking = true) {
-    if (!this.ctx) return; const t = this.ctx.currentTime;
-    const base = shrinking ? 76 : 69;
-    this.pluck(base, t, { vel: 0.06, dur: 0.1, bright: 1.0 });
-    this.pluck(base + (shrinking ? 5 : -3), t + 0.07, { vel: 0.05, dur: 0.14, bright: 1.0 });
-  }
   /** Pages of a book riffle (library reacts). */
   pageFlutter() {
     if (!this.ctx) return; const t = this.ctx.currentTime;
@@ -258,19 +162,7 @@ export class LumaAudio {
   setSfx(on) { this.sfxOn = !!on; if (this.sfxBus) this.sfxBus.gain.value = on ? 0.9 : 0; }
   setLayers(n) {
     this.layers = Math.max(0, Math.min(this.maxLayers, n));
-    if (this.stems && this.ctx) for (const st of this.stems) this.fadeStem(st, this.layers >= st.layer ? 1 : 0, 2.0);   // ~2 s fade
-  }
-  /**
-   * Stem fade as an explicit linear ramp from the tracked current level (anchor + ramp, no setTargetAtTime): the level
-   * is known without reading AudioParam.value (stale in some engines), a fade interrupted half-way continues from
-   * where it is, and every Web Audio implementation renders it identically (the offline renderer of the review videos
-   * mis-rendered setTargetAtTime after a long-held value and clipped the whole track — plan 17 video review, MATH-06).
-   */
-  fadeStem(st, to, dur) {
-    const t = this.ctx.currentTime, r = st.ramp;
-    const from = t >= r.t1 ? r.v1 : t <= r.t0 ? r.v0 : r.v0 + (r.v1 - r.v0) * (t - r.t0) / (r.t1 - r.t0);   // no 0/0 before the stems start
-    const p = st.gain.gain; p.cancelScheduledValues(t); p.setValueAtTime(from, t); p.linearRampToValueAtTime(to, t + dur);
-    st.ramp = { t0: t, t1: t + dur, v0: from, v1: to };
+    if (this.stems && this.ctx) for (const st of this.stems) st.gain.gain.setTargetAtTime(this.layers >= st.layer ? 1 : 0, this.ctx.currentTime, 0.6);   // ~2 s fade
   }
   /** Switch the environment cue (menu / workshop / village…): old stems fade out, the new cue's stems load. */
   setCue(id) {
@@ -278,7 +170,7 @@ export class LumaAudio {
     this.musicCue = id;
     if (this.stems && this.ctx) {
       const t = this.ctx.currentTime;
-      for (const st of this.stems) { this.fadeStem(st, 0, 1.2); try { st.src.stop(t + 1.6); } catch (e) { /* already stopped */ } }
+      for (const st of this.stems) { st.gain.gain.setTargetAtTime(0, t, 0.3); try { st.src.stop(t + 1.6); } catch (e) { /* already stopped */ } }
     }
     this.stems = null;
     if (this.ctx) this.loadStems(id);
@@ -303,11 +195,10 @@ export class LumaAudio {
       if (!this.stemBus) { this.stemBus = this.ctx.createGain(); this.stemBus.gain.value = STEM_LEVEL; this.stemBus.connect(this.musicBus); }
       const t = this.ctx.currentTime + 0.05;
       this.stems = names.map((n, i) => {
-        const v = this.layers >= meta.layer_for_stem[n] ? 1 : 0;
-        const g = this.ctx.createGain(); g.gain.setValueAtTime(v, t); g.connect(this.stemBus);
+        const g = this.ctx.createGain(); g.gain.value = this.layers >= meta.layer_for_stem[n] ? 1 : 0; g.connect(this.stemBus);
         const src = this.ctx.createBufferSource(); src.buffer = bufs[i]; src.loop = true;
         src.loopStart = meta.loop_start; src.loopEnd = meta.loop_end; src.connect(g); src.start(t);
-        return { name: n, layer: meta.layer_for_stem[n], gain: g, src, ramp: { t0: t, t1: t, v0: v, v1: v } };
+        return { name: n, layer: meta.layer_for_stem[n], gain: g, src };
       });
       this.stemMeta = meta;
       return true;

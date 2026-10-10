@@ -1,0 +1,227 @@
+{
+ "character": "TIKO",
+ "ppu": 1000,
+ "facing": "right",
+ "clips": [
+  "idle",
+  "walk",
+  "happy",
+  "run",
+  "look",
+  "confused",
+  "concerned",
+  "celebrate"
+ ],
+ "walk_params": {
+  "n": 16,
+  "stride_deg": 18,
+  "bob": 22
+ },
+ "gait": "hop",
+ "source": "art/final/GLOBAL/CHAR_TIKO__RIG_PARTS.png",
+ "bones": [
+  {
+   "name": "torso",
+   "image": "bones/torso.png",
+   "source_part": "p02",
+   "parent": null,
+   "size": [
+    614,
+    764
+   ],
+   "pivot": [
+    276.3,
+    657.0
+   ],
+   "attach": null,
+   "z": 40,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "tail",
+   "image": "bones/tail.png",
+   "source_part": "p09",
+   "parent": "torso",
+   "size": [
+    228,
+    386
+   ],
+   "pivot": [
+    182.4,
+    355.1
+   ],
+   "attach": [
+    184.2,
+    611.2
+   ],
+   "z": 5,
+   "rest_deg": 35,
+   "scale": 1.0
+  },
+  {
+   "name": "leg_far_up",
+   "image": "bones/leg_far_up.png",
+   "source_part": "p06",
+   "parent": "torso",
+   "size": [
+    304,
+    730
+   ],
+   "pivot": [
+    152.0,
+    73.0
+   ],
+   "attach": [
+    233.3,
+    641.8
+   ],
+   "z": 10,
+   "rest_deg": 0,
+   "scale": 0.52
+  },
+  {
+   "name": "arm_far_up",
+   "image": "bones/arm_far_up.png",
+   "source_part": "p04",
+   "parent": "torso",
+   "size": [
+    666,
+    248
+   ],
+   "pivot": [
+    53.3,
+    124.0
+   ],
+   "attach": [
+    380.7,
+    229.2
+   ],
+   "z": 12,
+   "rest_deg": -80,
+   "scale": 0.62
+  },
+  {
+   "name": "leg_near_up",
+   "image": "bones/leg_near_up.png",
+   "source_part": "p05",
+   "parent": "torso",
+   "size": [
+    300,
+    728
+   ],
+   "pivot": [
+    150.0,
+    72.8
+   ],
+   "attach": [
+    356.1,
+    657.0
+   ],
+   "z": 50,
+   "rest_deg": 0,
+   "scale": 0.52
+  },
+  {
+   "name": "head",
+   "image": "bones/head.png",
+   "source_part": "p00",
+   "parent": "torso",
+   "size": [
+    718,
+    674
+   ],
+   "pivot": [
+    301.6,
+    606.6
+   ],
+   "attach": [
+    337.7,
+    91.7
+   ],
+   "z": 70,
+   "rest_deg": 0,
+   "scale": 1.0
+  },
+  {
+   "name": "ear_far",
+   "image": "bones/ear_far.png",
+   "source_part": "p08",
+   "parent": "head",
+   "size": [
+    412,
+    406
+   ],
+   "pivot": [
+    90.6,
+    48.7
+   ],
+   "attach": [
+    215.4,
+    107.8
+   ],
+   "z": 65,
+   "rest_deg": 20,
+   "scale": 0.9
+  },
+  {
+   "name": "ear_near",
+   "image": "bones/ear_near.png",
+   "source_part": "p07",
+   "parent": "head",
+   "size": [
+    406,
+    420
+   ],
+   "pivot": [
+    316.7,
+    58.8
+   ],
+   "attach": [
+    287.2,
+    94.4
+   ],
+   "z": 75,
+   "rest_deg": 25,
+   "scale": 0.9
+  },
+  {
+   "name": "arm_near_up",
+   "image": "bones/arm_near_up.png",
+   "source_part": "p03",
+   "parent": "torso",
+   "size": [
+    664,
+    246
+   ],
+   "pivot": [
+    53.1,
+    123.0
+   ],
+   "attach": [
+    405.2,
+    259.8
+   ],
+   "z": 80,
+   "rest_deg": -80,
+   "scale": 0.62
+  }
+ ],
+ "swaps": [
+  {
+   "bone": "head",
+   "key": "blink",
+   "image": "bones/head_blink.png",
+   "size": [
+    716,
+    674
+   ],
+   "pivot": [
+    300.7,
+    606.6
+   ]
+  }
+ ],
+ "foot_y": 334,
+ "height_px": 1334
+}
